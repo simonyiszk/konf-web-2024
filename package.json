@@ -8,6 +8,11 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "author": {
+    "name": "Simonyi Károly Szakkollégium",
+    "email": "info@simonyi.bme.hu",
+    "url": "https://simonyi.bme.hu"
+  },
   "dependencies": {
     "next": "14.0.3",
     "react": "^18",

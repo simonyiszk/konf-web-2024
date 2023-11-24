@@ -11,7 +11,7 @@ on:
       - dev
 
 jobs:
-    static-analysis:
+    eslint:
         runs-on: ubuntu-latest
 
         steps:
@@ -28,6 +28,20 @@ jobs:
 
           - name: Run ESLint check
             run: yarn lint:check
+    prettier:
+      runs-on: ubuntu-latest
 
-          - name: Run Prettier check
-            run: yarn prettier:check
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '20'
+
+        - name: Install dependencies
+          run: yarn install --frozen-lockfile --non-interactive --production=false
+
+        - name: Run Prettier check
+          run: yarn prettier:check

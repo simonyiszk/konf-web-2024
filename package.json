@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint \"src/**/*.(ts|tsx)\" --fix",
-    "lint:check": "eslint \"src/**/*.(ts|tsx)\"",
+    "lint": "eslint \"./src/**/*.ts?(x)\" --fix",
+    "lint:check": "eslint \"./src/**/*.ts?(x)\"",
     "prettier": "prettier --write \"src/**/*.(ts|tsx)\"",
     "prettier:check": "prettier --check \"src/**/*.(ts|tsx)\""
   },

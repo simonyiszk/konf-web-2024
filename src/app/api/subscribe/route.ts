@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   const auth = new google.auth.JWT({
     email: credentials.client_email,
     key: credentials.private_key,
-    subject: process.env.SERVICE_ACCOUNT_JSON,
+    subject: process.env.SERVICE_ACCOUNT_SUBJECT,
     scopes: ['https://www.googleapis.com/auth/admin.directory.group.member'],
   });
 

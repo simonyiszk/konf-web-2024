@@ -1,3 +1,4 @@
+import * as EmailValidator from 'email-validator';
 import { google } from 'googleapis';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -7,28 +8,31 @@ export interface Subscription {
 
 export async function POST(request: NextRequest) {
   const { email }: Subscription = await request.json();
+  if (!EmailValidator.validate(email)) {
+    return new NextResponse('Invalid email!', { status: 400 });
+  }
 
   const credentials = JSON.parse(Buffer.from(process.env.SERVICE_ACCOUNT_JSON ?? '', 'base64').toString());
   const auth = new google.auth.JWT({
     email: credentials.client_email,
     key: credentials.private_key,
     subject: process.env.SERVICE_ACCOUNT_SUBJECT,
-    scopes: ['https://www.googleapis.com/auth/admin.directory.group.member'],
+    scopes: [process.env.JWT_SCOPE ?? ''],
   });
-
   try {
-    const response = await google.admin({ version: 'directory_v1', auth }).members.insert({
-      groupKey: 'konf-news@simonyi.bme.hu',
+    await google.admin({ version: 'directory_v1', auth }).members.insert({
+      groupKey: process.env.GROUP_KEY,
       requestBody: {
         email,
         role: 'MEMBER',
       },
     });
-    console.log(response);
-    return new NextResponse('Created', { status: 201 });
+    return new NextResponse('Success', { status: 200 });
   } catch (e) {
-    console.log(e);
-    console.log('error: ', (e as any).response?.data?.error);
-    return new NextResponse(':(', { status: 500 });
+    if ((e as any).response?.data?.error.code === 409) {
+      return new NextResponse('Already subscribed', { status: 409 });
+    }
+    console.error('error: ', (e as any).response?.data?.error ?? e);
+    return new NextResponse('Internal Server Error', { status: 500 });
   }
 }

@@ -1,4 +1,5 @@
 <<<<<<< dev
+<<<<<<< dev
 import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
@@ -10,13 +11,12 @@ import { useState } from 'react';
 
 import { KirDevLogo } from '@/components/kir-dev-logo/KirDevLogo';
 >>>>>>> solution with google groups api - 403
+=======
+import { KirDevLogo } from '@/components/kir-dev-logo/KirDevLogo';
+import { ModalContent } from '@/components/newsletter/ModalContent';
+>>>>>>> cleanup for route.ts solution
 
 export default function Landing() {
-  const [email, setEmail] = useState('');
-  const onSubscribe = async () => {
-    const res = await fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) });
-    console.log(res);
-  };
   return (
 <<<<<<< dev
     <>
@@ -35,12 +35,7 @@ export default function Landing() {
     <main className='flex flex-col gap-10 justify-center items-center h-full'>
       <h1 className='text-center'>XXI. Simonyi Konferencia</h1>
       <p className='text-center'>A weboldal fejlesztése folyamatban, szíves türelmed kérjük.</p>
-      <div className='flex justify-between items-center gap-2'>
-        <input className='text-black' value={email} onChange={(e) => setEmail(e.target.value)} type='email' />
-        <button onClick={onSubscribe} className='bg-white text-black rounded-md p-3'>
-          Feliratkozás
-        </button>
-      </div>
+      <ModalContent />
       <KirDevLogo variant='light' />
     </main>
 >>>>>>> solution with google groups api - 403

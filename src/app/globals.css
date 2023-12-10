@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-space h-screen text-slate-100  bg-cover bg-center;
+  @apply bg-space h-screen text-white bg-cover bg-center;
 }
 
 h1 {

@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
+import konfLogo from '../../public/img/konf.svg';
+
 export default function Landing() {
   return (
     <main className='grid grid-rows-[auto_1fr_auto] h-full'>
@@ -19,12 +21,11 @@ export default function Landing() {
           <Link href='/'>kapcsolat</Link>
         </div>
       </div>
-      <div className='flex flex-col items-center justify-center gap-10 max-w-3xl mx-auto p-10'>
-        <Image src='/img/konf.svg' alt='Simonyi Konferencia' height={120} width={600} />
-        <p className='text-2xl font-bold text-center'>
-          Magyarország legnagyobb, egyetemi hallgatók által szervezett éves technológiai konferenciája.
-        </p>
-        <p className='font-semibold text-5xl'>24. 03. 19.</p>
+      <div className='max-w-xl p-10 mx-auto'>
+        <div className='aspect-square shadow-gloria flex flex-col items-center justify-center gap-10 border-8 p-10 border-white rounded-full bg-nebula bg-cover bg-center bg-no-repeat'>
+          <Image src={konfLogo} alt='Simonyi Konferencia' className='w-full' />
+          <p className='font-semibold text-2xl sm:text-5xl'>24. 03. 19.</p>
+        </div>
       </div>
       <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10'>
         <div className='flex items-center gap-5 text-[40px]'>

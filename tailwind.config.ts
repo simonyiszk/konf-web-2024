@@ -6,7 +6,17 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
+  theme: {
+    extend: {
+      backgroundImage: {
+        nebula: 'url("/img/nebula.gif")',
+        space: 'url("/img/space.jpg")',
+      },
+      boxShadow: {
+        gloria: '0 0 60px 0 white',
+      },
+    },
+  },
   plugins: [],
 };
 export default config;

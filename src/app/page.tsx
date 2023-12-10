@@ -9,11 +9,11 @@ export default function Landing() {
     <main className='grid grid-rows-[auto_1fr_auto] h-full'>
       <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10'>
         <div className='flex items-center gap-10'>
-          <Link href='https://vik.bme.hu'>
-            <Image src='/img/vik.svg' alt='Vik' width={40} height={40} />
-          </Link>
           <Link href='https://simonyi.bme.hu'>
             <Image src='/img/simonyi.svg' alt='Simonyi Károly Szakkollégium' width={193} height={40} />
+          </Link>
+          <Link href='https://vik.bme.hu'>
+            <Image src='/img/vik.svg' alt='Vik' width={40} height={40} />
           </Link>
         </div>
         <div className='flex items-center gap-10'>
@@ -27,7 +27,7 @@ export default function Landing() {
           <p className='font-semibold text-2xl sm:text-5xl'>24. 03. 19.</p>
         </div>
       </div>
-      <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10'>
+      <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10 flex-col md:flex-row'>
         <div className='flex items-center gap-5 text-[40px]'>
           <Link href='https://www.instagram.com/simonyikonf'>
             <FaInstagram />

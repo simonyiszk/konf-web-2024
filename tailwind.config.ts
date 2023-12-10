@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        nebula: 'url("/img/nebula.gif")',
+        nebula: 'url("/img/nebula.webp")',
         space: 'url("/img/space.jpg")',
       },
       boxShadow: {

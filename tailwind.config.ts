@@ -15,6 +15,9 @@ const config: Config = {
       boxShadow: {
         gloria: '0 0 60px 0 white',
       },
+      colors: {
+        brand: '#D45B7E',
+      },
     },
   },
   plugins: [],

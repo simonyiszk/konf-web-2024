@@ -12,3 +12,8 @@ img {
 h1 {
   @apply text-4xl font-bold;
 }
+
+.brand-link:hover {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(40%) saturate(6364%) hue-rotate(307deg) brightness(88%)
+    contrast(87%);
+}

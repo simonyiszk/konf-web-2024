@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         nebula: 'url("/img/nebula.webp")',
-        space: 'url("/img/space.jpg")',
+        space: 'url("/img/space.webp")',
       },
       boxShadow: {
         gloria: '0 0 60px 0 white',

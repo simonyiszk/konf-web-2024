@@ -9,12 +9,12 @@ export default function Landing() {
     <main className='grid grid-rows-[auto_1fr_auto] h-full'>
       <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10 flex-col md:flex-row'>
         <div className='flex items-center gap-10'>
-          <a href='https://simonyi.bme.hu' className='brand-link' target='blank'>
+          <Link href='https://simonyi.bme.hu' className='brand-link' target='blank'>
             <Image src='/img/simonyi.svg' alt='Simonyi Károly Szakkollégium' width={193} height={40} />
-          </a>
-          <a href='https://vik.bme.hu' className='brand-link' target='blank'>
+          </Link>
+          <Link href='https://vik.bme.hu' className='brand-link' target='blank'>
             <Image src='/img/vik.svg' alt='Vik' width={40} height={40} />
-          </a>
+          </Link>
         </div>
         <div className='flex items-center gap-10'>
           <Link href='/' className='hover:text-brand text-xl'>
@@ -33,27 +33,27 @@ export default function Landing() {
       </div>
       <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10 flex-col md:flex-row'>
         <div className='flex items-center gap-5 text-[40px]'>
-          <a href='https://www.instagram.com/simonyikonf' className='brand-link' target='blank'>
+          <Link href='https://www.instagram.com/simonyikonf' className='brand-link' target='blank'>
             <FaInstagram />
-          </a>
-          <a href='https://www.facebook.com/events/1060756212046229' className='brand-link' target='blank'>
+          </Link>
+          <Link href='https://www.facebook.com/events/1060756212046229' className='brand-link' target='blank'>
             <FaFacebook />
-          </a>
-          <a
+          </Link>
+          <Link
             href='https://www.youtube.com/watch?v=QDKDaMKqcoQ&list=PLovp3RCdzQGx_lKpvCgUJT6n-wJazXKrL'
             className='brand-link'
             target='blank'
           >
             <FaYoutube />
-          </a>
+          </Link>
         </div>
         <div className='flex items-center gap-10'>
-          <a href='https://schdesign.hu' className='brand-link' target='blank'>
+          <Link href='https://schdesign.hu' className='brand-link' target='blank'>
             <Image className='-mb-2' src='/img/schdesign.svg' alt='schdesign' width={148} height={40} />
-          </a>
-          <a href='https://kir-dev.hu' className='brand-link' target='blank'>
+          </Link>
+          <Link href='https://kir-dev.hu' className='brand-link' target='blank'>
             <Image src='/img/kirdev-inline.svg' alt='Kir-Dev' width={193} height={40} />
-          </a>
+          </Link>
         </div>
       </div>
     </main>

@@ -29,7 +29,7 @@ export default function Landing() {
       </div>
       <div className='max-w-xl p-20 mx-auto relative h-full w-full flex items-center'>
         <div className='shadow-gloria rounded-full overflow-hidden'>
-          <Image src='/img/nebula.webp' height={200} width={200} alt='Nebula' className='h-full w-full' />
+          <Image src='/img/nebula.webp' height={600} width={600} alt='Nebula' className='h-full w-full' />
         </div>
         <div className='absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center flex-col py-5 gap-5 p-5'>
           <Image src={konfLogo} alt='Simonyi Konferencia' className='w-full' />

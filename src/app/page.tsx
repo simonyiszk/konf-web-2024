@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
+import { metadata } from '@/app/layout';
+
 import konfLogo from '../../public/img/konf.svg';
 
 export default function Landing() {
@@ -25,10 +27,14 @@ export default function Landing() {
           </Link>
         </div>
       </div>
-      <div className='max-w-xl p-10 mx-auto'>
-        <div className='aspect-square shadow-gloria flex flex-col items-center justify-center gap-10 border-8 p-10 border-white rounded-full bg-nebula bg-cover bg-center bg-no-repeat'>
+      <div className='max-w-xl p-20 mx-auto relative h-full w-full flex items-center'>
+        <div className='shadow-gloria rounded-full overflow-hidden'>
+          <Image src='/img/nebula.webp' height={200} width={200} alt='Nebula' className='h-full w-full' />
+        </div>
+        <div className='absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center flex-col py-5 gap-5 p-5'>
           <Image src={konfLogo} alt='Simonyi Konferencia' className='w-full' />
-          <p className='font-semibold text-2xl sm:text-5xl'>24. 03. 19.</p>
+          <p className='font-bold text-xl sm:text-2xl text-center'>{metadata.description}</p>
+          <p className='font-semibold text-2xl sm:text-6xl'>24. 03. 19.</p>
         </div>
       </div>
       <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10 flex-col md:flex-row'>

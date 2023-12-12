@@ -13,7 +13,7 @@ const config: Config = {
         space: 'url("/img/space.webp")',
       },
       boxShadow: {
-        gloria: '0 0 60px 0 white',
+        gloria: '0 0 50px -20px white',
       },
       colors: {
         brand: '#D45B7E',

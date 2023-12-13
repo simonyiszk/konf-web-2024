@@ -29,16 +29,9 @@ export default function Landing() {
       </div>
       <div className='max-w-xl p-20 mx-auto relative h-full w-full flex items-center'>
         <div className='shadow-gloria rounded-full overflow-hidden'>
-          <video
-            src='/video/nebula.mp4'
-            height={600}
-            width={600}
-            className='h-full w-full'
-            autoPlay
-            playsInline
-            loop
-            controls={false}
-          />
+          <video className='h-full w-full' autoPlay playsInline loop controls={false}>
+            <source src='/video/nebula.mp4' type='video/mp4' />
+          </video>
         </div>
         <div className='absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center flex-col py-5 gap-5 p-5'>
           <Image src={konfLogo} alt='Simonyi Konferencia' className='w-full' />

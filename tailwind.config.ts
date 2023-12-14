@@ -18,6 +18,9 @@ const config: Config = {
       colors: {
         brand: '#D45B7E',
       },
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
     },
   },
   plugins: [],

@@ -38,7 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
             </div>
           </div>
-          <div className='max-w-xl p-20 mx-auto relative h-full w-full flex items-center'>{children}</div>
+          <div className='max-w-6xl p-20 mx-auto relative h-full w-full flex justify-center items-center'>
+            {children}
+          </div>
           <div className='p-10 md:p-15 flex justify-between items-center flex-wrap gap-10 flex-col md:flex-row'>
             <div className='flex items-center gap-5 text-[40px]'>
               <Link href='https://www.instagram.com/simonyikonf' className='brand-link' target='blank'>

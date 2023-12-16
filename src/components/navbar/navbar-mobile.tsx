@@ -18,7 +18,7 @@ export function NavbarMobile() {
     <nav className='w-full p-5 md:hidden sticky top-0 z-20' onClick={onLinkClick}>
       <div className='w-full p-5 box-border rounded-md bg-white bg-opacity-10 backdrop-blur-sm'>
         <div className='w-full flex items-center justify-between gap-5'>
-          <Link href='/'>
+          <Link href='/' onClick={() => setIsOpen(false)}>
             <Image src='/img/icon-base.svg' alt='Simonyi Konferencia' width={40} height={40} />
           </Link>
           <button onClick={toggle}>

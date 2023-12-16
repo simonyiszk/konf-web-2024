@@ -6,9 +6,9 @@ import { FaCheckCircle, FaTimes } from 'react-icons/fa';
 
 import { addToGroup } from '@/app/actions';
 
-import { WhiteButton } from '../WhiteButton';
+import { WhiteButton } from '../white-button';
 
-export function ModalContent() {
+export function NewsletterModals() {
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
   const [isSuccessOpen, setIsSuccessOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +54,7 @@ export function ModalContent() {
         <div className='fixed inset-0 flex w-screen items-center justify-center p-4'>
           <Dialog.Panel className='mx-auto max-w-lg rounded bg-[#0f181c] p-8'>
             <div className='flex justify-between items-center mb-5'>
-              <Dialog.Title className='font-bold text-2xl '>Feliratkozás a hírlevélre</Dialog.Title>
+              <Dialog.Title className='font-bold text-2xl '>Hírlevél</Dialog.Title>
               <div className='hover:text-gray-400 hover:cursor-pointer text-xl' onClick={onSubscribeClose}>
                 <FaTimes />
               </div>

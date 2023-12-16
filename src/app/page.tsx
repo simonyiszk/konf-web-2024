@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
 import { SocialButtons } from '@/components/footer/social-buttons';
-import { ModalContent } from '@/components/newsletter/ModalContent';
+import { NewsletterModals } from '@/components/newsletter/newsletter-modals';
 
 import konfLogo from '../../public/img/konf.svg';
 
@@ -20,7 +20,7 @@ export default function Landing() {
         <p className='font-semibold text-2xl sm:text-6xl'>24. 03. 19.</p>
         <div className='flex md:hidden flex-col items-center gap-10 mt-10'>
           <SocialButtons />
-          <ModalContent />
+          <NewsletterModals />
         </div>
       </div>
     </>

@@ -11,7 +11,7 @@ export default function Landing() {
     <>
       <div className='p-10 relative'>
         <div className='max-w-md md:max-w-xl relative shadow-gloria rounded-full overflow-hidden mx-auto'>
-          <video className='h-full w-full' autoPlay playsInline loop controls={false}>
+          <video className='h-full w-full' autoPlay playsInline loop muted>
             <source src='/video/nebula.mp4' type='video/mp4' />
           </video>
         </div>

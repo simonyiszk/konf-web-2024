@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='hu'>
       <body className={raleway.className}>
-        <main className='grid grid-rows-[auto_1fr_auto] h-[100dvh]'>
+        <main className='grid grid-rows-[auto_1fr_auto] h-[100svh]'>
           <Navbar />
           <div className='max-w-6xl p-20 mx-auto relative h-full w-full flex justify-center items-center'>
             {children}

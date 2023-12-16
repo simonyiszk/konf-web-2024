@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { FaCheckCircle, FaTimes } from 'react-icons/fa';
 
 import { addToGroup } from '@/app/actions';
+import { Checkbox } from '@/components/checkbox';
 
 import { WhiteButton } from '../white-button';
 
@@ -66,16 +67,14 @@ export function NewsletterModals() {
                 hírlevelünkre!
               </p>
               <div>
-                <input
+                <Checkbox
                   className='mr-2'
                   type='checkbox'
                   id='accept'
                   checked={accepted}
+                  label='Beleegyezem, hogy a konferenciáig havonta maximum két emailt fogok kapni az alábbi email címre.'
                   onChange={(e) => setAccepted(e.target.checked)}
                 />
-                <label htmlFor='accept'>
-                  Beleegyezem, hogy a konferenciáig havonta maximum két emailt fogok kapni az alábbi email címre.
-                </label>
               </div>
 
               <input

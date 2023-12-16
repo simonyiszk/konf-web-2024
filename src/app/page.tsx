@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
+import { SocialButtons } from '@/components/footer/social-buttons';
 import { ModalContent } from '@/components/newsletter/ModalContent';
 
 import konfLogo from '../../public/img/konf.svg';
@@ -17,7 +18,10 @@ export default function Landing() {
         <Image src={konfLogo} alt='Simonyi Konferencia' className='w-full' />
         <p className='font-bold text-xl sm:text-2xl text-center'>{metadata.description}</p>
         <p className='font-semibold text-2xl sm:text-6xl'>24. 03. 19.</p>
-        <ModalContent />
+        <div className='flex md:hidden flex-col items-center gap-10 mt-10'>
+          <SocialButtons />
+          <ModalContent />
+        </div>
       </div>
     </>
   );

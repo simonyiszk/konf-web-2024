@@ -17,8 +17,9 @@
     "url": "https://simonyi.bme.hu"
   },
   "dependencies": {
-    "email-validator": "^2.0.4",
+    "@headlessui/react": "^1.7.17",
     "clsx": "^2.0.0",
+    "email-validator": "^2.0.4",
     "googleapis": "^129.0.0",
     "next": "14.0.3",
     "react": "^18",

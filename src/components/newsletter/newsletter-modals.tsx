@@ -62,7 +62,7 @@ export function NewsletterModals() {
             </div>
 
             <div className='flex flex-col gap-2'>
-              <p className='mb-2 text-justify'>
+              <p className='mb-2'>
                 Ha szeretnél értesülni a legfontosabb hírekről, mint például előadások és nyereményjáték, iratkozz fel a
                 hírlevelünkre!
               </p>

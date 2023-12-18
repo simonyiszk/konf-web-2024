@@ -8,7 +8,7 @@ export function DesktopFooter() {
   return (
     <footer className='hidden md:flex p-10 justify-between items-center gap-10 flex-row'>
       <SocialButtons />
-      <div className='absolute left-1/2 -translate-x-1/2'>
+      <div className='absolute left-1/2 bottom-24 xl:bottom-auto -translate-x-1/2'>
         <NewsletterModals />
       </div>
       <div className='flex items-center gap-10'>

@@ -62,8 +62,8 @@ export function NewsletterModals() {
             </div>
 
             <div className='flex flex-col gap-2'>
-              <p className='mb-2 text-justify'>
-                Ha szeretnél értesülni a legfontosabb hírekről, mint például előadások, nyereményjáték, iratkozz fel a
+              <p className='mb-2'>
+                Ha szeretnél értesülni a legfontosabb hírekről, mint például előadások és nyereményjáték, iratkozz fel a
                 hírlevelünkre!
               </p>
               <div>
@@ -72,7 +72,7 @@ export function NewsletterModals() {
                   type='checkbox'
                   id='accept'
                   checked={accepted}
-                  label='Beleegyezem, hogy a konferenciáig havonta maximum két emailt fogok kapni az alábbi email címre.'
+                  label='Elfogadom, hogy a konferenciáig havonta maximum két emailt fogok kapni az itt megadott e-mail címre.'
                   onChange={(e) => setAccepted(e.target.checked)}
                 />
               </div>

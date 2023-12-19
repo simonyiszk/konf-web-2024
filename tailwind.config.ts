@@ -21,6 +21,9 @@ const config: Config = {
       transitionProperty: {
         'max-height': 'max-height',
       },
+      dropShadow: {
+        hero: '0px 5.175px 5.175px rgba(0, 0, 0, 0.25)',
+      },
     },
   },
   plugins: [],

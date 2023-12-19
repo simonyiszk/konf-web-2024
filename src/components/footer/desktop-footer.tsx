@@ -6,7 +6,7 @@ import { SocialButtons } from './social-buttons';
 
 export function DesktopFooter() {
   return (
-    <footer className='hidden md:flex p-10 justify-between items-center gap-10 flex-row'>
+    <footer className='max-w-screen-2xl w-full mx-auto hidden md:flex p-10 justify-between items-center gap-10 flex-row'>
       <SocialButtons />
       <div className='absolute left-1/2 bottom-24 xl:bottom-auto -translate-x-1/2'>
         <NewsletterModals />

@@ -1,17 +1,28 @@
 import Link from 'next/link';
 
+const links = [
+  {
+    href: '/',
+    label: 'főoldal',
+  },
+  {
+    href: '/conferences',
+    label: 'konferenciák',
+  },
+  {
+    href: '/contact',
+    label: 'kapcsolat',
+  },
+];
+
 export function NavbarItems() {
   return (
     <>
-      <Link href='/' className='hover:text-brand text-xl'>
-        főoldal
-      </Link>
-      <Link href='/conferences' className='hover:text-brand text-xl'>
-        konferenciák
-      </Link>
-      <Link href='/contact' className='hover:text-brand text-xl'>
-        kapcsolat
-      </Link>
+      {links.map(({ href, label }) => (
+        <Link href={href} key={href} className='hover:text-brand text-xl font-bold'>
+          {label}
+        </Link>
+      ))}
     </>
   );
 }

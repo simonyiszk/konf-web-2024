@@ -16,9 +16,9 @@ export default function Landing() {
           </video>
         </div>
         <div className='absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center flex-col gap-5 p-5'>
-          <Image src={konfLogo} alt='Simonyi Konferencia' className='w-full' />
-          <p className='font-bold text-xl sm:text-2xl text-center'>{metadata.description}</p>
-          <p className='font-semibold text-4xl sm:text-6xl'>24. 03. 19.</p>
+          <Image src={konfLogo} alt='Simonyi Konferencia' className='w-full drop-shadow-hero' />
+          <p className='font-bold text-xl sm:text-2xl text-center hero-text-shadow'>{metadata.description}</p>
+          <p className='font-semibold text-4xl sm:text-6xl hero-text-shadow'>24. 03. 19.</p>
         </div>
       </div>
       <div className='flex md:hidden flex-col items-center gap-10 mt-10'>

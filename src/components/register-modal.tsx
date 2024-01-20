@@ -24,7 +24,7 @@ export function RegisterModal() {
             </div>
 
             <iframe
-              src='https://cooltix.com/widget/event-products/65ab9fecdfeb0d8b67dee006?referrerUrl=https://konferencia.simonyi.bme.hu&theme=dark&primaryColorHex=D45B7E'
+              src='https://cooltix.com/widget/event-products/65ab9fecdfeb0d8b67dee006?theme=dark&primaryColorHex=D45B7E'
               width='100%'
               height='90%'
               frameBorder='0'

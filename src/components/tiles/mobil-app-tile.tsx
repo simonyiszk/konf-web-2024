@@ -4,7 +4,7 @@ type Props = {
   data: MobilAppData;
 };
 
-export function MobilAppTile({ data: { description, androidUrl, iosUrl } }: Props) {
+export function MobilAppTile({ data: { description } }: Props) {
   return (
     <div className='tile col-span-3 p-10'>
       <h1>Konferenciapp</h1>

@@ -8,17 +8,18 @@ import { MobilAppTile } from '@/components/tiles/mobil-app-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
+import { mockData } from '@/models/mockdata';
 import { IndexPageData } from '@/models/models';
 
 import konfLogo from '../../public/img/konf.svg';
 
 async function getIndexData(): Promise<IndexPageData> {
-  console.log(process.env.BACKEND_URL);
-  const res = await fetch(`${process.env.BACKEND_URL}/conference/index`);
-  if (!res.ok) {
-    throw new Error(res.status.toString());
-  }
-  return res.json();
+  // const res = await fetch(`${process.env.BACKEND_URL}/conference/index`);
+  // if (!res.ok) {
+  //   throw new Error(res.status.toString());
+  // }
+  // return res.json();
+  return mockData;
 }
 
 export default async function Landing() {
@@ -38,7 +39,7 @@ export default async function Landing() {
         </div>
       </div>
 
-      <div className='grid grid-cols-6 max-w-6xl w-full my-40 gap-6'>
+      <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full my-40 gap-6'>
         {data.registration.url && <RegisterTile data={data.registration} />}
 
         <StatTile desc='konferenciát rendeztünk már' number='20' />

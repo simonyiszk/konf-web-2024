@@ -6,7 +6,7 @@ type Props = {
 
 export function GiveawayTile({ data: { description, sectionTitle } }: Props) {
   return (
-    <div className='tile col-span-6 p-10'>
+    <div className='tile sm:col-span-6 p-10'>
       <h1>{sectionTitle}</h1>
       <p>{description}</p>
       {/* pic */}

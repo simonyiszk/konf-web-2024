@@ -15,7 +15,7 @@ export function RegisterTile({ data: { url: cooltixEventId, buttonText } }: Prop
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className='col-span-6 tile w-full p-10 cursor-pointer' onClick={() => setIsOpen(true)}>
+      <div className='sm:col-span-6 tile w-full p-10 cursor-pointer' onClick={() => setIsOpen(true)}>
         <h1>{buttonText}</h1>
       </div>
       {/* <WhiteButton onClick={() => setIsOpen(true)}>{buttonText}</WhiteButton> */}

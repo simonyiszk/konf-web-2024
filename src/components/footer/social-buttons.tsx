@@ -1,9 +1,12 @@
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export function SocialButtons() {
   return (
-    <div className='flex items-center gap-5 text-[40px]'>
+    <div className='flex items-center gap-16 text-[40px]'>
+      <Link href='mailto:konferencia@simonyi.bme.hu' className='brand-link' target='blank'>
+        <FaEnvelope />
+      </Link>
       <Link href='https://www.instagram.com/simonyikonf' className='brand-link' target='blank'>
         <FaInstagram />
       </Link>

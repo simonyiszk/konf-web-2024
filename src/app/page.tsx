@@ -1,13 +1,28 @@
 import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
-import { SocialButtons } from '@/components/footer/social-buttons';
-import { NewsletterModals } from '@/components/newsletter/newsletter-modals';
-import { RegisterModal } from '@/components/register-modal';
+import { Sponsors } from '@/components/sponsors';
+import { CountdownTile } from '@/components/tiles/countdown-tile';
+import { GiveawayTile } from '@/components/tiles/giveaway-tile';
+import { MobilAppTile } from '@/components/tiles/mobil-app-tile';
+import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
+import { RegisterTile } from '@/components/tiles/register-tile';
+import { StatTile } from '@/components/tiles/stat-tile';
+import { IndexPageData } from '@/models/models';
 
 import konfLogo from '../../public/img/konf.svg';
 
-export default function Landing() {
+async function getIndexData(): Promise<IndexPageData> {
+  console.log(process.env.BACKEND_URL);
+  const res = await fetch(`${process.env.BACKEND_URL}/conference/index`);
+  if (!res.ok) {
+    throw new Error(res.status.toString());
+  }
+  return res.json();
+}
+
+export default async function Landing() {
+  const data = await getIndexData();
   return (
     <>
       <div className='p-10 relative'>
@@ -22,11 +37,22 @@ export default function Landing() {
           <p className='font-semibold text-4xl sm:text-6xl hero-text-shadow'>24. 03. 19.</p>
         </div>
       </div>
-      <RegisterModal />
-      <div className='flex md:hidden flex-col items-center gap-10 mt-10'>
-        <SocialButtons />
-        <NewsletterModals />
+
+      <div className='grid grid-cols-6 max-w-6xl w-full my-40 gap-6'>
+        <RegisterTile data={data.registration} />
+
+        <StatTile desc='konferenciát rendeztünk már' number='20' />
+        <StatTile desc='konferenciát rendeztünk már' number='20' />
+        <StatTile desc='konferenciát rendeztünk már' number='20' />
+
+        <PromoVideoTile data={data.promoVideo} />
+        <GiveawayTile data={data.giveaway} />
+
+        <CountdownTile />
+        <MobilAppTile data={data.mobilApp} />
       </div>
+
+      <Sponsors companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />
     </>
   );
 }

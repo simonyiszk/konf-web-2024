@@ -3,14 +3,22 @@ import { Dialog } from '@headlessui/react';
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
-import { WhiteButton } from './white-button';
+import { RegistraionData } from '@/models/models';
 
-export function RegisterModal() {
+// import { WhiteButton } from '../white-button';
+
+type Props = {
+  data: RegistraionData;
+};
+
+export function RegisterTile({ data: { url: cooltixEventId, buttonText } }: Props) {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
-      <WhiteButton onClick={() => setIsOpen(true)}>Regisztráció</WhiteButton>
+      <div className='col-span-6 tile w-full p-10 cursor-pointer' onClick={() => setIsOpen(true)}>
+        <h1>{buttonText}</h1>
+      </div>
+      {/* <WhiteButton onClick={() => setIsOpen(true)}>{buttonText}</WhiteButton> */}
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className='relative z-50'>
         <div className='fixed inset-0 bg-black/80' aria-hidden='true' />
 
@@ -24,7 +32,7 @@ export function RegisterModal() {
             </div>
 
             <iframe
-              src={`https://cooltix.com/widget/event-products/${process.env.NEXT_PUBLIC_COOLTIX_EVENTID}?theme=dark&primaryColorHex=D45B7E`}
+              src={`https://cooltix.com/widget/event-products/${cooltixEventId}?theme=dark&primaryColorHex=D45B7E`}
               width='100%'
               height='90%'
               frameBorder='0'

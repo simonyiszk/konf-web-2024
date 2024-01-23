@@ -8,18 +8,16 @@ import { MobilAppTile } from '@/components/tiles/mobil-app-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
-import { mockData } from '@/models/mockdata';
 import { IndexPageData } from '@/models/models';
 
 import konfLogo from '../../public/img/konf.svg';
 
 async function getIndexData(): Promise<IndexPageData> {
-  // const res = await fetch(`${process.env.BACKEND_URL}/conference/index`);
-  // if (!res.ok) {
-  //   throw new Error(res.status.toString());
-  // }
-  // return res.json();
-  return mockData;
+  const res = await fetch(`${process.env.BACKEND_URL}/conference/index`);
+  if (!res.ok) {
+    throw new Error(res.status.toString());
+  }
+  return res.json();
 }
 
 export default async function Landing() {

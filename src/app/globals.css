@@ -27,6 +27,7 @@ h2 {
 }
 
 .tile {
+  @apply p-6 sm:p-10 min-h-[225px];
   border-radius: 30px;
   border: 1px solid var(--test-stroke, #fff);
   background: var(

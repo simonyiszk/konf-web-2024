@@ -5,8 +5,6 @@ import { FaTimes } from 'react-icons/fa';
 
 import { RegistraionData } from '@/models/models';
 
-// import { WhiteButton } from '../white-button';
-
 type Props = {
   data: RegistraionData;
 };
@@ -15,10 +13,15 @@ export function RegisterTile({ data: { url: cooltixEventId, buttonText } }: Prop
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className='sm:col-span-6 tile w-full p-10 cursor-pointer' onClick={() => setIsOpen(true)}>
-        <h1>{buttonText}</h1>
+      <div
+        className='sm:col-span-6 tile w-full cursor-pointer flex flex-col justify-end'
+        onClick={() => setIsOpen(true)}
+      >
+        <h2 className='text-4xl sm:text-5xl font-bold'>{buttonText}</h2>
+        <p className='text-lg sm:text-xl font-medium'>
+          Regisztrálj már most a konferenciára a Cooltix rendszerén keresztül!
+        </p>
       </div>
-      {/* <WhiteButton onClick={() => setIsOpen(true)}>{buttonText}</WhiteButton> */}
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className='relative z-50'>
         <div className='fixed inset-0 bg-black/80' aria-hidden='true' />
 

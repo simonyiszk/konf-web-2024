@@ -2,9 +2,7 @@ import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
-import { CountdownTile } from '@/components/tiles/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
-import { MobilAppTile } from '@/components/tiles/mobil-app-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
@@ -37,18 +35,18 @@ export default async function Landing() {
         </div>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full my-40 gap-6'>
+      <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full my-40 gap-6 px-6 xl:px-0'>
         {data.registration.url && <RegisterTile data={data.registration} />}
 
         <StatTile desc='konferenciát rendeztünk már' number='20' />
-        <StatTile desc='konferenciát rendeztünk már' number='20' />
-        <StatTile desc='konferenciát rendeztünk már' number='20' />
+        <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
+        <StatTile desc='előadó' number='14' />
 
         {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
         {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
 
-        <CountdownTile />
-        {(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />}
+        {/* <CountdownTile />
+        {(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
       </div>
 
       <SponsorSection companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />

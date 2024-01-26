@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
+import { CountdownTile } from '@/components/tiles/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
@@ -45,8 +46,8 @@ export default async function Landing() {
         {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
         {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
 
-        {/* <CountdownTile />
-        {(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
+        <CountdownTile />
+        {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
       </div>
 
       <SponsorSection companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />

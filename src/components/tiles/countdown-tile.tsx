@@ -10,10 +10,10 @@ export function CountdownTile() {
     if (target.getTime() > Date.now()) setDuration(intervalToDuration({ start: new Date(), end: target }));
   };
   useEffect(() => {
-    setTimeout(() => setInterval(update, 1000), 1000);
+    setTimeout(() => setInterval(update, 1000), 2000);
   }, []);
   return (
-    <div className='tile sm:col-span-3 p-10 flex flex-row items-center justify-center gap-4'>
+    <div className='tile sm:col-span-3 p-10 flex flex-row sm:flex-col lg:flex-row items-center justify-center gap-4'>
       <p className='text-xl sm:text-2xl font-medium'>még</p>
       <div className='flex flex-col items-center'>
         <p className='text-3xl sm:text-4xl font-bold'>

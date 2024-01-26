@@ -9,7 +9,7 @@ import { Checkbox } from '@/components/checkbox';
 
 import { WhiteButton } from '../white-button';
 
-export function NewsletterModals() {
+export function NewsletterTile() {
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
   const [isSuccessOpen, setIsSuccessOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +48,12 @@ export function NewsletterModals() {
 
   return (
     <>
-      <WhiteButton onClick={() => setIsSubscribeOpen(true)}>Feliratkozás a hírlevélre</WhiteButton>
+      <div className='sm:col-span-3 tile w-full cursor-pointer flex flex-col ' onClick={() => setIsSubscribeOpen(true)}>
+        <h2 className='text-4xl sm:text-5xl font-bold'>Hírlevél</h2>
+        <p className='text-lg sm:text-xl font-medium mt-4'>
+          Addig is iratkozz fel a hírlevelünkre, hogy elsőként értesülj az előadásokról!
+        </p>
+      </div>
       <Dialog open={isSubscribeOpen} onClose={onSubscribeClose} className='relative z-50'>
         <div className='fixed inset-0 bg-black/80' aria-hidden='true' />
 
@@ -63,8 +68,8 @@ export function NewsletterModals() {
 
             <div className='flex flex-col gap-2'>
               <p className='mb-2'>
-                Ha szeretnél értesülni a legfontosabb hírekről, mint például előadások és nyereményjáték, iratkozz fel a
-                hírlevelünkre!
+                Ha szeretnél értesülni a legfontosabb hírekről, mint például az előadások és azok menetrendje, iratkozz
+                fel a hírlevelünkre!
               </p>
               <div>
                 <Checkbox

@@ -4,6 +4,7 @@ import { metadata } from '@/app/layout';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import { CountdownTile } from '@/components/tiles/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
+import { NewsletterTile } from '@/components/tiles/newsletter-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
@@ -47,6 +48,7 @@ export default async function Landing() {
         {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
 
         <CountdownTile />
+        <NewsletterTile />
         {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
       </div>
 

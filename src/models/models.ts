@@ -46,7 +46,7 @@ export interface Presentation {
 
 export interface RegistraionData {
   buttonText: string;
-  url: string;
+  cooltixEventId: string;
 }
 
 export interface MobilAppData {
@@ -59,6 +59,7 @@ export interface GiveawayData {
   sectionTitle: string;
   description: string;
   pictureUrl: string;
+  rules: string;
 }
 
 export interface PromoVideoData {

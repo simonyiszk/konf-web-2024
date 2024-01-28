@@ -4,6 +4,7 @@
 
 body {
   @apply bg-space h-screen text-white bg-cover bg-center;
+  font-family: var(--font-raleway);
 }
 img {
   @apply select-none;
@@ -11,10 +12,23 @@ img {
 
 h1 {
   @apply text-3xl sm:text-4xl md:text-5xl font-bold;
+  font-family: var(--font-recharge);
 }
 
 h2 {
   @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+}
+
+.markdown ul {
+  @apply list-disc ml-6;
+}
+
+.markdown ol {
+  @apply list-decimal ml-6;
+}
+
+.markdown a {
+  @apply underline;
 }
 
 .brand-link:hover {

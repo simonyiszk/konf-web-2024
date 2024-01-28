@@ -4,9 +4,10 @@ import { GiveawayData } from '@/models/models';
 
 type Props = {
   data: GiveawayData;
+  showLink?: boolean;
 };
 
-export function GiveawayTile({ data: { description, sectionTitle, pictureUrl } }: Props) {
+export function GiveawayTile({ data: { description, sectionTitle, pictureUrl }, showLink = true }: Props) {
   const [preText, shinyText, postText] = description.split('***');
   return (
     <div className='tile sm:col-span-6 p-10'>
@@ -16,9 +17,11 @@ export function GiveawayTile({ data: { description, sectionTitle, pictureUrl } }
           <p className='text-lg sm:text-xl font-medium text-justify w-full'>{preText}</p>
           <h3 className='text-5xl sm:text-6xl font-bold text-[#FFE500]'>{shinyText}</h3>
           <p className='text-lg mb-8 sm:text-xl font-medium text-justify w-full'>{postText}</p>
-          <Link className='text-2xl font-medium underline' href='/giveaway'>
-            További részleteket itt találsz
-          </Link>
+          {showLink && (
+            <Link className='text-2xl font-medium underline' href='/giveaway'>
+              További részleteket itt találsz
+            </Link>
+          )}
         </div>
         <img className='w-full aspect-[16/9]' src={pictureUrl} />
       </div>

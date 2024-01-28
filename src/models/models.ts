@@ -59,6 +59,7 @@ export interface GiveawayData {
   sectionTitle: string;
   description: string;
   pictureUrl: string;
+  rules: string;
 }
 
 export interface PromoVideoData {

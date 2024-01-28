@@ -28,7 +28,7 @@ export default async function Landing() {
       </div>
 
       <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full my-40 gap-6 px-6 xl:px-0'>
-        {data.registration.url && <RegisterTile data={data.registration} />}
+        {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
         <StatTile desc='konferenciát rendeztünk már' number='20' />
         <StatTile desc='percnyi előadás egy nap alatt' number='700+' />

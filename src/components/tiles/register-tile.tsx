@@ -9,7 +9,7 @@ type Props = {
   data: RegistraionData;
 };
 
-export function RegisterTile({ data: { url: cooltixEventId, buttonText } }: Props) {
+export function RegisterTile({ data: { cooltixEventId, buttonText } }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>

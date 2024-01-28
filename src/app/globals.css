@@ -31,6 +31,24 @@ h2 {
   @apply underline;
 }
 
+.planet {
+  @apply absolute hidden xl:block;
+}
+
+.red-planet {
+  height: 300px;
+  width: 626px;
+  bottom: 0;
+  right: -340px;
+}
+
+.white-planet {
+  height: 300px;
+  width: 626px;
+  bottom: -120px;
+  left: -330px;
+}
+
 .brand-link:hover {
   filter: brightness(0) saturate(100%) invert(69%) sepia(40%) saturate(6364%) hue-rotate(307deg) brightness(88%)
     contrast(87%);

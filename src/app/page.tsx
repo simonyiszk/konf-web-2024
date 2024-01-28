@@ -11,6 +11,8 @@ import { StatTile } from '@/components/tiles/stat-tile';
 import { getIndexData } from '@/models/get-index-data';
 
 import konfLogo from '../../public/img/konf.svg';
+import redPlanet from '../../public/img/red-planet.png';
+import whitePlanet from '../../public/img/white-planet.png';
 
 export default async function Landing() {
   const data = await getIndexData();
@@ -28,22 +30,24 @@ export default async function Landing() {
           <p className='font-semibold text-4xl sm:text-6xl hero-text-shadow'>24. 03. 19.</p>
         </div>
       </div>
+      <div className='relative'>
+        <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full my-40 gap-6 px-6 xl:px-0'>
+          {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
-      <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full my-40 gap-6 px-6 xl:px-0'>
-        {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
+          <StatTile desc='konferenciát rendeztünk már' number='20' />
+          <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
+          <StatTile desc='előadó' number='14' />
 
-        <StatTile desc='konferenciát rendeztünk már' number='20' />
-        <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
-        <StatTile desc='előadó' number='14' />
+          {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
+          {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
 
-        {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
-        {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
-
-        <CountdownTile />
-        <NewsletterTile />
-        {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
+          <CountdownTile />
+          <NewsletterTile />
+          {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
+        </div>
+        <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet' />
+        <Image src={whitePlanet} alt='Fehér bolygó' className='planet white-planet' />
       </div>
-
       <SponsorSection companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />
     </>
   );

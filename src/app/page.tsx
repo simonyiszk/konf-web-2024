@@ -32,24 +32,26 @@ export default async function Landing() {
         </div>
       </div>
       <div className='relative'>
-        <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-6 xl:px-0'>
-          {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
+        <div className='relative'>
+          <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-6 xl:px-0'>
+            {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
-          <StatTile desc='konferenciát rendeztünk már' number='20' />
-          <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
-          <StatTile desc='előadó' number='14' />
+            <StatTile desc='konferenciát rendeztünk már' number='20' />
+            <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
+            <StatTile desc='előadó' number='14' />
 
-          {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
-          {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
+            {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
+            {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
 
-          <CountdownTile />
-          <NewsletterTile />
-          {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
+            <CountdownTile />
+            <NewsletterTile />
+            {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
+          </div>
+          <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet' />
         </div>
-        <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet' />
+        {data.previousConferences.conferences.length > 0 && <ImageCarousel data={data.previousConferences} />}
+        <Image src={whitePlanet} alt='Fehér bolygó' className='planet white-planet' />
       </div>
-      {data.previousConferences.conferences.length > 0 && <ImageCarousel data={data.previousConferences} />}
-      {/* <Image src={whitePlanet} alt='Fehér bolygó' className='planet white-planet' /> */}
       <SponsorSection companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />
     </>
   );

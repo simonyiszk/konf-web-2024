@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
-import { ImageCarousel } from '@/components/image-carousel';
+import { ImageCarouselSection } from '@/components/image-carousel/image-carousel-section';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import { CountdownTile } from '@/components/tiles/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
@@ -49,7 +49,7 @@ export default async function Landing() {
           </div>
           <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet' />
         </div>
-        {data.previousConferences.conferences.length > 0 && <ImageCarousel data={data.previousConferences} />}
+        {data.previousConferences.conferences.length > 0 && <ImageCarouselSection data={data.previousConferences} />}
         <Image src={whitePlanet} alt='Fehér bolygó' className='planet white-planet' />
       </div>
       <SponsorSection companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />

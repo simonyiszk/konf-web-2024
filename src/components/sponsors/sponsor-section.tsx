@@ -17,16 +17,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
     <div className='w-full bg-white'>
       <section className={styles.section}>
         <h2 className='text-3xl font-bold'>{sectionTitle}</h2>
-        <div className='flex flex-col justify-center'>
-          <h3 className='mb-auto text-3xl'>Főtámogató</h3>
-          <div className='my-auto flex flex-wrap items-center justify-evenly'>
-            {mainSponsor?.logoUrl && (
-              <div className='mx-0 h-auto w-72 sm:w-96 2xl:w-80'>
-                <SponsorLogo company={mainSponsor} />
-              </div>
-            )}
-          </div>
-        </div>
+
         <div>
           <h3 className='text-3xl'>Kiemelt támogatók</h3>
           <div className={styles.containerMany}>
@@ -37,6 +28,16 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
                     <SponsorLogo key={c.name} company={c} />
                   </div>
                 )
+            )}
+          </div>
+        </div>
+        <div className='flex flex-col justify-center'>
+          <h3 className='mb-auto text-3xl'>Főtámogató</h3>
+          <div className='my-auto flex flex-wrap items-center justify-evenly'>
+            {mainSponsor?.logoUrl && (
+              <div className='mx-0 h-auto w-72 sm:w-96 2xl:w-80'>
+                <SponsorLogo company={mainSponsor} />
+              </div>
             )}
           </div>
         </div>

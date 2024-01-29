@@ -14,33 +14,24 @@ type Props = {
   data: PrevConfData;
 };
 
-function getIndexBound() {
-  if (window.innerWidth < 650) return 1;
-  if (window.innerWidth < 1000) return 2;
-  if (window.innerWidth < 1350) return 3;
-  return 4;
-}
-
 export function ImageCarousel({ data: { conferences, sectionTitle } }: Props) {
   const [index, setIndex] = useState(-1);
   const images = conferences[0].imageUrls;
   return (
-    <div className='my-40 '>
+    <div className='my-40'>
       <h2 className='flex justify-center mb-4'>{sectionTitle}</h2>
-      <div className='flex gap-6 justify-center w-full max-w-6xl'>
-        {images
-          .filter((_, i) => i < getIndexBound())
-          .map((imageUrl, idx) => (
-            <Image
-              onClick={() => setIndex(idx)}
-              src={imageUrl}
-              key={imageUrl}
-              alt='Kép korábbi konferenciáról'
-              className='h-full cursor-pointer'
-              height={225}
-              width={300}
-            />
-          ))}
+      <div className='flex gap-6  w-full max-w-6xl overflow-hidden px-6 xl:px-0'>
+        {images.map((imageUrl, idx) => (
+          <Image
+            onClick={() => setIndex(idx)}
+            src={imageUrl}
+            key={imageUrl}
+            alt='Kép korábbi konferenciáról'
+            className='h-full cursor-pointer'
+            height={225}
+            width={300}
+          />
+        ))}
       </div>
       <Lightbox
         open={index > -1}

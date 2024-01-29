@@ -68,11 +68,13 @@ export interface PromoVideoData {
   description: string;
 }
 
+export interface PrevConfData {
+  sectionTitle: string;
+  conferences: Conference[];
+}
+
 export interface IndexPageData {
-  previousConferences: {
-    sectionTitle: string;
-    conferences: Conference[];
-  };
+  previousConferences: PrevConfData;
   registration: RegistraionData;
   mobilApp: MobilAppData;
   giveaway: GiveawayData;

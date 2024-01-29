@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { metadata } from '@/app/layout';
+import { ImageCarousel } from '@/components/image-carousel';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import { CountdownTile } from '@/components/tiles/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
@@ -31,7 +32,7 @@ export default async function Landing() {
         </div>
       </div>
       <div className='relative'>
-        <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full my-40 gap-6 px-6 xl:px-0'>
+        <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-6 xl:px-0'>
           {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
           <StatTile desc='konferenciát rendeztünk már' number='20' />
@@ -46,8 +47,9 @@ export default async function Landing() {
           {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
         </div>
         <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet' />
-        <Image src={whitePlanet} alt='Fehér bolygó' className='planet white-planet' />
       </div>
+      {data.previousConferences.conferences.length > 0 && <ImageCarousel data={data.previousConferences} />}
+      {/* <Image src={whitePlanet} alt='Fehér bolygó' className='planet white-planet' /> */}
       <SponsorSection companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />
     </>
   );

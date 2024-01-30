@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { getIndexData } from '@/models/get-index-data';
 
 export default async function asyncontact() {
@@ -9,14 +7,6 @@ export default async function asyncontact() {
   return (
     <div className='flex flex-col px-6 xl:px-0'>
       <h1 className='mb-16 mt-8'>Kapcsolat</h1>
-
-      <Link
-        href='mailto:konferencia@simonyi.bme.hu'
-        className='my-8 text-xl sm:text-2xl md:text-3xl font-semibold text-center hover:text-brand'
-        target='blank'
-      >
-        konferencia@simonyi.bme.hu
-      </Link>
 
       <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-16'>
         {sortedOrganizers.map((organiser) => (

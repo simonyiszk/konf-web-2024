@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body:has(.yarl__root) {
+  @apply bg-none bg-black; /* TODO ez se szép, de jobb mint nélküle */
+}
+
 body {
-  @apply bg-space h-screen text-white bg-cover bg-center;
+  @apply bg-space h-screen text-white bg-contain bg-center;
   font-family: var(--font-raleway);
 }
 img {
@@ -49,9 +53,10 @@ h2 {
   left: -350px;
 }
 
+/* generate filter to change the color of an svg here: https://codepen.io/sosuke/pen/Pjoqqp */
 .brand-link:hover {
-  filter: brightness(0) saturate(100%) invert(69%) sepia(40%) saturate(6364%) hue-rotate(307deg) brightness(88%)
-    contrast(87%);
+  filter: brightness(0) saturate(100%) invert(60%) sepia(7%) saturate(0%) hue-rotate(323deg) brightness(92%)
+    contrast(95%);
 }
 
 .hero-text-shadow {

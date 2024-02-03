@@ -5,7 +5,6 @@ import styles from './styles.module.css';
 type Props = {
   children: React.ReactNode;
   className?: string;
-  onClick?: () => void;
 };
 
 function TileBase({ children, className }: Props) {

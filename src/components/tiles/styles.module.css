@@ -1,0 +1,20 @@
+.card {
+  --rotation: 150deg;
+  --border-rounding: 30px;
+
+  border-radius: var(--border-rounding);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(calc(var(--rotation)), rgba(128, 128, 128, 1) 0%, rgba(0, 212, 255, 0) 20%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.card-body {
+  border-radius: var(--border-rounding);
+  background: radial-gradient(50.13% 157.63% at 49.87% 50.22%, rgba(255, 255, 255, 0.1) 14.5%, rgba(0, 0, 0, 0.1) 100%)
+    #101010;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 2px 15px rgba(255, 255, 255, 0.2);
+}

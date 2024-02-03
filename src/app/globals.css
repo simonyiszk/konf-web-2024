@@ -36,7 +36,7 @@ h2 {
 }
 
 .planet {
-  @apply absolute hidden xl:block;
+  @apply absolute hidden xl:block select-none pointer-events-none;
 }
 
 .red-planet {

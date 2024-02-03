@@ -8,6 +8,7 @@ import { addToGroup } from '@/app/actions';
 import { Checkbox } from '@/components/checkbox';
 
 import { WhiteButton } from '../white-button';
+import { Tile } from './tile';
 
 export function NewsletterTile() {
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
@@ -48,11 +49,15 @@ export function NewsletterTile() {
 
   return (
     <>
-      <div className='sm:col-span-3 tile w-full cursor-pointer flex flex-col ' onClick={() => setIsSubscribeOpen(true)}>
-        <h2 className='text-4xl sm:text-5xl font-bold'>Hírlevél</h2>
-        <p className='text-lg sm:text-xl font-medium mt-4'>
-          Addig is iratkozz fel a hírlevelünkre, hogy elsőként értesülj az előadásokról!
-        </p>
+      <div className='sm:col-span-3 w-full h-full' onClick={() => setIsSubscribeOpen(true)}>
+        <Tile className='w-full h-full'>
+          <Tile.Body className='w-full cursor-pointer flex flex-col'>
+            <h2 className='text-4xl sm:text-5xl font-bold'>Hírlevél</h2>
+            <p className='text-lg sm:text-xl font-medium mt-4'>
+              Addig is iratkozz fel a hírlevelünkre, hogy elsőként értesülj az előadásokról!
+            </p>
+          </Tile.Body>
+        </Tile>
       </div>
       <Dialog open={isSubscribeOpen} onClose={onSubscribeClose} className='relative z-50'>
         <div className='fixed inset-0 bg-black/80' aria-hidden='true' />

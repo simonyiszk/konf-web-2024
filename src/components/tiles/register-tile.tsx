@@ -1,9 +1,12 @@
 'use client';
 import { Dialog } from '@headlessui/react';
 import { useState } from 'react';
+import React from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 import { RegistraionData } from '@/models/models';
+
+import { Tile } from './tile';
 
 type Props = {
   data: RegistraionData;
@@ -13,14 +16,15 @@ export function RegisterTile({ data: { cooltixEventId, buttonText } }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div
-        className='sm:col-span-6 tile w-full cursor-pointer flex flex-col justify-end'
-        onClick={() => setIsOpen(true)}
-      >
-        <h2 className='text-4xl sm:text-5xl font-bold'>{buttonText}</h2>
-        <p className='text-lg sm:text-xl font-medium'>
-          Regisztrálj már most a konferenciára a Cooltix rendszerén keresztül!
-        </p>
+      <div onClick={() => setIsOpen(true)} className='w-full sm:col-span-6'>
+        <Tile className=' w-full h-full cursor-pointer'>
+          <Tile.Body className='flex flex-col justify-end'>
+            <h2 className='text-4xl sm:text-5xl font-bold'>{buttonText}</h2>
+            <p className='text-lg sm:text-xl font-medium'>
+              Regisztrálj már most a konferenciára a Cooltix rendszerén keresztül!
+            </p>
+          </Tile.Body>
+        </Tile>
       </div>
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className='relative z-50'>
         <div className='fixed inset-0 bg-black/80' aria-hidden='true' />

@@ -3,29 +3,19 @@
 import { intervalToDuration } from 'date-fns';
 import { useEffect, useState } from 'react';
 
-import { Tile } from './tile';
+import { CountDownElement } from '@/components/tiles/countdown-tile/countdown-element';
 
-type CountdownElementProps = {
-  value: any;
-  label: string;
-};
-function CountDownElement({ value, label }: CountdownElementProps) {
-  return (
-    <div className='flex flex-col items-center'>
-      <p className='text-6xl font-bold'>{value}</p>
-      <p className='text-xl sm:text-2xl'>{label}</p>
-    </div>
-  );
-}
+import { Tile } from '../tile';
 
-export function CountdownTile() {
+export default function CountdownTile() {
   const target = new Date(1710846000000); // 2024. 03. 19. 12:00
   const [duration, setDuration] = useState(intervalToDuration({ start: new Date(), end: target }));
   const update = () => {
     if (target.getTime() > Date.now()) setDuration(intervalToDuration({ start: new Date(), end: target }));
   };
   useEffect(() => {
-    setTimeout(() => setInterval(update, 1000), 2000);
+    const interval = setInterval(update, 1000);
+    return () => clearInterval(interval);
   }, []);
   return (
     <Tile className='sm:col-span-3'>

@@ -16,7 +16,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
   return (
     <div className='w-full bg-white'>
       <section className={styles.section}>
-        <h2 className='text-3xl font-bold'>{sectionTitle}</h2>
+        <h2 className='text-3xl font-bold order-first'>{sectionTitle}</h2>
 
         <div>
           <h3 className='text-3xl'>Kiemelt támogatók</h3>
@@ -31,7 +31,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
             )}
           </div>
         </div>
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col justify-center -order-1 2xl:order-none'>
           <h3 className='mb-auto text-3xl'>Főtámogató</h3>
           <div className='my-auto flex flex-wrap items-center justify-evenly'>
             {mainSponsor?.logoUrl && (

@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 
 import { metadata } from '@/app/layout';
 import { ImageCarouselSection } from '@/components/image-carousel/image-carousel-section';
@@ -19,6 +20,9 @@ const CountdownTile = dynamic(() => import('@/components/tiles/countdown-tile/co
 
 export default async function Landing() {
   const data = await getIndexData();
+  if (!data) {
+    redirect('/error');
+  }
   return (
     <>
       <div className='p-10 relative'>

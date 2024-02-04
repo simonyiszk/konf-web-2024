@@ -1,9 +1,14 @@
+import { redirect } from 'next/navigation';
+
 import { OrganiserTile } from '@/components/tiles/organizer-tile';
 import { getIndexData } from '@/models/get-index-data';
 
 export default async function asyncontact() {
-  const { organisers } = await getIndexData();
-  const sortedOrganizers = organisers.sort((o) => o.priority);
+  const data = await getIndexData();
+  if (!data) {
+    redirect('/error');
+  }
+  const sortedOrganizers = data.organisers.sort((o) => o.priority);
 
   const org = {
     main: sortedOrganizers.filter((o) => o.priority === 0),

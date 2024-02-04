@@ -31,7 +31,6 @@ export function SponsorLogo({ company: { logoUrl, name, url } }: Props) {
     >
       <div className='relative p-2'>
         <img src={logoUrl} alt={`${name} logo`} />
-        {/* TODO ??? */}
       </div>
     </ConditionalWrapper>
   );

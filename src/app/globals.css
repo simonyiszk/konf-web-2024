@@ -35,6 +35,14 @@ h2 {
   @apply underline;
 }
 
+.markdown h2 {
+  @apply my-2;
+}
+
+.markdown h1 {
+  @apply mb-4;
+}
+
 .planet {
   @apply absolute hidden xl:block select-none pointer-events-none;
 }

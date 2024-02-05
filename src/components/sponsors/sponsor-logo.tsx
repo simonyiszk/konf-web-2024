@@ -1,4 +1,6 @@
-import { Company } from '@/models/models';
+import clsx from 'clsx';
+
+import { Company, SponsorCategory } from '@/models/models';
 
 function ConditionalWrapper({
   condition,
@@ -16,7 +18,7 @@ type Props = {
   company: Company;
 };
 
-export function SponsorLogo({ company: { logoUrl, name, url } }: Props) {
+export function SponsorLogo({ company: { logoUrl, name, url, category } }: Props) {
   if (!logoUrl) {
     return null;
   }
@@ -30,7 +32,11 @@ export function SponsorLogo({ company: { logoUrl, name, url } }: Props) {
       )}
     >
       <div className='relative p-2'>
-        <img src={logoUrl} alt={`${name} logo`} />
+        <img
+          src={logoUrl}
+          alt={`${name} logo`}
+          className={clsx(category === SponsorCategory.MAIN_SPONSOR ? '' : 'max-h-[75px]', 'mx-auto')}
+        />
       </div>
     </ConditionalWrapper>
   );

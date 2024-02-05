@@ -24,7 +24,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
             {featuredSponsors.map(
               (c) =>
                 c.logoUrl && (
-                  <div key={c.name} className='col-span-2 h-auto max-w-[200px] w-full'>
+                  <div key={c.name} className='col-span-2 h-auto max-w-[200px] w-full max-h-[75px]'>
                     <SponsorLogo company={c} />
                   </div>
                 )
@@ -45,7 +45,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
           <h3 className='text-3xl'>További támogatóink</h3>
           <div className={styles.containerMany}>
             {regularSponsors.map((c) => (
-              <div key={c.name} className='col-span-2 h-auto max-w-[170px] w-full'>
+              <div key={c.name} className='col-span-2 h-auto max-w-[170px] w-full max-h-[75px]'>
                 <SponsorLogo company={c} />
               </div>
             ))}

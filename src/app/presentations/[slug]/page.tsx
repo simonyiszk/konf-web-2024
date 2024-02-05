@@ -56,7 +56,6 @@ export default async function PresentationBySlug({ params }: { params: { slug: s
                     />
                   </div>
                 )}
-                )
               </div>
             </div>
           </div>

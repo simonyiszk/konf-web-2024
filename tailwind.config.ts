@@ -17,6 +17,9 @@ const config: Config = {
       },
       colors: {
         brand: '#8f8e8f',
+        konf: {
+          yellow: '#FFE500',
+        },
       },
       transitionProperty: {
         'max-height': 'max-height',

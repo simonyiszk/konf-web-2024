@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { GiveawayData } from '@/models/models';
@@ -26,7 +27,9 @@ export function GiveawayTile({ data: { description, sectionTitle, pictureUrl }, 
               </Link>
             )}
           </div>
-          <img className='w-full aspect-[16/9]' src={pictureUrl} />
+          <div className='relative'>
+            <Image objectFit='contain' src={pictureUrl} alt='Nintendo Switch OLED' fill />
+          </div>
         </div>
       </Tile.Body>
     </Tile>

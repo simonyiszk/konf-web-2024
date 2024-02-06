@@ -5,11 +5,19 @@ import styles from './styles.module.css';
 type Props = {
   children: React.ReactNode;
   className?: string;
+  clickable?: boolean;
 };
 
-function TileBase({ children, className }: Props) {
+function TileBase({ children, className, clickable }: Props) {
   return (
-    <div className={clsx(styles.card, 'overflow-hidden relative p-[1.5px] min-h-[225px]', className)}>
+    <div
+      className={clsx(
+        styles.card,
+        'overflow-hidden relative p-[1.5px] min-h-[225px]',
+        clickable && styles['card-clickable'],
+        className
+      )}
+    >
       <>{children}</>
     </div>
   );

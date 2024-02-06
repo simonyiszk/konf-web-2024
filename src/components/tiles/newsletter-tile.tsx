@@ -50,7 +50,7 @@ export function NewsletterTile() {
   return (
     <>
       <div className='sm:col-span-3 w-full h-full' onClick={() => setIsSubscribeOpen(true)}>
-        <Tile className='w-full h-full'>
+        <Tile clickable className='w-full h-full'>
           <Tile.Body className='w-full cursor-pointer flex flex-col'>
             <h2 className='text-4xl sm:text-5xl font-bold'>Hírlevél</h2>
             <p className='text-lg sm:text-xl font-medium mt-4'>

@@ -37,28 +37,26 @@ export default async function PresentationBySlug({ params }: { params: { slug: s
               </div>
             </Link>
           </h3>
-          <div className='shadow-md overflow-hidden md:max-w-5xl'>
-            <h1 className='mb-16'>{result.title}</h1>
-            <div className='flex flex-col md:flex-row gap-8'>
-              <p className='text-stone-200 text-[20px] whitespace-pre-line'>{result.description}</p>
-              <div className='flex flex-col items-center flex-shrink-0 text-center order-first md:order-last'>
-                <img
-                  src={result.presenter.pictureUrl}
-                  className='object-cover w-[308px] h-[308px] rounded-3xl'
-                  alt='Presentation Image'
-                />
-                <p className='block mt-4 text-[32px] leading-tight font-bold text-white-900'>{result.presenter.name}</p>
-                <p className='block mt-0.5 text-[20px]  text-[#FFE500]'>{result.presenter.rank}</p>
-                {result.presenter.company && (
-                  <div className='mt-1.5 bg-white rounded-xl max-w-[308px] max-h-[75px]'>
-                    <img
-                      src={result.presenter.company.logoUrl}
-                      alt='Company logo'
-                      className='p-2 max-w-full max-h-[75px] object-fit m-auto'
-                    />
-                  </div>
-                )}
-              </div>
+          <h1 className='mb-16'>{result.title}</h1>
+          <div className='flex flex-col md:flex-row gap-8'>
+            <p className='text-stone-200 text-[20px] whitespace-pre-line'>{result.description}</p>
+            <div className='flex flex-col items-center flex-shrink-0 text-center order-first md:order-last'>
+              <img
+                src={result.presenter.pictureUrl}
+                className='object-cover w-[308px] h-[308px] rounded-3xl'
+                alt='Presentation Image'
+              />
+              <p className='block mt-4 text-[32px] leading-tight font-bold text-white-900'>{result.presenter.name}</p>
+              <p className='block mt-0.5 text-[20px]  text-[#FFE500]'>{result.presenter.rank}</p>
+              {result.presenter.company && (
+                <div className='mt-1.5 bg-white rounded-xl max-w-[308px] max-h-[75px]'>
+                  <img
+                    src={result.presenter.company.logoUrl}
+                    alt='Company logo'
+                    className='p-2 max-w-full max-h-[75px] object-fit m-auto'
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -30,11 +30,7 @@ type TileBodyProps = {
 };
 
 function TileBody({ children, className, padding = 10 }: TileBodyProps) {
-  return (
-    <div className={clsx(styles['card-body'], `p-${padding}`, 'w-full h-full', className)}>
-      {children}
-    </div>
-  );
+  return <div className={clsx(styles['card-body'], `p-${padding}`, 'w-full h-full', className)}>{children}</div>;
 }
 
 export const Tile = TileBase as typeof TileBase & {

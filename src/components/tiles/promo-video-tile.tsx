@@ -16,8 +16,9 @@ export function PromoVideoTile({ data: { description, sectionTitle } }: Props) {
           <video
             className='w-full aspect-[16/9]'
             controls
+            preload='none'
             src='/video/promo_video.mp4'
-            poster='/img/thumbnail.png'
+            poster='/img/thumbnail.webp'
           ></video>
         </div>
       </Tile.Body>

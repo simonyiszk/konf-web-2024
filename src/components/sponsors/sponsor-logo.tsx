@@ -33,6 +33,7 @@ export function SponsorLogo({ company: { logoUrl, name, url, category } }: Props
     >
       <div className='relative p-2'>
         <img
+          loading='lazy'
           src={logoUrl}
           alt={`${name} logo`}
           className={clsx(category === SponsorCategory.MAIN_SPONSOR ? '' : 'max-h-[75px]', 'mx-auto')}

@@ -1,10 +1,10 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
 import { metadata } from '@/app/layout';
 import { ImageCarouselSection } from '@/components/image-carousel/image-carousel-section';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
+import CountdownTile from '@/components/tiles/countdown-tile/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
 import { NewsletterTile } from '@/components/tiles/newsletter-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
@@ -15,8 +15,6 @@ import { getIndexData } from '@/models/get-index-data';
 import konfLogo from '../../public/img/konf.svg';
 import redPlanet from '../../public/img/red-planet.png';
 import whitePlanet from '../../public/img/white-planet.png';
-
-const CountdownTile = dynamic(() => import('@/components/tiles/countdown-tile/countdown-tile'), { ssr: false });
 
 export default async function Landing() {
   const data = await getIndexData();

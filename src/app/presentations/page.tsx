@@ -17,13 +17,13 @@ export default async function Presentations() {
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
         {data.presentations.map((presentation) => (
           <Tile key={presentation.title} clickable>
-            <Tile.Body padding={0}>
+            <Tile.Body padding='[1px]'>
               <div className='flex flex-col h-full'>
                 <Link href={`/presentations/${presentation.slug}`}>
                   <div className='relative'>
                     <img
                       src={presentation.presenter.pictureUrl}
-                      className='w-full aspect-square object-cover object-center rounded-b-[30px]'
+                      className='w-full aspect-square object-cover object-center rounded-[30px]'
                       alt='Presentation Image'
                     />
                     <div className='z-20 px-5 absolute text-center left-1/2 -translate-x-[50%] -translate-y-[50%] shadow-md rounded-xl overflow-hidden bg-[#FFE500]'>

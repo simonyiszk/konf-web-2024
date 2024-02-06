@@ -1,9 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { GiveawayData } from '@/models/models';
 
 import { Tile } from './tile';
-import Image from 'next/image';
 
 type Props = {
   data: GiveawayData;

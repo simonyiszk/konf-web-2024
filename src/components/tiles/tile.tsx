@@ -26,12 +26,12 @@ function TileBase({ children, className, clickable }: Props) {
 type TileBodyProps = {
   children: React.ReactNode;
   className?: string;
-  hidePadding?: boolean;
+  padding?: number;
 };
 
-function TileBody({ children, className, hidePadding = false }: TileBodyProps) {
+function TileBody({ children, className, padding = 10 }: TileBodyProps) {
   return (
-    <div className={clsx(styles['card-body'], hidePadding ? 'p-2' : 'p-10', 'w-full h-full', className)}>
+    <div className={clsx(styles['card-body'], `p-${padding}`, 'w-full h-full', className)}>
       {children}
     </div>
   );

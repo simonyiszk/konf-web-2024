@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 
 import { Tile } from '@/components/tiles/tile';
 import { getIndexData } from '@/models/get-index-data';
@@ -8,7 +8,7 @@ import slugify from '@/utils/slugify';
 export default async function Presentations() {
   const data = await getIndexData();
   if (!data) {
-    redirect('/error');
+    notFound();
   }
 
   return (

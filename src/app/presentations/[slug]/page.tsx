@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import { getIndexData } from '@/models/get-index-data';
@@ -23,7 +23,7 @@ const getPresentationBySlug = async (slug: string) => {
 export default async function PresentationBySlug({ params }: { params: { slug: string } }) {
   const presentation = await getPresentationBySlug(params.slug);
   if (!presentation) {
-    redirect('/error');
+    notFound();
   }
 
   const { title, description, presenter } = presentation;

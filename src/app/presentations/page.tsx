@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 
 import { Tile } from '@/components/tiles/tile';
 import { getIndexData } from '@/models/get-index-data';
+import slugify from '@/utils/slugify';
 
 export default async function Presentations() {
   const data = await getIndexData();
@@ -19,7 +20,7 @@ export default async function Presentations() {
           <Tile key={presentation.title} clickable>
             <Tile.Body padding='[1px]'>
               <div className='flex flex-col h-full'>
-                <Link href={`/presentations/${presentation.slug}`}>
+                <Link href={`/presentations/${slugify(presentation.title)}`}>
                   <div className='relative'>
                     <img
                       src={presentation.presenter.pictureUrl}

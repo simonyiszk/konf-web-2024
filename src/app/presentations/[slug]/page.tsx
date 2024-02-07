@@ -8,9 +8,10 @@ import slugify from '@/utils/slugify';
 export async function generateStaticParams() {
   const data = await getIndexData();
 
-  const slugs = data?.presentations?.map((p) => ({
-    slug: slugify(p.title),
-  }));
+  const slugs =
+    data?.presentations?.map((p) => ({
+      slug: slugify(p.title),
+    })) ?? [];
 
   return slugs;
 }

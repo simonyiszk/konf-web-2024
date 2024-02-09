@@ -24,7 +24,7 @@ const getPresentationBySlug = async (slug: string) => {
 export default async function PresentationBySlug({
   params,
 }: {
-  params: { slug: string; noBackArrow?: boolean; imageSize?: { x: string; y: string }; imageUrls?: string[] };
+  params: { slug: string; noBackArrow?: boolean; imageUrls?: string[] };
 }) {
   const presentation = await getPresentationBySlug(params.slug);
   if (!presentation) {
@@ -35,8 +35,8 @@ export default async function PresentationBySlug({
 
   let imageClass = 'object-cover rounded-3xl';
 
-  if (params.imageSize) {
-    imageClass += ` w-[${params.imageSize.x}] h-[${params.imageSize.y}]`;
+  if (params.noBackArrow) {
+    imageClass += ' w-96 h-96';
   } else {
     imageClass += ' w-[308px] h-[308px]';
   }
@@ -69,7 +69,7 @@ export default async function PresentationBySlug({
                     <img
                       src={image}
                       alt='presentation images'
-                      className='p-2 max-w-full max-h-[75px] object-fit mt-5'
+                      className='p-2 max-w-full max-h-[75px] object-fill mt-5'
                     />
                   );
                 })}

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
 import { metadata } from '@/app/layout';
+import PresentationBySlug from '@/app/presentations/[slug]/page';
 import { ImageCarouselSection } from '@/components/image-carousel/image-carousel-section';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
@@ -10,6 +11,7 @@ import { NewsletterTile } from '@/components/tiles/newsletter-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
+import { Tile } from '@/components/tiles/tile';
 import { getIndexData } from '@/models/get-index-data';
 
 import konfLogo from '../../public/img/konf.svg';
@@ -46,7 +48,46 @@ export default async function Landing() {
             <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
             <StatTile desc='előadó' number='14' />
 
+            <Tile className='col-span-6'>
+              <Tile.Body>
+                <PresentationBySlug
+                  params={{
+                    slug: 'kotlin-multiplatform-kodmegosztas-pragmatikusan',
+                    noBackArrow: true,
+                    imageSize: {
+                      x: '387px',
+                      y: '387px',
+                    },
+                    imageUrls: [
+                      'https://konf-api-staging.kir-dev.hu/cdn/public/KOTLIN_X7DTU1V0XFXU.svg',
+                      'https://konf-api-staging.kir-dev.hu/cdn/public/KODE_DOWK1X158B66.png',
+                    ],
+                  }}
+                />
+              </Tile.Body>
+            </Tile>
+
             {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
+
+            <Tile className='col-span-6'>
+              <Tile.Body>
+                <PresentationBySlug
+                  params={{
+                    slug: 'kotlin-multiplatform-kodmegosztas-pragmatikusan',
+                    noBackArrow: true,
+                    imageSize: {
+                      x: '387px',
+                      y: '387px',
+                    },
+                    imageUrls: [
+                      'https://konf-api-staging.kir-dev.hu/cdn/public/KOTLIN_X7DTU1V0XFXU.svg',
+                      'https://konf-api-staging.kir-dev.hu/cdn/public/KODE_DOWK1X158B66.png',
+                    ],
+                  }}
+                />
+              </Tile.Body>
+            </Tile>
+
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
 
             <CountdownTile />

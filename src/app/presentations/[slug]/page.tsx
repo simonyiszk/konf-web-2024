@@ -21,7 +21,11 @@ const getPresentationBySlug = async (slug: string) => {
   return data?.presentations.find((p) => slugify(p.title) === slug);
 };
 
-export default async function PresentationBySlug({ params }: { params: { slug: string } }) {
+export default async function PresentationBySlug({
+  params,
+}: {
+  params: { slug: string; noBackArrow?: boolean; imageSize?: { x: string; y: string }; imageUrls?: string[] };
+}) {
   const presentation = await getPresentationBySlug(params.slug);
   if (!presentation) {
     notFound();
@@ -32,21 +36,44 @@ export default async function PresentationBySlug({ params }: { params: { slug: s
   return (
     <>
       <div className='max-w-6xl w-full px-6 xl:px-0'>
-        <h3 className='mb-5 hover:text-brand'>
-          <Link href={`/presentations`}>
-            <div className='flex items-center'>
-              <FaArrowLeft />
-              <p className='ml-1'>Vissza az előadásokhoz </p>
-            </div>
-          </Link>
-        </h3>
-        <h1 className='mb-16'>{title}</h1>
+        {!params.noBackArrow && (
+          <h3 className='mb-5 w-fit hover:text-brand'>
+            <Link href={`/presentations`}>
+              <div className='flex items-center'>
+                <FaArrowLeft />
+                <p className='ml-1'>Vissza az előadásokhoz </p>
+              </div>
+            </Link>
+          </h3>
+        )}
+        {!params.noBackArrow && <h1 className='mb-16'>{title}</h1>}
         <div className='flex flex-col md:flex-row gap-8'>
-          <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>
+          {!params.noBackArrow && <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>}
+          {params.noBackArrow && (
+            <div>
+              <p className='mb-12 text-[40px] font-bold leading-10'>{title}</p>
+              <p className='text-stone-200 text-[20px] whitespace-pre-line'>
+                {description.slice(0, Math.floor(description.length / 2))}
+              </p>
+              <div className='flex'>
+                {params.imageUrls?.map((image) => {
+                  return (
+                    <img
+                      src={image}
+                      alt='presentation images'
+                      className='p-2 max-w-full max-h-[75px] object-fit mt-5'
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          )}
           <div className='flex flex-col items-center flex-shrink-0 text-center order-first md:order-last'>
             <img
               src={presenter.pictureUrl}
-              className='object-cover w-[308px] h-[308px] rounded-3xl'
+              className={`object-cover w-[${params.imageSize ? params.imageSize.x : '308px'}] h-[${
+                params.imageSize ? params.imageSize.y : '308px'
+              }] rounded-3xl`}
               alt='Presentation Image'
             />
             <p className='block mt-4 text-[32px] leading-tight font-bold text-white-900'>{presenter.name}</p>

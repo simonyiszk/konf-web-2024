@@ -33,6 +33,14 @@ export default async function PresentationBySlug({
 
   const { title, description, presenter } = presentation;
 
+  let imageClass = 'object-cover rounded-3xl';
+
+  if (params.imageSize) {
+    imageClass += ` w-[${params.imageSize.x}] h-[${params.imageSize.y}]`;
+  } else {
+    imageClass += ' w-[308px] h-[308px]';
+  }
+
   return (
     <>
       <div className='max-w-6xl w-full px-6 xl:px-0'>
@@ -69,13 +77,7 @@ export default async function PresentationBySlug({
             </div>
           )}
           <div className='flex flex-col items-center flex-shrink-0 text-center order-first md:order-last'>
-            <img
-              src={presenter.pictureUrl}
-              className={`object-cover w-[${params.imageSize ? params.imageSize.x : '308px'}] h-[${
-                params.imageSize ? params.imageSize.y : '308px'
-              }] rounded-3xl`}
-              alt='Presentation Image'
-            />
+            <img src={presenter.pictureUrl} className={imageClass} alt='Presentation Image' />
             <p className='block mt-4 text-[32px] leading-tight font-bold text-white-900'>{presenter.name}</p>
             <p className='block mt-0.5 text-[20px]  text-[#FFE500]'>{presenter.rank}</p>
             {presenter.company && (

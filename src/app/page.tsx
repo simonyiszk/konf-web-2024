@@ -54,10 +54,6 @@ export default async function Landing() {
                   params={{
                     slug: 'kotlin-multiplatform-kodmegosztas-pragmatikusan',
                     noBackArrow: true,
-                    imageSize: {
-                      x: '387px',
-                      y: '387px',
-                    },
                     imageUrls: [
                       'https://konf-api-staging.kir-dev.hu/cdn/public/KOTLIN_X7DTU1V0XFXU.svg',
                       'https://konf-api-staging.kir-dev.hu/cdn/public/KODE_DOWK1X158B66.png',
@@ -75,10 +71,6 @@ export default async function Landing() {
                   params={{
                     slug: 'kotlin-multiplatform-kodmegosztas-pragmatikusan',
                     noBackArrow: true,
-                    imageSize: {
-                      x: '387px',
-                      y: '387px',
-                    },
                     imageUrls: [
                       'https://konf-api-staging.kir-dev.hu/cdn/public/KOTLIN_X7DTU1V0XFXU.svg',
                       'https://konf-api-staging.kir-dev.hu/cdn/public/KODE_DOWK1X158B66.png',

@@ -37,9 +37,7 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
           {isFrontPage && (
             <div>
               <p className='mb-12 text-[40px] font-bold leading-10'>{title}</p>
-              <p className='text-stone-200 text-[20px] whitespace-pre-line'>
-                {description.slice(0, Math.floor(description.length / 2))}
-              </p>
+              <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>
               <div className='flex'>
                 {imageUrls?.map((image) => {
                   return (

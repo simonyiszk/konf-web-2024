@@ -14,10 +14,10 @@ export async function generateStaticParams() {
   );
 }
 
-export async function getPresentationBySlug(slug: string) {
+const getPresentationBySlug = async (slug: string) => {
   const data = await getIndexData();
   return data?.presentations.find((p) => slugify(p.title) === slug);
-}
+};
 
 export default async function PresentationBySlug({ params }: { params: { slug: string } }) {
   const presentation = await getPresentationBySlug(params.slug);

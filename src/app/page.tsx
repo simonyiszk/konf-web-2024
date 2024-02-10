@@ -48,7 +48,7 @@ export default async function Landing() {
             <StatTile desc='előadó' number='14' />
 
             <Tile className='sm:col-span-6'>
-              <Tile.Body>
+              <Tile.Body className='md:px-10 px-5'>
                 <Presentation presentation={kotlinPresentation} isFrontPage />
               </Tile.Body>
             </Tile>
@@ -56,7 +56,7 @@ export default async function Landing() {
             {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
 
             <Tile className='sm:col-span-6'>
-              <Tile.Body>
+              <Tile.Body className='md:px-10 px-5'>
                 <Presentation presentation={tresoritPresentation} isFrontPage />
               </Tile.Body>
             </Tile>

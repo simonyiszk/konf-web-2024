@@ -50,16 +50,6 @@ export default async function Landing() {
             <Tile className='sm:col-span-6'>
               <Tile.Body>
                 <Presentation presentation={kotlinPresentation} isFrontPage />
-                {/*<PresentationBySlug
-                  params={{
-                    slug: 'kotlin-multiplatform-kodmegosztas-pragmatikusan',
-                    isFrontPage: true,
-                    imageUrls: [
-                      'https://konf-api-staging.kir-dev.hu/cdn/public/KOTLIN_X7DTU1V0XFXU.svg',
-                      'https://konf-api-staging.kir-dev.hu/cdn/public/KODE_DOWK1X158B66.png',
-                    ],
-                  }}
-                />*/}
               </Tile.Body>
             </Tile>
 

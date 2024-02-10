@@ -1,41 +1,18 @@
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { FaArrowLeft } from 'react-icons/fa';
 
-import { getIndexData } from '@/models/get-index-data';
-import slugify from '@/utils/slugify';
+import { Presentation } from '@/models/models';
 
-export async function generateStaticParams() {
-  const data = await getIndexData();
-
-  const slugs =
-    data?.presentations?.map((p) => ({
-      slug: slugify(p.title),
-    })) ?? [];
-
-  return slugs;
-}
-
-export async function getPresentationBySlug(slug: string) {
-  const data = await getIndexData();
-  return data?.presentations.find((p) => slugify(p.title) === slug);
-}
-
-export default async function PresentationBySlug({
-  params,
-}: {
-  params: { slug: string; isFrontPage?: boolean; imageUrls?: string[] };
-}) {
-  const presentation = await getPresentationBySlug(params.slug);
-  if (!presentation) {
-    notFound();
-  }
-
-  const { title, description, presenter } = presentation;
+type PresentationProps = {
+  presentation: Presentation;
+  isFrontPage?: boolean | undefined;
+};
+export default async function Presentation({ presentation, isFrontPage }: PresentationProps) {
+  const { title, description, presenter, imageUrls } = presentation;
 
   let imageClass = 'object-cover rounded-3xl';
 
-  if (params.isFrontPage) {
+  if (isFrontPage) {
     imageClass += ' w-96 h-96';
   } else {
     imageClass += ' w-[308px] h-[308px]';
@@ -44,7 +21,7 @@ export default async function PresentationBySlug({
   return (
     <>
       <div className='max-w-6xl w-full px-6 xl:px-0'>
-        {!params.isFrontPage && (
+        {!isFrontPage && (
           <h3 className='mb-5 w-fit hover:text-brand'>
             <Link href={`/presentations`}>
               <div className='flex items-center'>
@@ -54,17 +31,17 @@ export default async function PresentationBySlug({
             </Link>
           </h3>
         )}
-        {!params.isFrontPage && <h1 className='mb-16'>{title}</h1>}
+        {!isFrontPage && <h1 className='mb-16'>{title}</h1>}
         <div className='flex flex-col md:flex-row gap-8'>
-          {!params.isFrontPage && <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>}
-          {params.isFrontPage && (
+          {!isFrontPage && <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>}
+          {isFrontPage && (
             <div>
               <p className='mb-12 text-[40px] font-bold leading-10'>{title}</p>
               <p className='text-stone-200 text-[20px] whitespace-pre-line'>
                 {description.slice(0, Math.floor(description.length / 2))}
               </p>
               <div className='flex'>
-                {params.imageUrls?.map((image) => {
+                {imageUrls?.map((image) => {
                   return (
                     <img
                       src={image}
@@ -78,7 +55,7 @@ export default async function PresentationBySlug({
           )}
           <div
             className={`flex flex-col items-center flex-shrink-0 text-center ${
-              params.isFrontPage ? '' : 'order-first'
+              isFrontPage ? '' : 'order-first'
             } md:order-last`}
           >
             <img src={presenter.pictureUrl} className={imageClass} alt='Presentation Image' />

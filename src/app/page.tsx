@@ -48,7 +48,7 @@ export default async function Landing() {
             <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
             <StatTile desc='előadó' number='14' />
 
-            <Tile className='col-span-6'>
+            <Tile className='sm:col-span-6'>
               <Tile.Body>
                 <PresentationBySlug
                   params={{
@@ -65,7 +65,7 @@ export default async function Landing() {
 
             {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
 
-            <Tile className='col-span-6'>
+            <Tile className='sm:col-span-6'>
               <Tile.Body>
                 <PresentationBySlug
                   params={{

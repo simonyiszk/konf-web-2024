@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import { Presentation } from '@/models/models';
+import slugify from '@/utils/slugify';
 
 type PresentationProps = {
   presentation: Presentation;
@@ -71,6 +72,56 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
           </div>
         </div>
       </div>
+      {isFrontPage && (
+        <div className='flex flex-row items-center justify-between pt-2'>
+          <div>
+            <Link
+              href={'/presentations'}
+              className='inline-flex items-center font-medium dark:text-white dark:hover:text-gray-400'
+            >
+              Összes előadás
+              <svg
+                className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 6 10'
+              >
+                <path
+                  stroke='currentColor'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='m1 9 4-4-4-4'
+                />
+              </svg>
+            </Link>
+          </div>
+          <div>
+            <Link
+              href={`/presentations/${slugify(presentation.title)}`}
+              className='inline-flex items-center font-medium dark:text-white dark:hover:text-gray-400'
+            >
+              Olvass többet
+              <svg
+                className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 6 10'
+              >
+                <path
+                  stroke='currentColor'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='m1 9 4-4-4-4'
+                />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   );
 }

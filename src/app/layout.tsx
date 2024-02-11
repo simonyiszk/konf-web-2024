@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import localFont from 'next/font/local';
+import PlausibleProvider from 'next-plausible';
 
 import { Footer } from '@/components/footer/footer';
 import { Navbar } from '@/components/navbar/navbar';
@@ -21,6 +22,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='hu'>
       <body className={`${raleway.variable} ${recharge.variable}`}>
+        <PlausibleProvider
+          domain='konferencia.simonyi.bme.hu'
+          customDomain='https://visit.kir-dev.hu'
+          selfHosted
+          enabled
+        />
         <main className='flex flex-col min-h-screen overflow-hidden'>
           <Navbar />
           <div className='flex-grow relative flex flex-col justify-center items-center'>{children}</div>

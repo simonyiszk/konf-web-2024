@@ -26,7 +26,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           domain='konferencia.simonyi.bme.hu'
           customDomain={process.env.NEXT_PUBLIC_PLAUSIBLE_URL}
           selfHosted
-          enabled
         />
         <main className='flex flex-col min-h-screen overflow-hidden'>
           <Navbar />

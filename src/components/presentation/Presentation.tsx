@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
@@ -11,17 +12,9 @@ type PresentationProps = {
 export default async function Presentation({ presentation, isFrontPage }: PresentationProps) {
   const { title, description, presenter, imageUrls } = presentation;
 
-  let imageClass = 'object-cover rounded-3xl';
-
-  if (isFrontPage) {
-    imageClass += ' w-96 h-96';
-  } else {
-    imageClass += ' w-[308px] h-[308px]';
-  }
-
   return (
     <>
-      <div className='max-w-6xl w-full px-6 xl:px-0'>
+      <div className={clsx('max-w-6xl w-full', isFrontPage ? '' : 'px-6 xl:px-0')}>
         {!isFrontPage && (
           <h3 className='mb-5 w-fit hover:text-brand'>
             <Link href={`/presentations`}>
@@ -37,15 +30,15 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
           {!isFrontPage && <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>}
           {isFrontPage && (
             <div>
-              <p className='mb-12 text-[40px] font-bold leading-10'>{title}</p>
+              <p className='mb-12 text-3xl sm:text-[40px] font-bold leading-10'>{title}</p>
               <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>
-              <div className='flex'>
+              <div className='flex flex-col sm:flex-row'>
                 {imageUrls?.map((image) => {
                   return (
                     <img
                       src={image}
                       alt='presentation images'
-                      className='p-2 max-w-full max-h-[75px] object-fill mt-5'
+                      className='p-2 max-w-full max-h-[75px] object-contain mt-5'
                     />
                   );
                 })}
@@ -53,11 +46,20 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
             </div>
           )}
           <div
-            className={`flex flex-col items-center flex-shrink-0 text-center ${
-              isFrontPage ? '' : 'order-first'
-            } md:order-last`}
+            className={clsx(
+              'flex flex-col items-center flex-shrink-0 text-center',
+              isFrontPage ? 'order-none' : 'order-first',
+              'md:order-last'
+            )}
           >
-            <img src={presenter.pictureUrl} className={imageClass} alt='Presentation Image' />
+            <img
+              src={presenter.pictureUrl}
+              className={clsx(
+                'object-cover rounded-3xl',
+                isFrontPage ? 'w-72 h-72 sm:w-96 sm:h-96' : 'w-[250px] h-[250px] sm:w-[308px] sm:h-[308px]'
+              )}
+              alt='Presentation Image'
+            />
             <p className='block mt-4 text-[32px] leading-tight font-bold text-white-900'>{presenter.name}</p>
             <p className='block mt-0.5 text-[20px]  text-[#FFE500]'>{presenter.rank}</p>
             {presenter.company && (
@@ -73,53 +75,49 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
         </div>
       </div>
       {isFrontPage && (
-        <div className='flex flex-row items-center justify-between pt-2'>
-          <div>
-            <Link
-              href={'/presentations'}
-              className='inline-flex items-center font-medium dark:text-white dark:hover:text-gray-400'
+        <div className='flex flex-col md:flex-row gap-6 md:gap-16 items-center pt-6 justify-center'>
+          <Link
+            href={`/presentations/${slugify(presentation.title)}`}
+            className='inline-flex items-center font-semibold text-xl text-white brand-link'
+          >
+            Részletek
+            <svg
+              className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 6 10'
             >
-              Összes előadás
-              <svg
-                className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 6 10'
-              >
-                <path
-                  stroke='currentColor'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='m1 9 4-4-4-4'
-                />
-              </svg>
-            </Link>
-          </div>
-          <div>
-            <Link
-              href={`/presentations/${slugify(presentation.title)}`}
-              className='inline-flex items-center font-medium dark:text-white dark:hover:text-gray-400'
+              <path
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='m1 9 4-4-4-4'
+              />
+            </svg>
+          </Link>
+          <Link
+            href={'/presentations'}
+            className='inline-flex items-center font-semibold text-xl text-white brand-link'
+          >
+            Összes előadás
+            <svg
+              className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 6 10'
             >
-              Olvass többet
-              <svg
-                className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 6 10'
-              >
-                <path
-                  stroke='currentColor'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='m1 9 4-4-4-4'
-                />
-              </svg>
-            </Link>
-          </div>
+              <path
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='m1 9 4-4-4-4'
+              />
+            </svg>
+          </Link>
         </div>
       )}
     </>

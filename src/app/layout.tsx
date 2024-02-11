@@ -22,12 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='hu'>
       <body className={`${raleway.variable} ${recharge.variable}`}>
-        <PlausibleProvider
-          domain='konferencia.simonyi.bme.hu'
-          customDomain='https://visit.kir-dev.hu'
-          selfHosted
-          enabled
-        />
+        <PlausibleProvider domain='konferencia.simonyi.bme.hu' customDomain='https://visit.kir-dev.hu' selfHosted />
         <main className='flex flex-col min-h-screen overflow-hidden'>
           <Navbar />
           <div className='flex-grow relative flex flex-col justify-center items-center'>{children}</div>

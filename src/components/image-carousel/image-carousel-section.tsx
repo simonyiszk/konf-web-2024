@@ -32,7 +32,7 @@ export function ImageCarouselSection({ data: { conferences, sectionTitle } }: Pr
                 key={item}
                 alt='Kép korábbi konferenciáról'
                 className='h-full cursor-pointer rounded-[30px]'
-                height={225}
+                height={200}
                 width={300}
               />
             </CarouselItem>

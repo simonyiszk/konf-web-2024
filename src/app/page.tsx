@@ -45,7 +45,7 @@ export default async function Landing() {
             <StatTile desc='előadó' number='14' />
 
             {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
-            {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
+            {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={false} />}
 
             <CountdownTile />
             <NewsletterTile />

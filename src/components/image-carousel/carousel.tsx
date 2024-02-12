@@ -34,11 +34,11 @@ export const Carousel = <T,>({ items, renderItem }: CarouselProps<T>) => {
     <div>
       <div className='flex justify-center items-center gap-4 mb-4' aria-hidden>
         <FaArrowLeft
-          className={`${activePageIndex === 0 ? 'opacity-30' : ''} cursor-pointer text-3xl`}
+          className={`${activePageIndex === 0 ? 'opacity-30' : ''} cursor-pointer text-3xl select-none`}
           onClick={() => prev()}
         />
         <FaArrowRight
-          className={`${activePageIndex === pages.length - 1 ? 'opacity-30' : ''} cursor-pointer text-3xl`}
+          className={`${activePageIndex === pages.length - 1 ? 'opacity-30' : ''} cursor-pointer text-3xl select-none`}
           onClick={() => next()}
         />
       </div>

@@ -1,3 +1,4 @@
+import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import Presentation from '@/components/presentation/Presentation';
@@ -12,6 +13,23 @@ export async function generateStaticParams() {
       slug: slugify(p.title),
     })) ?? []
   );
+}
+
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params: { slug } }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const data = await getIndexData();
+  const presentation = data?.presentations.find((p) => slugify(p.title) === slug);
+
+  return {
+    title: presentation?.title,
+    description: `${presentation?.presenter.name} "${presentation?.title}" című előadása a XXI. Simonyi Konferencián`,
+    keywords: `${(await parent).keywords}, ${presentation?.presenter.name}${presentation?.title
+      .split(' ')
+      .reduce((prev, curr) => `${prev}, ${curr}`, '')}`,
+  };
 }
 
 const getPresentationBySlug = async (slug: string) => {

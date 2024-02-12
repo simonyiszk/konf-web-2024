@@ -18,7 +18,7 @@ export default async function Presentations() {
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
         {data.presentations.map((presentation) => (
           <Tile key={presentation.title} clickable>
-            <Tile.Body padding='[1px]'>
+            <Tile.Body lessPadding='[1px]'>
               <div className='flex flex-col h-full'>
                 <Link href={`/presentations/${slugify(presentation.title)}`}>
                   <div className='relative'>

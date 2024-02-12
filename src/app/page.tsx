@@ -61,7 +61,7 @@ export default async function Landing() {
               </Tile.Body>
             </Tile>
 
-            {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} />}
+            {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={false} />}
 
             <CountdownTile />
             <NewsletterTile />

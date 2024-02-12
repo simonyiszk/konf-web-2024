@@ -19,7 +19,7 @@ export function ImageCarouselSection({ data: { conferences, sectionTitle } }: Pr
   const [index, setIndex] = useState(-1);
   const images = conferences[0].imageUrls;
   return (
-    <div className='my-40'>
+    <div className='my-16 sm:my-40'>
       <h2 className='flex justify-center mb-4'>{sectionTitle}</h2>
       <div className='w-full max-w-6xl px-6 xl:px-0'>
         <Carousel

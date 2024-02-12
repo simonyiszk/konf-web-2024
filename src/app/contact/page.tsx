@@ -20,12 +20,12 @@ export default async function asyncontact() {
       <h1 className='mb-16 mt-8'>Kapcsolat</h1>
 
       <div className='flex flex-col gap-24'>
-        <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
           {org.main.map((organiser) => (
             <OrganiserTile key={organiser.emailAddress} {...organiser} />
           ))}
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
           {org.other.map((organiser) => (
             <OrganiserTile key={organiser.emailAddress} {...organiser} />
           ))}

@@ -31,7 +31,7 @@ type TileBodyProps = {
 
 function TileBody({ children, className, hidePadding = false }: TileBodyProps) {
   return (
-    <div className={clsx(styles['card-body'], hidePadding ? 'p-2' : 'p-10', 'w-full h-full', className)}>
+    <div className={clsx(styles['card-body'], hidePadding ? 'p-2' : 'p-6 sm:p-10', 'w-full h-full', className)}>
       {children}
     </div>
   );

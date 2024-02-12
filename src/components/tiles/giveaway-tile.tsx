@@ -27,7 +27,7 @@ export function GiveawayTile({ data: { description, sectionTitle, pictureUrl }, 
               </Link>
             )}
           </div>
-          <div className='relative'>
+          <div className='h-[236px] relative'>
             <Image objectFit='contain' src={pictureUrl} alt='Nintendo Switch OLED' fill />
           </div>
         </div>

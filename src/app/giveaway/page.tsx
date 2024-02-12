@@ -12,8 +12,8 @@ export default async function Giveaway() {
     redirect('/error');
   }
   return (
-    <div className='grid grid-col-6 max-w-6xl w-full my-10 px-6 xl:px-0 gap-y-20'>
-      <h1 className='col-span-6'>Nyereményjáték</h1>
+    <div className='grid sm:grid-col-6 max-w-6xl w-full my-10 px-6 xl:px-0 gap-y-20'>
+      <h1 className='sm:col-span-6'>Nyereményjáték</h1>
       <GiveawayTile data={data.giveaway} showLink={false} />
       {/* <Tile className='col-span-6'>
         <Tile.Body className='markdown'>

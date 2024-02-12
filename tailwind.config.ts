@@ -16,7 +16,10 @@ const config: Config = {
         gloria: '0 0 50px -20px white',
       },
       colors: {
-        brand: '#D45B7E',
+        brand: '#8f8e8f',
+        konf: {
+          yellow: '#FFE500',
+        },
       },
       transitionProperty: {
         'max-height': 'max-height',

@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body:has(.yarl__root) {
+  @apply bg-none bg-black; /* TODO ez se szép, de jobb mint nélküle */
+}
+
 body {
-  @apply bg-space h-screen text-white bg-cover bg-center;
+  @apply bg-space h-screen text-white bg-contain bg-center;
+  font-family: var(--font-raleway);
 }
 img {
   @apply select-none;
@@ -11,17 +16,68 @@ img {
 
 h1 {
   @apply text-3xl sm:text-4xl md:text-5xl font-bold;
+  font-family: var(--font-recharge);
 }
 
 h2 {
   @apply text-2xl sm:text-3xl md:text-4xl font-bold;
 }
 
+.markdown ul {
+  @apply list-disc ml-6;
+}
+
+.markdown ol {
+  @apply list-decimal ml-6;
+}
+
+.markdown a {
+  @apply underline;
+}
+
+.markdown h2 {
+  @apply my-2;
+}
+
+.markdown h1 {
+  @apply mb-4;
+}
+
+.planet {
+  @apply absolute hidden xl:block select-none pointer-events-none;
+}
+
+.red-planet {
+  height: 300px;
+  width: 626px;
+  bottom: -170px;
+  right: -340px;
+}
+
+.white-planet {
+  height: 300px;
+  width: 626px;
+  bottom: -120px;
+  left: -350px;
+}
+
+/* generate filter to change the color of an svg here: https://codepen.io/sosuke/pen/Pjoqqp */
 .brand-link:hover {
-  filter: brightness(0) saturate(100%) invert(69%) sepia(40%) saturate(6364%) hue-rotate(307deg) brightness(88%)
-    contrast(87%);
+  filter: brightness(0) saturate(100%) invert(60%) sepia(7%) saturate(0%) hue-rotate(323deg) brightness(92%)
+    contrast(95%);
 }
 
 .hero-text-shadow {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tile {
+  @apply p-6 sm:p-10 min-h-[225px];
+  border-radius: 30px;
+  border: 1px solid var(--test-stroke, #fff);
+  background: var(
+    --test-item,
+    radial-gradient(165.3% 70.64% at 49.87% 50.22%, rgba(255, 255, 255, 0.1) 14.5%, rgba(0, 0, 0, 0.1) 100%),
+    #101010
+  );
 }

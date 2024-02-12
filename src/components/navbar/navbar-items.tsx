@@ -5,10 +5,10 @@ const links = [
     href: '/',
     label: 'főoldal',
   },
-  {
-    href: '/conferences',
-    label: 'konferenciák',
-  },
+  // {
+  //   href: '/presentations',
+  //   label: 'előadások',
+  // },
   {
     href: '/contact',
     label: 'kapcsolat',

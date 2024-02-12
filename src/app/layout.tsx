@@ -2,11 +2,14 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
+import localFont from 'next/font/local';
+import PlausibleProvider from 'next-plausible';
 
 import { Footer } from '@/components/footer/footer';
 import { Navbar } from '@/components/navbar/navbar';
 
-const raleway = Raleway({ subsets: ['latin'] });
+const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
+const recharge = localFont({ src: '../../public/recharge.otf', variable: '--font-recharge' });
 
 export const metadata: Metadata = {
   title: 'Simonyi Konferencia - 2024. 03. 19.',
@@ -18,8 +21,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='hu'>
-      <body className={raleway.className}>
-        <main className='flex flex-col min-h-screen'>
+      <body className={`${raleway.variable} ${recharge.variable}`}>
+        <PlausibleProvider
+          domain='konferencia.simonyi.bme.hu'
+          customDomain={process.env.NEXT_PUBLIC_PLAUSIBLE_URL}
+          selfHosted
+        />
+        <main className='flex flex-col min-h-screen overflow-hidden'>
           <Navbar />
           <div className='flex-grow relative flex flex-col justify-center items-center'>{children}</div>
           <Footer />

@@ -42,7 +42,10 @@ export const Carousel = <T,>({ items, renderItem }: CarouselProps<T>) => {
           onClick={() => next()}
         />
       </div>
-      <ul className='relative w-[300px] sm:w-auto mx-auto flex gap-4 overflow-hidden snap-x' ref={scrollRef}>
+      <ul
+        className='relative w-[300px] sm:w-[616px] md:w-auto mx-auto flex gap-4 overflow-hidden snap-x'
+        ref={scrollRef}
+      >
         {items.map((item, i) =>
           renderItem({
             item,

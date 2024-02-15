@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -27,6 +28,10 @@ const config: Config = {
       dropShadow: {
         hero: '0px 5.175px 5.175px rgba(0, 0, 0, 0.25)',
       },
+    },
+    screens: {
+      xs: '600px',
+      ...defaultTheme.screens,
     },
   },
   plugins: [],

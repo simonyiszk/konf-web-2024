@@ -28,7 +28,7 @@ export default async function Landing() {
     <>
       <div className='p-10 relative'>
         <div className='max-w-md md:max-w-xl relative shadow-gloria rounded-full overflow-hidden mx-auto'>
-          <video className='h-full w-full' autoPlay playsInline loop muted poster='/img/nebula-thumbnail.png'>
+          <video className='h-full w-full' autoPlay playsInline loop muted poster='/img/nebula-thumbnail.webp'>
             <source src='/video/nebula.mp4' type='video/mp4' />
           </video>
         </div>

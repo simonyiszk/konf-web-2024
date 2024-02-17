@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default async function Presentations() {
   const data = await getIndexData();
-  if (!data) {
+  if (!data || !data.presentations) {
     notFound();
   }
   const presentations = data.presentations.toSorted((p1, p2) => p1.presenter.name.localeCompare(p2.presenter.name));

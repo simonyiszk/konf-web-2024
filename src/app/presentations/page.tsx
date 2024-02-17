@@ -18,7 +18,7 @@ export default async function Presentations() {
   if (!data || !data.presentations) {
     notFound();
   }
-  const presentations = data.presentations.toSorted((p1, p2) => p1.presenter.name.localeCompare(p2.presenter.name));
+  const presentations = data.presentations.sort((p1, p2) => p1.presenter.name.localeCompare(p2.presenter.name));
 
   return (
     <div className='flex flex-col max-w-6xl w-full px-6 xl:px-0'>

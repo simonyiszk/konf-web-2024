@@ -37,7 +37,7 @@ export function ImageCarouselSection({ data: { conferences, sectionTitle } }: Pr
                   height={200}
                   width={300}
                 />
-                <h3 className='mt-2'>{item.priority}</h3>
+                <h3 className='text-3xl font-semibold mt-2'>{item.priority}</h3>
                 <p className='mt-1 text-md sm:text-lg font-medium'>{item.title}</p>
               </div>
             </CarouselItem>

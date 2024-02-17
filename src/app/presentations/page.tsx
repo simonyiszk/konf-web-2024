@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -28,20 +29,27 @@ export default async function Presentations() {
           <Tile key={presentation.title} clickable>
             <Tile.Body lessPadding='[1px]'>
               <div className='flex flex-col h-full'>
-                <Link href={`/presentations/${slugify(presentation.title)}`}>
-                  <div className='relative'>
+                <Link className='h-full flex flex-col' href={`/presentations/${slugify(presentation.title)}`}>
+                  <div>
                     <img
                       src={presentation.presenter.pictureUrl}
                       className='w-full aspect-square object-cover object-center rounded-[30px]'
                       alt='Presentation Image'
                     />
-                    <div className='z-20 px-5 absolute text-center left-1/2 -translate-x-[50%] -translate-y-[50%] shadow-md rounded-xl overflow-hidden bg-[#FFE500]'>
-                      <p className='pt-1 whitespace-nowrap min-w-[200px] sm:min-w-[240px] min-h-[36px] sm:min-h-[44px] text-2xl xs:text-xl sm:text-2xl text-black font-bold'>
-                        {presentation.presenter.name}
-                      </p>
+                    <div className='z-20 px-5 py-2 absolute text-center left-1/2 -translate-x-[50%] -translate-y-[50%] shadow-md rounded-xl overflow-hidden bg-[#FFE500]'>
+                      {presentation.presenter.name.split(',').map((pName) => (
+                        <p className='whitespace-nowrap min-w-[200px] sm:min-w-[240px]  text-2xl xs:text-xl sm:text-2xl text-black font-bold'>
+                          {pName}
+                        </p>
+                      ))}
                     </div>
                   </div>
-                  <div className='p-6'>
+                  <div
+                    className={clsx(
+                      'p-6 h-full flex items-center justify-center',
+                      presentation.presenter.name.split(',').length > 1 && 'mt-6'
+                    )}
+                  >
                     <h2 className='text-center text-[24px] font-bold text-white pb-4'>{presentation.title}</h2>
                   </div>
                 </Link>

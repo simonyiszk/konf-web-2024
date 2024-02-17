@@ -31,7 +31,12 @@ const config: Config = {
     },
     screens: {
       xs: '600px',
-      ...defaultTheme.screens,
+      sm: defaultTheme.screens.sm,
+      md: defaultTheme.screens.md,
+      mdx: '940px',
+      lg: defaultTheme.screens.lg,
+      xl: defaultTheme.screens.xl,
+      '2xl': defaultTheme.screens['2xl'],
     },
   },
   plugins: [],

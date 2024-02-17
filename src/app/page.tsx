@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 
 import { metadata } from '@/app/layout';
 import { ImageCarouselSection } from '@/components/image-carousel/image-carousel-section';
+import Presentation from '@/components/presentation/Presentation';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import CountdownTile from '@/components/tiles/countdown-tile/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
@@ -10,7 +11,9 @@ import { NewsletterTile } from '@/components/tiles/newsletter-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
+import { Tile } from '@/components/tiles/tile';
 import { getIndexData } from '@/models/get-index-data';
+import { kotlinPresentation, tresoritPresentation } from '@/models/staticPresentationData';
 
 import konfLogo from '../../public/img/konf.svg';
 import redPlanet from '../../public/img/red-planet.png';
@@ -25,7 +28,7 @@ export default async function Landing() {
     <>
       <div className='p-10 relative'>
         <div className='max-w-md md:max-w-xl relative shadow-gloria rounded-full overflow-hidden mx-auto'>
-          <video className='h-full w-full' autoPlay playsInline loop muted poster='/img/nebula-thumbnail.png'>
+          <video className='h-full w-full' autoPlay playsInline loop muted poster='/img/nebula-thumbnail.webp'>
             <source src='/video/nebula.mp4' type='video/mp4' />
           </video>
         </div>
@@ -44,7 +47,20 @@ export default async function Landing() {
             <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
             <StatTile desc='előadó' number='14' />
 
+            <Tile className='sm:col-span-6'>
+              <Tile.Body className='md:px-10 px-5'>
+                <Presentation presentation={kotlinPresentation} isFrontPage />
+              </Tile.Body>
+            </Tile>
+
             {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
+
+            <Tile className='sm:col-span-6'>
+              <Tile.Body className='md:px-10 px-5'>
+                <Presentation presentation={tresoritPresentation} isFrontPage />
+              </Tile.Body>
+            </Tile>
+
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={false} />}
 
             <CountdownTile />

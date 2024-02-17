@@ -42,6 +42,7 @@ export interface Presentation {
   endTime: string;
   description: string;
   questionsUrl: string; // még kérdéses, hogy így lesz-e
+  imageUrls?: string[];
 }
 
 export interface RegistraionData {

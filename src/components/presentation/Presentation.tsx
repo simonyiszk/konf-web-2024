@@ -1,9 +1,12 @@
 import clsx from 'clsx';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import { Presentation } from '@/models/models';
 import slugify from '@/utils/slugify';
+
+import uk from '../../../public/img/uk.svg';
 
 type PresentationProps = {
   presentation: Presentation;
@@ -69,6 +72,12 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
                   alt='Company logo'
                   className='p-2 max-w-full max-h-[75px] object-fit m-auto'
                 />
+              </div>
+            )}
+            {presentation.language === 'en' && (
+              <div className='flex mt-2 gap-2'>
+                <Image src={uk} alt='Egyesült Királyság zászlója' width={50} height={25} className='rounded-xl' />
+                <p className='text-lg'>Az előadás angol nyelvű.</p>
               </div>
             )}
           </div>

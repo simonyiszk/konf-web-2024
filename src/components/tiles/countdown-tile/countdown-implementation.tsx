@@ -17,10 +17,14 @@ export default function CountdownTileImplementation() {
   }, []);
   return (
     <>
-      <CountDownElement value={duration.months ? (duration.days ?? 0) + 30 : duration.days} label='nap' />
-      <CountDownElement value={duration.hours ? String(duration.hours).padStart(2, '0') : '00'} label='óra' />
-      <CountDownElement value={duration.minutes ? String(duration.minutes).padStart(2, '0') : '00'} label='perc' />
-      <CountDownElement value={duration.seconds ? String(duration.seconds).padStart(2, '0') : '00'} label='mp' />
+      <p className='text-4xl font-bold'>
+        még <span className='text-9xl'>{duration.months ? (duration.days ?? 0) + 30 : duration.days}</span> nap
+      </p>
+      <div className='flex flex-row flex-wrap justify-center gap-4'>
+        <CountDownElement value={duration.hours ? String(duration.hours).padStart(2, '0') : '00'} label='óra' />
+        <CountDownElement value={duration.minutes ? String(duration.minutes).padStart(2, '0') : '00'} label='perc' />
+        <CountDownElement value={duration.seconds ? String(duration.seconds).padStart(2, '0') : '00'} label='mp' />
+      </div>
     </>
   );
 }

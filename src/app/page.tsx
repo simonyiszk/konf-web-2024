@@ -7,10 +7,10 @@ import Presentation from '@/components/presentation/Presentation';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import CountdownTile from '@/components/tiles/countdown-tile/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
-import { NewsletterTile } from '@/components/tiles/newsletter-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
+import { WorkshopTile } from '@/components/tiles/workshop-tile';
 import { getIndexData } from '@/models/get-index-data';
 import { kotlinPresentation, tresoritPresentation } from '@/models/staticPresentationData';
 
@@ -55,7 +55,8 @@ export default async function Landing() {
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={true} />}
 
             <CountdownTile />
-            <NewsletterTile />
+            {/* <NewsletterTile /> */}
+            <WorkshopTile />
             {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
           </div>
           <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet -z-10' />

@@ -10,6 +10,10 @@ const links = [
     label: 'előadások',
   },
   {
+    href: '/workshop',
+    label: 'workshop',
+  },
+  {
     href: '/contact',
     label: 'kapcsolat',
   },

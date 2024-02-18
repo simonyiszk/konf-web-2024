@@ -34,7 +34,7 @@ export const tresoritPresentation: Presentation = {
   imageUrls: [],
   presenter: {
     name: 'Lám István',
-    pictureUrl: 'https://konf-api-staging.kir-dev.hu/cdn/public/LAMI_1NX7QQULY1EVF.jpg', // TODO inkább prod link kellenne
-    rank: 'Co-founder, Tresorit',
+    pictureUrl: 'https://konf-api-staging.kir-dev.hu/cdn/public/ILAM_MA9QME1TFGAG.webp', // TODO inkább prod link kellenne
+    rank: 'Co-Founder, Board Member & Corporate Development Director, Tresorit',
   },
 };

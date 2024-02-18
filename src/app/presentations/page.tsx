@@ -18,7 +18,7 @@ export default async function Presentations() {
   if (!data || !data.presentations) {
     notFound();
   }
-  const presentations = data.presentations.sort((p1, p2) => p1.presenter.name.localeCompare(p2.presenter.name));
+  const presentations = data.presentations.sort((p1, p2) => p1.title.localeCompare(p2.title));
 
   return (
     <div className='flex flex-col max-w-6xl w-full px-6 xl:px-0'>
@@ -58,6 +58,8 @@ export default async function Presentations() {
           </Tile>
         ))}
       </div>
+
+      <h2 className='mt-20 text-center'>Az előadások listája még bővül!</h2>
     </div>
   );
 }

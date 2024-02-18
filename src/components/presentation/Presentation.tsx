@@ -50,7 +50,7 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
           )}
           <div
             className={clsx(
-              'flex flex-col items-center flex-shrink-0 text-center',
+              'flex flex-col items-center flex-shrink-0 text-center md:max-w-sm',
               isFrontPage ? 'order-none' : 'order-first',
               'md:order-last'
             )}
@@ -66,7 +66,7 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
             <p className='block mt-4 text-[32px] leading-tight font-bold text-white-900'>{presenter.name}</p>
             <p className='block mt-0.5 text-[20px]  text-[#FFE500]'>{presenter.rank}</p>
             {presenter.company && (
-              <div className='mt-1.5 bg-white rounded-xl max-w-[308px] max-h-[75px]'>
+              <div className='mt-2 bg-white rounded-xl max-w-[308px] max-h-[75px] w-full'>
                 <img
                   src={presenter.company.logoUrl}
                   alt='Company logo'

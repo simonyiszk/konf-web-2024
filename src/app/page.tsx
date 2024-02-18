@@ -43,9 +43,9 @@ export default async function Landing() {
           <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-6 xl:px-0'>
             {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
-            <StatTile desc='konferenciát rendeztünk már' number='20' />
+            <StatTile desc='óta rendezünk konferenciákat' number='2003' />
             <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
-            <StatTile desc='előadó' number='14' />
+            <StatTile desc='előadás' number='20' />
 
             <Tile className='sm:col-span-6'>
               <Tile.Body className='md:px-10 px-5'>

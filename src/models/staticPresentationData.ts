@@ -15,7 +15,7 @@ export const kotlinPresentation: Presentation = {
     'https://konf-api-staging.kir-dev.hu/cdn/public/KODE_DOWK1X158B66.png',
   ],
   presenter: {
-    name: 'Braun Márton',
+    name: 'Braun Márton Szabolcs',
     pictureUrl: 'https://konf-api-staging.kir-dev.hu/cdn/public/BMARTON_1TJQY4RH9EA5.png', // TODO inkább prod link kellenne
     rank: 'Developer Advocate, JetBrains',
   },

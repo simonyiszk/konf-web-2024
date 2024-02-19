@@ -43,7 +43,7 @@ export const Carousel = <T,>({ items, renderItem }: CarouselProps<T>) => {
         />
       </div>
       <ul
-        className='relative w-[300px] sm:w-[616px] md:w-auto mx-auto flex gap-4 overflow-hidden snap-x'
+        className='relative w-[300px] sm:w-[616px] mdx:w-[932px] lg:w-auto mx-auto flex gap-4 overflow-hidden snap-x'
         ref={scrollRef}
       >
         {items.map((item, i) =>

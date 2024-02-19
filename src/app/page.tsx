@@ -11,7 +11,6 @@ import { NewsletterTile } from '@/components/tiles/newsletter-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
-import { Tile } from '@/components/tiles/tile';
 import { getIndexData } from '@/models/get-index-data';
 import { kotlinPresentation, tresoritPresentation } from '@/models/staticPresentationData';
 

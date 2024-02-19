@@ -43,5 +43,9 @@ export default async function PresentationBySlug({ params }: { params: { slug: s
     notFound();
   }
 
-  return <Presentation presentation={presentation} />;
+  return (
+    <div className='mt-10'>
+      <Presentation presentation={presentation} />
+    </div>
+  );
 }

@@ -44,22 +44,14 @@ export default async function Landing() {
             {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
             <StatTile desc='óta rendezünk konferenciákat' number='2003' />
-            <StatTile desc='percnyi előadás egy nap alatt' number='700+' />
+            <StatTile desc='percnyi előadás egy nap alatt' number='400+' />
             <StatTile desc='előadás' number='20' />
 
-            <Tile className='sm:col-span-6'>
-              <Tile.Body className='md:px-10 px-5'>
-                <Presentation presentation={kotlinPresentation} isFrontPage />
-              </Tile.Body>
-            </Tile>
+            <Presentation presentation={kotlinPresentation} isFrontPage />
 
             {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
 
-            <Tile className='sm:col-span-6'>
-              <Tile.Body className='md:px-10 px-5'>
-                <Presentation presentation={tresoritPresentation} isFrontPage />
-              </Tile.Body>
-            </Tile>
+            <Presentation presentation={tresoritPresentation} isFrontPage />
 
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={false} />}
 

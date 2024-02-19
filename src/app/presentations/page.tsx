@@ -47,10 +47,10 @@ export default async function Presentations() {
                   <div
                     className={clsx(
                       'p-6 h-full flex items-center justify-center',
-                      presentation.presenter.name.split(',').length > 1 && 'mt-6'
+                      presentation.presenter.name.split(',').length > 1 ? 'mt-6' : 'mt-2'
                     )}
                   >
-                    <h2 className='text-center text-[24px] font-bold text-white pb-4'>{presentation.title}</h2>
+                    <h2 className='text-center text-[24px] font-bold text-white'>{presentation.title}</h2>
                   </div>
                 </Link>
               </div>

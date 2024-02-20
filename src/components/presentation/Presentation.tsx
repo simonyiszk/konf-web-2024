@@ -30,7 +30,7 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
               </Link>
             </h3>
           )}
-          {!isFrontPage && <h1 className='mb-16 hyphens-auto sm:hyphens-none'>{title}</h1>}
+          {!isFrontPage && <h1 className='mb-8 hyphens-auto sm:hyphens-none'>{title}</h1>}
           <div className='flex flex-col md:flex-row gap-8'>
             {!isFrontPage && (
               <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>

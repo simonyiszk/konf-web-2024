@@ -44,7 +44,7 @@ export default async function Landing() {
 
             <StatTile desc='óta rendezünk konferenciákat' number='2003' />
             <StatTile desc='percnyi előadás egy nap alatt' number='400+' />
-            <StatTile desc='előadás' number='20' />
+            <StatTile desc='előadás' number='21' />
 
             <Presentation presentation={kotlinPresentation} isFrontPage />
 

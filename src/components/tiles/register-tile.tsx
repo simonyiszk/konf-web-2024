@@ -18,7 +18,7 @@ export function RegisterTile({ data: { cooltixEventId, buttonText } }: Props) {
     <>
       <div onClick={() => setIsOpen(true)} className='w-full sm:col-span-6'>
         <Tile clickable className=' w-full h-full cursor-pointer'>
-          <Tile.Body className='flex flex-col justify-end'>
+          <Tile.Body className='flex flex-col justify-center items-center'>
             <h2 className='text-4xl sm:text-5xl font-bold'>{buttonText}</h2>
             <p className='text-lg sm:text-xl font-medium'>
               Regisztrálj már most a konferenciára a Cooltix rendszerén keresztül!

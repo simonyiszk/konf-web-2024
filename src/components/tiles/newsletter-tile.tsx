@@ -51,9 +51,9 @@ export function NewsletterTile() {
     <>
       <div className='sm:col-span-3 w-full h-full' onClick={() => setIsSubscribeOpen(true)}>
         <Tile clickable className='w-full h-full'>
-          <Tile.Body className='w-full cursor-pointer flex flex-col'>
+          <Tile.Body className='w-full cursor-pointer flex flex-col justify-center items-center'>
             <h2 className='text-4xl sm:text-5xl font-bold'>Hírlevél</h2>
-            <p className='text-lg sm:text-xl font-medium mt-4'>
+            <p className='text-lg sm:text-xl font-medium mt-4 text-center'>
               Addig is iratkozz fel a hírlevelünkre, hogy elsőként értesülj az előadásokról!
             </p>
           </Tile.Body>

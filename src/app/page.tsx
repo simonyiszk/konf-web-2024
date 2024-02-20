@@ -52,7 +52,7 @@ export default async function Landing() {
 
             <Presentation presentation={tresoritPresentation} isFrontPage />
 
-            {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={false} />}
+            {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={true} />}
 
             <CountdownTile />
             <NewsletterTile />

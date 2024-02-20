@@ -21,8 +21,8 @@ export default async function Giveaway() {
             children={data.giveaway.rules}
             remarkPlugins={[remarkGfm]}
             components={{
-              h1: ({ children }) => <h1 className='text-5xl font-bold mb-8'>{children}</h1>,
-              h2: ({ children }) => <h2 className='text-4xl font-bold my-4'>{children}</h2>,
+              h1: ({ children }) => <h1 className='text-2xl sm:text-4xl md:text-5xl font-bold mb-8'>{children}</h1>,
+              h2: ({ children }) => <h2 className='text-xl sm:text-3xl md:text-4xl font-bold my-4'>{children}</h2>,
               p: ({ children }) => <p className='my-1'>{children}</p>,
               a: ({ children, href }) => (
                 <a

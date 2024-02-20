@@ -17,7 +17,7 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
   const { title, description, presenter, imageUrls } = presentation;
 
   return (
-    <Tile className={clsx(isFrontPage && 'sm:col-span-6', 'mx-2 xl:mx-0')}>
+    <Tile className={clsx(isFrontPage && 'sm:col-span-6')}>
       <Tile.Body>
         <div className='max-w-6xl w-full'>
           {!isFrontPage && (
@@ -30,13 +30,15 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
               </Link>
             </h3>
           )}
-          {!isFrontPage && <h1 className='mb-16'>{title}</h1>}
+          {!isFrontPage && <h1 className='mb-16 hyphens-auto sm:hyphens-none'>{title}</h1>}
           <div className='flex flex-col md:flex-row gap-8'>
-            {!isFrontPage && <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>}
+            {!isFrontPage && (
+              <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>
+            )}
             {isFrontPage && (
               <div>
-                <p className='mb-12 text-3xl sm:text-[40px] font-bold leading-10'>{title}</p>
-                <p className='text-stone-200 text-[20px] whitespace-pre-line'>{description}</p>
+                <p className='mb-8 text-3xl sm:text-[40px] font-bold leading-10'>{title}</p>
+                <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>
                 <div className='flex flex-col sm:flex-row'>
                   {imageUrls?.map((image) => {
                     return (

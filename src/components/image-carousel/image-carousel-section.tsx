@@ -22,7 +22,7 @@ export function ImageCarouselSection({ data: { conferences, sectionTitle } }: Pr
   return (
     <div className='my-16 sm:my-40'>
       <h2 className='flex justify-center mb-4'>{sectionTitle}</h2>
-      <div className='w-full max-w-6xl px-6 xl:px-0'>
+      <div className='w-full max-w-6xl px-4 sm:px-6 xl:px-0'>
         <Carousel
           items={conferences}
           renderItem={({ item, isSnapPoint, index: i }) => (

@@ -44,7 +44,7 @@ export default async function PresentationBySlug({ params }: { params: { slug: s
   }
 
   return (
-    <div className='mt-10'>
+    <div className='mt-10 px-4 sm:px-6 xl:px-0'>
       <Presentation presentation={presentation} />
     </div>
   );

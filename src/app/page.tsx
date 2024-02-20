@@ -39,7 +39,7 @@ export default async function Landing() {
       </div>
       <div className='relative'>
         <div className='relative'>
-          <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-6 xl:px-0'>
+          <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-4 sm:px-6 xl:px-0'>
             {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
             <StatTile desc='óta rendezünk konferenciákat' number='2003' />

@@ -21,7 +21,7 @@ export default async function Presentations() {
   const presentations = data.presentations.sort((p1, p2) => p1.title.localeCompare(p2.title));
 
   return (
-    <div className='flex flex-col max-w-6xl w-full px-6 xl:px-0'>
+    <div className='flex flex-col max-w-6xl w-full px-4 sm:px-6 xl:px-0'>
       <h1 className='mb-16 mt-8'>Előadások</h1>
 
       <div className='grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8'>

@@ -2,7 +2,7 @@ import { Tile } from '@/components/tiles/tile';
 
 export default function WorkshopPage() {
   return (
-    <div className='max-w-6xl w-full px-6 xl:px-0 mt-10'>
+    <div className='max-w-6xl w-full px-4 sm:px-6 xl:px-0 mt-10'>
       <Tile>
         <Tile.Body>
           <h1 className='mb-16 text-3xl sm:text-4xl md:text-[42px]'>A 21. század műanyaga az AI - Workshop</h1>

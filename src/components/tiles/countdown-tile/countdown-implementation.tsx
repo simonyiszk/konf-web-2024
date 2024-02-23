@@ -18,7 +18,11 @@ export default function CountdownTileImplementation() {
   return (
     <>
       <p className='text-4xl font-bold'>
-        még <span className='text-9xl'>{duration.months ? (duration.days ?? 0) + 30 : duration.days}</span> nap
+        még{' '}
+        <span className='text-8xl sm:text-9xl md:text-8xl lg:text-9xl'>
+          {duration.months ? (duration.days ?? 0) + 30 : duration.days}
+        </span>{' '}
+        nap
       </p>
       <div className='flex flex-row flex-wrap justify-center gap-4'>
         <CountDownElement value={duration.hours ? String(duration.hours).padStart(2, '0') : '00'} label='óra' />

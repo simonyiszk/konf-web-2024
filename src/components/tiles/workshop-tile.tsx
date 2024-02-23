@@ -4,7 +4,7 @@ import { Tile } from './tile';
 
 export function WorkshopTile() {
   return (
-    <Tile className='sm:col-span-3'>
+    <Tile className='sm:col-span-6 md:col-span-3'>
       <Tile.Body>
         <h2 className='text-3xl sm:text-[34px]'>A 21. század műanyaga az AI</h2>
         <div className='flex flex-col gap-4 lg:gap-0 lg:flex-row w-full justify-between mt-4'>
@@ -15,7 +15,7 @@ export function WorkshopTile() {
 
           <div className='flex flex-col items-center w-full'>
             <img
-              src='https://konf-api-staging.kir-dev.hu/cdn/public/MEDVE_17BB6XBGVH7Q2.webp'
+              src='https://konf-api.kir-dev.hu/cdn/public/MEDVE_U6Y7SQZJ4HNQ.webp'
               className='object-cover rounded-3xl w-[200px] h-[200px]'
               alt='Workshop Image'
             />

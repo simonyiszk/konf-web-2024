@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <main className='flex flex-col min-h-screen overflow-hidden'>
           <Navbar />
-          <div className='flex-grow relative flex flex-col justify-center items-center'>{children}</div>
+          <div className='flex-grow relative mt-24 md:mt-28 flex flex-col justify-center items-center'>{children}</div>
           <Footer />
         </main>
       </body>

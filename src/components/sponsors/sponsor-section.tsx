@@ -14,7 +14,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
   const regularSponsors = companies.filter((c) => c.category === SponsorCategory.SPONSOR);
 
   return (
-    <div className='w-full bg-white'>
+    <div id='sponsor-container' className='w-full bg-white'>
       <section className={styles.section}>
         <h2 className='text-3xl font-bold order-first'>{sectionTitle}</h2>
 

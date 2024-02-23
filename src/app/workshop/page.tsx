@@ -1,4 +1,11 @@
+import { Metadata } from 'next';
+
 import { Tile } from '@/components/tiles/tile';
+
+export const metadata: Metadata = {
+  title: 'A 21. század műanyaga az AI - Workshop',
+  description: 'Bartos-Elekes Miklós "A 21. század műanyaga az AI" című workshopja a XXI. Simonyi Konferencián',
+};
 
 export default function WorkshopPage() {
   return (

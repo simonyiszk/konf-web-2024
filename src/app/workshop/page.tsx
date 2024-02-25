@@ -24,7 +24,7 @@ export default function WorkshopPage() {
                 modelleket (ChatGPT, Gemini) biztonsági és etikai szempontok alapján.
               </p>
               <p className='mt-8 text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>
-                A részvétel regsiztrációhoz kötött, melyet az általános konferencia belépőtől függetlenül, de ugyanazon
+                A részvétel regisztrációhoz kötött, melyet az általános konferencia belépőtől függetlenül, de ugyanazon
                 a felületen lehet intézni.
               </p>
             </div>

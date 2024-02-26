@@ -19,13 +19,13 @@ export default function WorkshopPage() {
                 A 21. század műanyaga a mesterséges intelligencia. Már előreláthatólag el fog árasztani mindent, és
                 lépésről lépésre fel kell fedezzük (a mérnökök és a felhasználók) a tulajdonságait, hogy az általános
                 használata milyen előnyökkel és hátrányokkal jár együtt. 2 órás gyakorlati workshopomban a résztvevőkkel
-                együtt bemutatom a neurális hálók működését, eddig megismert tulajdonságait. A résztvevőkkel felépítünk
-                egy kisebb képfelismerő hálót, majd a hálót felhasználva megismerjük a ma népszerű nagy nyelvi
-                modelleket (ChatGPT, Gemini) biztonsági és etikai szempontok alapján.
+                együtt bemutatom a neurális hálók működését, eddig megismert tulajdonságait. Felépítünk egy kisebb
+                képfelismerő hálót, majd a hálót felhasználva megismerjük a ma népszerű nagy nyelvi modelleket (ChatGPT,
+                Gemini) biztonsági és etikai szempontok alapján.
               </p>
               <p className='mt-8 text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>
                 A részvétel regisztrációhoz kötött, melyet az általános konferencia belépőtől függetlenül, de ugyanazon
-                a felületen lehet intézni.
+                a felületen lehet intézni. A workshopon való aktív részvételhez egy laptop szükséges.
               </p>
             </div>
             <div className='flex flex-col items-center flex-shrink-0 text-center lg:max-w-sm order-first lg:order-last'>

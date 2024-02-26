@@ -8,8 +8,8 @@ const CountdownTileImplementation = dynamic(() => import('./countdown-implementa
 
 export default function CountdownTile() {
   return (
-    <Tile className='sm:col-span-3'>
-      <Tile.Body className='flex flex-row flex-wrap items-center justify-center gap-4'>
+    <Tile className='sm:col-span-6 md:col-span-3'>
+      <Tile.Body className='flex flex-col items-center justify-center gap-8'>
         {CountdownTileImplementation && <CountdownTileImplementation />}
       </Tile.Body>
     </Tile>

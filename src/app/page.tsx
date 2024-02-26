@@ -7,10 +7,10 @@ import Presentation from '@/components/presentation/Presentation';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import CountdownTile from '@/components/tiles/countdown-tile/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
-import { NewsletterTile } from '@/components/tiles/newsletter-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
+import { WorkshopTile } from '@/components/tiles/workshop-tile';
 import { getIndexData } from '@/models/get-index-data';
 import { kotlinPresentation, tresoritPresentation } from '@/models/staticPresentationData';
 
@@ -25,7 +25,7 @@ export default async function Landing() {
   }
   return (
     <>
-      <div className='p-10 relative'>
+      <div className='md:mt-0 p-10 relative'>
         <div className='max-w-md md:max-w-xl relative shadow-gloria rounded-full overflow-hidden mx-auto'>
           <video className='h-full w-full' autoPlay playsInline loop muted poster='/img/nebula-thumbnail.webp'>
             <source src='/video/nebula.mp4' type='video/mp4' />
@@ -42,9 +42,9 @@ export default async function Landing() {
           <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-4 sm:px-6 xl:px-0'>
             {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
-            <StatTile desc='óta rendezünk konferenciákat' number='2003' />
-            <StatTile desc='percnyi előadás egy nap alatt' number='400+' />
             <StatTile desc='előadás' number='21' />
+            <StatTile desc='kiállító az expón' number='21' />
+            <StatTile desc='év tapasztalat' number='21' />
 
             <Presentation presentation={kotlinPresentation} isFrontPage />
 
@@ -55,7 +55,8 @@ export default async function Landing() {
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={true} />}
 
             <CountdownTile />
-            <NewsletterTile />
+            {/* <NewsletterTile /> */}
+            <WorkshopTile />
             {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
           </div>
           <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet -z-10' />

@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 
 import { Tile } from '@/components/tiles/tile';
 import { getIndexData } from '@/models/get-index-data';
+import { SponsorCategory } from '@/models/models';
 import slugify from '@/utils/slugify';
 
 export const metadata: Metadata = {
@@ -19,13 +20,17 @@ export default async function Presentations() {
     notFound();
   }
   const presentations = data.presentations.sort((p1, p2) => p1.title.localeCompare(p2.title));
+  const [bosch] = presentations.splice(
+    presentations.findIndex((p) => p.presenter.company?.category === SponsorCategory.MAIN_SPONSOR),
+    1
+  );
 
   return (
     <div className='flex flex-col max-w-6xl w-full px-4 sm:px-6 xl:px-0'>
       <h1 className='mb-16 mt-8'>Előadások</h1>
 
       <div className='grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8'>
-        {presentations.map((presentation) => (
+        {[bosch, ...presentations].map((presentation) => (
           <Tile key={presentation.title} clickable>
             <Tile.Body lessPadding='[1px]'>
               <div className='flex flex-col h-full'>

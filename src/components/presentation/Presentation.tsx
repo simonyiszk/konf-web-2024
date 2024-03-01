@@ -15,7 +15,16 @@ type PresentationProps = {
 };
 export default async function Presentation({ presentation, isFrontPage }: PresentationProps) {
   const { title, description, presenter, imageUrls } = presentation;
-
+  let time = '';
+  if (presentation.startTime && presentation.endTime) {
+    time = ` | ${new Date(presentation.startTime).toLocaleTimeString('hu', {
+      hour: '2-digit',
+      minute: '2-digit',
+    })} - ${new Date(presentation.endTime).toLocaleTimeString('hu', {
+      hour: '2-digit',
+      minute: '2-digit',
+    })}`;
+  }
   return (
     <Tile className={clsx(isFrontPage && 'sm:col-span-6')}>
       <Tile.Body>
@@ -30,14 +39,22 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
               </Link>
             </h3>
           )}
-          {!isFrontPage && <h1 className='mb-8 hyphens-auto sm:hyphens-none'>{title}</h1>}
+          {!isFrontPage && (
+            <div>
+              <h1 className='mb-2 hyphens-auto sm:hyphens-none'>{title}</h1>
+            </div>
+          )}
           <div className='flex flex-col md:flex-row gap-8'>
             {!isFrontPage && (
-              <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>
+              <div>
+                <p className='mb-8 text-[25px]'>{`${presentation.room}${time}`}</p>
+                <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>
+              </div>
             )}
             {isFrontPage && (
               <div>
-                <p className='mb-8 text-3xl sm:text-[40px] font-bold leading-10'>{title}</p>
+                <p className='mb-2 text-3xl sm:text-[40px] font-bold leading-10'>{title}</p>
+                <p className='mb-8 text-[22px] '>{`${presentation.room}${time}`}</p>
                 <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>
                 <div className='flex flex-col sm:flex-row'>
                   {imageUrls?.map((image) => {
@@ -54,7 +71,7 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
             )}
             <div
               className={clsx(
-                'flex flex-col items-center flex-shrink-0 text-center md:max-w-sm',
+                'flex flex-col items-center flex-shrink-0 text-center md:max-w-sm  mt-8',
                 isFrontPage ? 'order-none' : 'order-first',
                 'md:order-last'
               )}

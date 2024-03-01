@@ -6,7 +6,8 @@ export function WorkshopTile() {
   return (
     <Tile className='sm:col-span-6 md:col-span-3'>
       <Tile.Body>
-        <h2 className='text-3xl sm:text-[34px]'>A 21. század műanyaga az AI</h2>
+        <h2 className='text-3xl sm:text-[34px] mb-1'>A 21. század műanyaga az AI</h2>
+        <p className='mb-2 text-[22px]'>{`IB110 | 14:30-16:30`}</p>
         <div className='flex flex-col gap-4 lg:gap-0 lg:flex-row w-full justify-between mt-4'>
           <p className='text-stone-200 text-[20px] whitespace-pre-line w-full'>
             2 órás gyakorlati workshop, amiben bemutatásra kerül a neurális hálók működése, eddig megismert

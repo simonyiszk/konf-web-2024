@@ -5,9 +5,9 @@ import { metadata } from '@/app/layout';
 import { ImageCarouselSection } from '@/components/image-carousel/image-carousel-section';
 import Presentation from '@/components/presentation/Presentation';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
-import CountdownTile from '@/components/tiles/countdown-tile/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
 import MapTile from '@/components/tiles/map-tile/map-tile';
+import { MobilAppTile } from '@/components/tiles/mobil-app-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
@@ -55,7 +55,8 @@ export default async function Landing() {
 
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={true} />}
 
-            <CountdownTile />
+            {/* <CountdownTile /> */}
+            {(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />}
             {/* <NewsletterTile /> */}
             <WorkshopTile />
             <MapTile />

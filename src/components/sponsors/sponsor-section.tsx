@@ -24,7 +24,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
             {featuredSponsors.map(
               (c) =>
                 c.logoUrl && (
-                  <div key={c.name} className='col-span-2 h-auto max-w-[200px] w-full max-h-[75px]'>
+                  <div key={c.name} className='col-span-2 max-w-[200px] w-full h-[75px]'>
                     <SponsorLogo company={c} />
                   </div>
                 )

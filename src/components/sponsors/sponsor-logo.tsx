@@ -31,12 +31,12 @@ export function SponsorLogo({ company: { logoUrl, name, url, category } }: Props
         </a>
       )}
     >
-      <div className='relative p-2'>
+      <div className='relative p-2 h-full'>
         <img
           loading='lazy'
           src={logoUrl}
           alt={`${name} logo`}
-          className={clsx(category === SponsorCategory.MAIN_SPONSOR ? '' : 'max-h-[75px]', 'mx-auto')}
+          className={clsx(category === SponsorCategory.MAIN_SPONSOR ? '' : 'max-h-[75px]', 'mx-auto my-auto h-full')}
         />
       </div>
     </ConditionalWrapper>

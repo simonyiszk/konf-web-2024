@@ -10,9 +10,9 @@ const mapLinks = {
 
 export function LocationTile() {
   return (
-    <Tile className='col-span-3 min-h-[500px]'>
-      <Tile.Body className='max-w-6xl w-full md:grid-cols-3 md:px-12 grid gap-12'>
-        <div className='order-2 flex flex-col justify-center gap-4 md:order-1'>
+    <Tile className='sm:col-span-2 lg:col-span-3 min-h-[500px] h-[800px] lg:h-auto md:h-auto'>
+      <Tile.Body className='max-w-6xl w-full md:px-12 flex lg:flex-row md:flex-row flex-col gap-4 justify-between'>
+        <div className='flex flex-col justify-center gap-4 min-w-[300px] flex-1 lg:max-w-[400px]'>
           <h1 className='text-center'>Helyszín</h1>
           <address className='block text-center text-xl not-italic lg:text-2xl'>
             <span className='block'>I épület</span>
@@ -39,7 +39,7 @@ export function LocationTile() {
             </a>
           </div>
         </div>
-        <div className='order-1 h-full min-h-[300px] md:order-2 md:col-span-2 md:min-h-0 lg:aspect-2 focus:outline-none'>
+        <div className='order-1 h-full lg:min-h-[300px] md:order-2 md:col-span-2 md:min-h-0 lg:aspect-2 focus:outline-none flex-1 lg:max-w-[600px]'>
           <iframe
             title='Térkép'
             src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1348.437074543208!2d19.060099308679057!3d47.47288184641483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741ddabb29bd997%3A0x4b453205e2d0f96b!2zQk1FIEkgw6lww7xsZXQ!5e0!3m2!1shu!2shu!4v1650888578884!5m2!1shu!2shu'

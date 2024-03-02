@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 
+import { LocationTile } from '@/components/tiles/location-tile';
 import { OrganiserTile } from '@/components/tiles/organizer-tile';
 import { getIndexData } from '@/models/get-index-data';
 
@@ -29,6 +30,7 @@ export default async function asyncontact() {
           {org.other.map((organiser) => (
             <OrganiserTile key={organiser.emailAddress} {...organiser} />
           ))}
+          <LocationTile />
         </div>
       </div>
     </div>

@@ -12,19 +12,17 @@ export function MobilAppTile({ data }: Props) {
       <Tile.Body>
         <h2 className='text-3xl sm:text-[34px]'>KonferenciApp</h2>
         <div className='flex flex-col gap-4 lg:gap-0 lg:flex-row w-full justify-between mt-4 items-center'>
-          <img src='img/app-screens.png' className='object-cover rounded-3xl h-[300px] mr-3' alt='Workshop Image' />
+          <img src='img/app-screens.png' className='object-cover rounded-3xl h-[300px] mr-3' alt='App screens' />
           <p className='text-stone-200 text-[20px] whitespace-pre-line w-full h-full items-center'>
-            Töltsd le a mobil appot és kövesd a konferencia eseményeit élőben!
-            {/* Tegyél fel kérdéseket az előadóknak, vagy
-            tájékozódj az előadsok között */}
+            Töltsd le a mobil appot, hogy élőben köveshesd a konferencia eseményeit és kérdezhess az előadóktól!
           </p>
         </div>
-        <div className='w-full flex flex-row justify-center gap-10 items-center mt-4'>
+        <div className='w-full flex lg:flex-row md:flex-col justify-center lg:gap-10 md:gap-5 items-center mt-4'>
           <a href={data.androidUrl} className='h-fit'>
-            <img className='h-[57px]' src='img/google-play-badge-en.png' alt='Play Store' />
+            <img className='h-[57px] min-w-[190]' src='img/google-play-badge-hu.png' alt='Play Store' />
           </a>
           <a href={data.iosUrl}>
-            <img className='h-[60px]' src='img/apple-store-en-black.svg' alt='Apple Store' />
+            <img className='h-[60px] min-w-[180]' src='img/apple-store-hu-black.svg' alt='Apple Store' />
           </a>
         </div>
       </Tile.Body>

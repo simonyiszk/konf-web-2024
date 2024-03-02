@@ -12,9 +12,13 @@ export default function WorkshopPage() {
     <div className='max-w-6xl w-full px-4 sm:px-6 xl:px-0 mt-10'>
       <Tile>
         <Tile.Body>
-          <h1 className='mb-16 text-3xl sm:text-4xl md:text-[42px]'>A 21. század műanyaga az AI - Workshop</h1>
+          <div>
+            <h1 className='mb-2 text-3xl sm:text-4xl md:text-[42px]'>A 21. század műanyaga az AI - Workshop</h1>
+            <p className='mb-16 text-[22px] font-bold block lg:hidden text-[#FFE500]'>IB110 | 14:30-16:30</p>
+          </div>
           <div className='flex flex-col lg:flex-row gap-8'>
             <div>
+              <p className='mb-8 text-[22px] font-bold hidden lg:block text-[#FFE500]'>IB110 | 14:30-16:30</p>
               <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>
                 A 21. század műanyaga a mesterséges intelligencia. Már előreláthatólag el fog árasztani mindent, és
                 lépésről lépésre fel kell fedezzük (a mérnökök és a felhasználók) a tulajdonságait, hogy az általános

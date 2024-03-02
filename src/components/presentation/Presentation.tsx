@@ -42,19 +42,20 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
           {!isFrontPage && (
             <div>
               <h1 className='mb-2 hyphens-auto sm:hyphens-none'>{title}</h1>
+              <p className='mb-8 text-[25px] font-bold block md:hidden text-[#FFE500]'>{`${presentation.room}${time}`}</p>
             </div>
           )}
           <div className='flex flex-col md:flex-row gap-8'>
             {!isFrontPage && (
               <div>
-                <p className='mb-8 text-[25px]'>{`${presentation.room}${time}`}</p>
+                <p className='mb-8 text-[25px] font-bold hidden md:block text-[#FFE500]'>{`${presentation.room}${time}`}</p>
                 <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>
               </div>
             )}
             {isFrontPage && (
               <div>
                 <p className='mb-2 text-3xl sm:text-[40px] font-bold leading-10'>{title}</p>
-                <p className='mb-8 text-[22px] '>{`${presentation.room}${time}`}</p>
+                <p className='mb-8 text-[22px] font-bold text-[#FFE500]'>{`${presentation.room}${time}`}</p>
                 <p className='text-stone-200 text-base sm:text-[20px] whitespace-pre-line'>{description}</p>
                 <div className='flex flex-col sm:flex-row'>
                   {imageUrls?.map((image) => {

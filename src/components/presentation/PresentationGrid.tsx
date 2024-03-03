@@ -8,7 +8,7 @@ import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates } from '@/models/models';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
-const TimespanUnitHeight = '9rem';
+const TimespanUnitHeight = 'minmax(6rem, auto)';
 
 export function PresentationGrid({
   presentations,

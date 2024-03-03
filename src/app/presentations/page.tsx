@@ -21,7 +21,6 @@ export default async function Presentations() {
     <div className='flex flex-col max-w-6xl w-full px-4 sm:px-6 xl:px-0 relative'>
       <h1 className='mb-16 mt-8'>Előadások</h1>
       <PresentationGrid presentations={presentations} endDate={endDate} startDate={startDate} />
-      <h2 className='mt-20 text-center'>Az előadások listája még bővül!</h2>
     </div>
   );
 }

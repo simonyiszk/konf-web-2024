@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { CSSProperties, useRef } from 'react';
 
 import { Tile } from '@/components/tiles/tile';
-import { PresentationWithDates } from '@/models/models';
+import { PresentationWithDates, SponsorCategory } from '@/models/models';
 import slugify from '@/utils/slugify';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
@@ -130,6 +130,9 @@ function PresentationTile({ presentation }: { presentation: PresentationWithDate
                 <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
               </div>
             </div>
+          )}
+          {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && (
+            <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
           )}
         </div>
       </Tile.Body>

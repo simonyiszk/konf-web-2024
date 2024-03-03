@@ -379,7 +379,10 @@ export function Map({ active }: MapProps) {
           <text className='cls-13' transform='translate(360.78 488.13)'>
             IB025
           </text>
-          <text className='cls-14' transform='translate(142.85 511.4) rotate(-1.81)'>
+          <text
+            className={active == 0 ? 'cls-14-highlight' : 'cls-14'}
+            transform='translate(142.85 511.4) rotate(-1.81)'
+          >
             R
           </text>
           <g id='Environment_Coffee' data-name='Environment / Coffee'>

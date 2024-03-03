@@ -15,28 +15,28 @@ const map = [
   'Interactive Brokers',
   'Paks II.',
   'Barré',
-  'Nova',
+  'Nova Services',
   'KUKA',
-  'OTP',
+  'OTP Bank',
   'Knorr-Bremse',
   'SCHIS',
-  'Paripa',
+  'PARIPA',
   'BME Suborbitals',
   'BME Formula Racing Team',
-  'Schdesign',
-  'Kir-dev',
+  'schdesign',
+  'Kir-Dev',
   'SEM',
   'HA5KFU',
-  'LEGO',
+  'LEGO Kör',
 ];
 
 export function Floorplan() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
   return (
     <section className='container'>
-      <h4 className='mb-4 text-center text-4xl font-black md:text-6xl lg:col-span-2 lg:text-8xl'>Térkép</h4>
-      <div className='relative flex flex-col-reverse md:flex-row w-full rounded-lg justify-between gap-4 items-center'>
-        <ol className='pl-3 text-center grid grid-cols-2 gap-4 md:block'>
+      <h2 className='mb-4 text-center text-4xl lg:col-span-2'>Térkép</h2>
+      <div className='relative flex flex-col-reverse md:flex-row w-full rounded-lg justify-center gap-8 md:gap-16 lg:gap-32 items-center'>
+        <ol className='pl-3 text-center md:text-start gap-4 md:block'>
           {map.map((name, i) => {
             return (
               <li key={name} className='text-lg'>

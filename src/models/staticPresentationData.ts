@@ -1,7 +1,7 @@
 import { Presentation } from './models';
 
 export const kotlinPresentation: Presentation = {
-  slug: 'kotlin-multiplatform-kodmegosztas-pragmatikusan',
+  slug: 'kotlin-multiplatform',
   description:
     'A Kotlin első verzióját 2016-ban adta ki a JetBrains, a nyelv azóta folyamatosan fejlődik, mára már élénk közösséggel és ökoszisztémával rendelkezik. Eredeti célját, a JVM alapú szoftverfejlesztést hamar kinőtte, pár év alatt meghódította az Android fejlesztést is. Napjainkban a növekedés legújabb iránya a Kotlin Multiplatform, amivel kitörhetünk a JVM-ről, és szabadon megoszthatunk Kotlin kódot különböző mobil platformok, valamint asztali, webes és szerveroldali alkalmazások között. Ebben az előadásban ennek a technológiának az előnyeivel és legújabb fejleményeivel fogunk megismerkedni.',
   language: 'hu',
@@ -22,7 +22,7 @@ export const kotlinPresentation: Presentation = {
 };
 
 export const tresoritPresentation: Presentation = {
-  slug: 'hogyan-lehet-eladni-a-diplomamunkat-150-orszagban-crysys-laborbol-indult-tresorit-tapasztalatok',
+  slug: 'crysys-tresorit',
   description:
     'A Tresoritot BMEs és Corvinusos hallgatók alapították, melynek alapja egy közös kutatási munka volt. Korán jelentős tőkét vontak be: már a BSc diplomaosztóra 380M Ft tőkebevonást zártak. De a sikerhez nem vezetett kikövezett út, rengeteg nehézséggel szembesültek. Ezek közé tartozott a marketing, növekedés, cégépítés és termékfejlesztés kérdései. Ma már nagyvállalatok, kormányzati szervek, kisebb-nagyobb cégek világszerte használják a Tresoritot a legbizalmasabb dokumentumok tárolására - de az idevezető út sokszor meglepő fordulatot vett.',
   language: 'hu',

@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function Conferences() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col overflow-hidden'>
       <h2 className='mb-20 text-center'>Tekintsd meg korábbi konferenciáinkat:</h2>
       <div className='flex justify-between flex-col md:flex-row gap-10'>
         <Link href='https://2023.konferencia.simonyi.bme.hu' target='_blank'>

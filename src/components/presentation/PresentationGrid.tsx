@@ -8,7 +8,7 @@ import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates } from '@/models/models';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
-const TimespanUnitHeight = '8.75rem';
+const TimespanUnitHeight = '9rem';
 
 export function PresentationGrid({
   presentations,
@@ -54,7 +54,7 @@ export function PresentationGrid({
         </button>
       </div>
 
-      <div className='overflow-x-auto flex'>
+      <div className='overflow-x-auto no-scrollbar flex'>
         <ul
           ref={gridRef}
           className='presentation-grid snap-x snap-proximity'
@@ -65,7 +65,7 @@ export function PresentationGrid({
           {presentations.map((presentation) => (
             <li
               key={presentation.slug}
-              className={clsx('w-full', presentation.room != 'IB028' && 'snap-start')}
+              className={clsx('w-full pb-4', presentation.room == 'IB028' && 'pr-4')}
               style={getPresentationCellStyles(startDate, presentation)}
             >
               {presentation.placeholder ? (
@@ -94,7 +94,7 @@ function PresentationTile({ presentation }: { presentation: PresentationWithDate
           {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
         </span>
         <div className='flex-1' />
-        <h2 className={clsx('text-xl pb-6 font-medium', !presentation.presenter && 'text-center')}>
+        <h2 className={clsx('text-lg lg:text-xl pb-4 lg:pb-6 font-medium', !presentation.presenter && 'text-center')}>
           {presentation.title}
         </h2>
         {!!presentation.presenter && (
@@ -105,9 +105,9 @@ function PresentationTile({ presentation }: { presentation: PresentationWithDate
               alt='Presentation Image'
             />
             <div>
-              <h3 className='text-2xl font-bold'>{presentation.presenter.name}</h3>
-              <div className='text-sm'>{presentation.presenter.rank}</div>
-              <div className='text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
+              <h3 className='text-lg lg:text-2xl font-bold'>{presentation.presenter.name}</h3>
+              <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
+              <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
             </div>
           </div>
         )}
@@ -123,7 +123,11 @@ function TimeMarker({ markerDate, startDate }: { markerDate: Date; startDate: nu
   const rowStart = getTimeRowPositionInGrid(markerDate.getTime(), startDate) + 1;
   const rowEnd = rowStart + Math.floor(TimeMarkerStepSize / TimespanUnit);
   return (
-    <li aria-hidden={true} className='snap-start' style={{ gridRowStart: rowStart, gridRowEnd: rowEnd }}>
+    <li
+      aria-hidden={true}
+      className='snap-start hidden pr-4 md:block'
+      style={{ gridRowStart: rowStart, gridRowEnd: rowEnd }}
+    >
       <Tile disableMinHeight={true}>
         <Tile.Body lessPadding='4'>{dateToHourAndMinuteString(markerDate)}</Tile.Body>
       </Tile>

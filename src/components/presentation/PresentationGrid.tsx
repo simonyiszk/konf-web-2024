@@ -6,6 +6,7 @@ import { CSSProperties, useRef } from 'react';
 
 import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates } from '@/models/models';
+import slugify from '@/utils/slugify';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
 const TimespanUnitHeight = 'minmax(5rem, auto)';
@@ -71,7 +72,7 @@ export function PresentationGrid({
               {presentation.placeholder ? (
                 <PresentationTile presentation={presentation} />
               ) : (
-                <Link href={`/presentations/${presentation.slug}`}>
+                <Link href={`/presentations/${slugify(presentation.title)}`}>
                   <PresentationTile presentation={presentation} />
                 </Link>
               )}

@@ -34,7 +34,7 @@ export async function generateMetadata({ params: { slug } }: Props, parent: Reso
 
 const getPresentationBySlug = async (slug: string) => {
   const data = await getIndexData();
-  return data?.presentations.find((p) => p.slug === slug);
+  return data?.presentations.find((p) => slugify(p.title) === slug);
 };
 
 export default async function PresentationBySlug({ params }: { params: { slug: string } }) {

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import { Presentation } from '@/models/models';
+import slugify from '@/utils/slugify';
 
 import uk from '../../../public/img/uk.svg';
 import { Tile } from '../tiles/tile';
@@ -107,7 +108,7 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
         {isFrontPage && (
           <div className='flex flex-col md:flex-row gap-6 md:gap-16 items-center pt-6 justify-center'>
             <Link
-              href={`/presentations/${presentation.slug}`}
+              href={`/presentations/${slugify(presentation.title)}`}
               className='inline-flex items-center font-semibold text-xl text-white brand-link'
             >
               Részletek

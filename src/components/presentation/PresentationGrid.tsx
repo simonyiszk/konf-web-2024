@@ -8,7 +8,7 @@ import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates } from '@/models/models';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
-const TimespanUnitHeight = 'minmax(6rem, auto)';
+const TimespanUnitHeight = 'minmax(5rem, auto)';
 
 export function PresentationGrid({
   presentations,
@@ -91,6 +91,7 @@ function PresentationTile({ presentation }: { presentation: PresentationWithDate
     <Tile clickable={!presentation.placeholder} className='w-full h-full' disableMinHeight={true}>
       <Tile.Body lessPadding='5' className='flex flex-col'>
         <span className='pb-2 text-xs'>
+          {presentation.room !== 'BOTH' && `${presentation.room}  | `}
           {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
         </span>
         <div className='flex flex-col justify-center flex-1'>
@@ -139,11 +140,11 @@ const TimeMarkerStepSize = 30 * 60 * 1000; // half an hour
 
 function TimeMarker({ markerDate, startDate }: { markerDate: Date; startDate: number }) {
   const rowStart = getTimeRowPositionInGrid(markerDate.getTime(), startDate) + 1;
-  const rowEnd = rowStart + Math.floor(TimeMarkerStepSize / TimespanUnit);
+  const rowEnd = rowStart + Math.floor(TimeMarkerStepSize / TimespanUnit) - 1;
   return (
     <li
       aria-hidden={true}
-      className='snap-start hidden pr-4 md:block'
+      className={clsx('snap-start hidden pr-4 md:block', rowStart > 1 && '-translate-y-10')}
       style={{ gridRowStart: rowStart, gridRowEnd: rowEnd }}
     >
       <Tile disableMinHeight={true}>

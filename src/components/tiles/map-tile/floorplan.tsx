@@ -44,12 +44,6 @@ export function Floorplan() {
                   type='button'
                   className='group py-1 pl-1 text-left'
                   onClick={() => {
-                    // if (ref.current) {
-                    //   ref.current.scrollIntoView({
-                    //     behavior: 'smooth',
-                    //     inline: 'start',
-                    //   });
-                    // }
                     setActive(i);
                   }}
                 >

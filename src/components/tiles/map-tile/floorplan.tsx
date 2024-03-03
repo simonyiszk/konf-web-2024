@@ -1,6 +1,6 @@
 'use client';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { MdLocationPin } from 'react-icons/md';
 
 import { Map } from './map';
@@ -19,7 +19,7 @@ const map = [
   'KUKA',
   'OTP Bank',
   'Knorr-Bremse',
-  'SCHIS',
+  'Schönherz Iskolaszövetkezet',
   'PARIPA',
   'BME Suborbitals',
   'BME Formula Racing Team',
@@ -32,11 +32,12 @@ const map = [
 
 export function Floorplan() {
   const [active, setActive] = useState(-1);
+  const ref = useRef<HTMLDivElement>(null);
   return (
     <section className='container'>
       <h2 className='mb-4 text-center text-4xl lg:col-span-2'>Térkép</h2>
-      <div className='relative flex flex-col-reverse md:flex-row w-full rounded-lg justify-center gap-8 md:gap-16 lg:gap-32 items-center'>
-        <ol className='pl-3 text-center md:text-start gap-4 md:block'>
+      <div className='relative flex flex-col-reverse mdx:flex-row w-full rounded-lg justify-center gap-8 mdx:gap-16 lg:gap-32 items-center'>
+        <ol className='pl-3 text-center mdx:text-start gap-4 mdx:block'>
           {map.map((name, i) => {
             return (
               <li key={name} className='text-lg'>
@@ -44,6 +45,12 @@ export function Floorplan() {
                   type='button'
                   className='group py-1 pl-1 text-left'
                   onClick={() => {
+                    if (ref.current && window.innerWidth < 940) {
+                      ref.current.scrollIntoView({
+                        behavior: 'smooth',
+                        inline: 'start',
+                      });
+                    }
                     setActive(i);
                   }}
                 >
@@ -61,7 +68,10 @@ export function Floorplan() {
             );
           })}
         </ol>
-        <div className='pointer-events-none relative select-none bg-white/10 rounded-md flex-1 w-full md:w-fit p-8 max-w-[500px] flex flex-row justify-center items-center'>
+        <div
+          ref={ref}
+          className='pointer-events-none relative select-none bg-white/10 rounded-md flex-1 w-full mdx:w-fit p-8 max-w-[500px] flex flex-row justify-center items-center'
+        >
           <Map active={active} />
         </div>
       </div>

@@ -1,0 +1,100 @@
+.cls-1 {
+  fill: #bbc6d1;
+}
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+  stroke: #000;
+  stroke-width: 6px;
+}
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-8 {
+  stroke-miterlimit: 10;
+}
+.cls-2,
+.cls-5 {
+  fill: #7d99b6;
+}
+.cls-15,
+.cls-3 {
+  fill: none;
+}
+.cls-3 {
+  stroke-linecap: square;
+}
+.cls-4 {
+  fill: #486d94;
+}
+.cls-14,
+.cls-6 {
+  font-size: 12px;
+}
+.cls-6,
+.cls-9 {
+  fill: #1d1d1b;
+  font-family: Raleway-ExtraBold, Raleway;
+  font-weight: 800;
+}
+.cls-7,
+.cls-8 {
+  fill: #010101;
+}
+.cls-15,
+.cls-8 {
+  stroke: #010101;
+}
+.cls-8 {
+  stroke-width: 0.5px;
+}
+.cls-9 {
+  font-size: 11.54px;
+}
+.cls-10 {
+  letter-spacing: -0.03em;
+}
+.cls-11 {
+  font-size: 14px;
+}
+.cls-11,
+.cls-13 {
+  font-family: Raleway-Bold, Raleway;
+  font-weight: 700;
+}
+.cls-12 {
+  letter-spacing: -0.02em;
+}
+.cls-13 {
+  font-size: 17.77px;
+  fill: #fff;
+}
+.cls-14 {
+  fill: #f6f6f6;
+  font-family: Raleway-SemiBold, Raleway;
+  font-weight: 600;
+}
+.cls-15 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.56px;
+}
+.anim {
+  animation: anim 1s ease-in-out infinite;
+  fill: #ffe500;
+  /* opacity: 1; */
+}
+
+@keyframes anim {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

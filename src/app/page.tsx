@@ -7,6 +7,7 @@ import Presentation from '@/components/presentation/Presentation';
 import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import CountdownTile from '@/components/tiles/countdown-tile/countdown-tile';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
+import MapTile from '@/components/tiles/map-tile/map-tile';
 import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
@@ -57,7 +58,7 @@ export default async function Landing() {
             <CountdownTile />
             {/* <NewsletterTile /> */}
             <WorkshopTile />
-            {/*{(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />} */}
+            <MapTile />
           </div>
           <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet -z-10' />
         </div>

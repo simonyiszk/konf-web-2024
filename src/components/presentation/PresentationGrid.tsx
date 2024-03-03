@@ -1,4 +1,4 @@
-'use client'; // we need use client because of useRef
+'use client';
 
 import clsx from 'clsx';
 import Link from 'next/link';
@@ -26,7 +26,7 @@ export function PresentationGrid({
   const gridRef = useRef<HTMLUListElement | null>(null);
   return (
     <>
-      <div className='flex sticky left-0 top-28 z-10 flex-row justify-evenly rounded-b-md mb-8'>
+      <div className='flex sticky left-0 top-28 z-10 md:ml-24 flex-row justify-around rounded-b-md mb-8'>
         <button
           className='rounded-md backdrop-blur-md bg-white bg-opacity-[0.15] py-4 px-6 font-bold text-lg'
           type='button'

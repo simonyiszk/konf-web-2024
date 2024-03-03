@@ -43,6 +43,12 @@ export interface Presentation {
   description: string;
   questionsUrl: string; // még kérdéses, hogy így lesz-e
   imageUrls?: string[];
+  placeholder?: boolean;
+}
+
+export interface PresentationWithDates extends Presentation {
+  startDate: Date;
+  endDate: Date;
 }
 
 export interface RegistraionData {

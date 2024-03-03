@@ -34,7 +34,7 @@ export async function generateMetadata({ params: { slug } }: Props, parent: Reso
 
 const getPresentationBySlug = async (slug: string) => {
   const data = await getIndexData();
-  return data?.presentations.find((p) => slugify(p.title) === slug);
+  return data?.presentations.find((p) => p.slug === slug);
 };
 
 export default async function PresentationBySlug({ params }: { params: { slug: string } }) {
@@ -44,7 +44,7 @@ export default async function PresentationBySlug({ params }: { params: { slug: s
   }
 
   return (
-    <div className='mt-10 px-4 sm:px-6 xl:px-0'>
+    <div className='mt-10 px-4 sm:px-6 xl:px-0 overflow-hidden'>
       <Presentation presentation={presentation} />
     </div>
   );

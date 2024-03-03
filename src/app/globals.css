@@ -85,3 +85,12 @@ h2 {
     #101010
   );
 }
+
+.presentation-grid {
+  display: grid;
+  justify-items: start;
+  align-content: stretch;
+  grid-template-columns: fit-content(16rem) minmax(340px, 1fr) minmax(340px, 1fr);
+  grid-gap: 16px;
+  scrollbar-width: none;
+}

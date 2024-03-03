@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function WorkshopPage() {
   return (
-    <div className='max-w-6xl w-full px-4 sm:px-6 xl:px-0 mt-10'>
+    <div className='max-w-6xl w-full px-4 sm:px-6 xl:px-0 mt-10 overflow-hidden'>
       <Tile>
         <Tile.Body>
           <div>

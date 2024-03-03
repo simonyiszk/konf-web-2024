@@ -35,9 +35,11 @@ export function Floorplan() {
   const ref = useRef<HTMLDivElement>(null);
   return (
     <section className='container'>
-      <h2 className='mb-4 text-center text-4xl lg:col-span-2'>Térkép</h2>
+      <h2 ref={ref} className='mb-4 text-center text-4xl lg:col-span-2'>
+        Térkép
+      </h2>
       <div className='relative flex flex-col-reverse mdx:flex-row w-full rounded-lg justify-center gap-8 mdx:gap-16 lg:gap-32 items-center'>
-        <ol className='pl-3 text-center mdx:text-start gap-4 mdx:block'>
+        <ol className='text-center mdx:text-start gap-4 mdx:block'>
           {map.map((name, i) => {
             return (
               <li key={name} className='text-lg'>
@@ -68,10 +70,7 @@ export function Floorplan() {
             );
           })}
         </ol>
-        <div
-          ref={ref}
-          className='pointer-events-none relative select-none bg-white/10 rounded-md flex-1 w-full mdx:w-fit p-8 max-w-[500px] flex flex-row justify-center items-center'
-        >
+        <div className='pointer-events-none relative select-none bg-white/10 rounded-md flex-1 w-full mdx:w-fit p-8 max-w-[500px] flex flex-row justify-center items-center'>
           <Map active={active} />
         </div>
       </div>

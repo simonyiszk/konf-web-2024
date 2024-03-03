@@ -65,7 +65,7 @@ export function PresentationGrid({
           {presentations.map((presentation) => (
             <li
               key={presentation.slug}
-              className={clsx('w-full pb-4', presentation.room == 'IB028' && 'pr-4')}
+              className={clsx('w-full px-1 pb-4', presentation.room == 'IB028' && 'pr-4')}
               style={getPresentationCellStyles(startDate, presentation)}
             >
               {presentation.placeholder ? (
@@ -93,25 +93,43 @@ function PresentationTile({ presentation }: { presentation: PresentationWithDate
         <span className='pb-2 text-xs'>
           {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
         </span>
-        <div className='flex-1' />
-        <h2 className={clsx('text-lg lg:text-xl pb-4 lg:pb-6 font-medium', !presentation.presenter && 'text-center')}>
-          {presentation.title}
-        </h2>
-        {!!presentation.presenter && (
-          <div className='flex gap-4'>
-            <img
-              src={presentation.presenter.pictureUrl}
-              className='object-cover rounded-3xl w-16 h-16'
-              alt='Presentation Image'
-            />
-            <div>
-              <h3 className='text-lg lg:text-2xl font-bold'>{presentation.presenter.name}</h3>
-              <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
-              <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
-            </div>
+        <div className='flex flex-col justify-center flex-1'>
+          <div className={clsx('flex', presentation.placeholder && 'justify-around')}>
+            <h2
+              className={clsx(
+                'text-lg lg:text-xl font-medium',
+                !presentation.presenter ? 'text-center pb-4' : 'pb-4 lg:pb-6'
+              )}
+            >
+              {presentation.title}
+            </h2>
+            {presentation.room === 'BOTH' && presentation.placeholder && (
+              <h2
+                aria-hidden={true}
+                className={clsx(
+                  'text-lg lg:text-xl pb-4 lg:pb-6 font-medium',
+                  !presentation.presenter && 'text-center'
+                )}
+              >
+                {presentation.title}
+              </h2>
+            )}
           </div>
-        )}
-        <div className='flex-1' />
+          {!!presentation.presenter && (
+            <div className='flex gap-4'>
+              <img
+                src={presentation.presenter.pictureUrl}
+                className='object-cover rounded-3xl w-16 h-16'
+                alt='Presentation Image'
+              />
+              <div>
+                <h3 className='text-lg lg:text-2xl font-bold text-[#FFE500]'>{presentation.presenter.name}</h3>
+                <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
+                <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
+              </div>
+            </div>
+          )}
+        </div>
       </Tile.Body>
     </Tile>
   );

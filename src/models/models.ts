@@ -36,7 +36,7 @@ export interface Presentation {
   slug: string;
   title: string;
   presenter: Presenter;
-  room: 'IB028' | 'IB025';
+  room: 'IB028' | 'IB025' | 'BOTH';
   language: 'en' | 'hu';
   startTime: string;
   endTime: string;

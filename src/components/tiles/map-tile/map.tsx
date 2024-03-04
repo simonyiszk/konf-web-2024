@@ -6,7 +6,7 @@ type MapProps = {
 
 export function Map({ active }: MapProps) {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 436.39 700.05'>
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 436.39 700.05' className='md:max-h-[800px] max-h-max'>
       <g id='Layer_2' data-name='Layer 2'>
         <g id='Layer_2-2' data-name='Layer 2'>
           <polygon
@@ -230,13 +230,13 @@ export function Map({ active }: MapProps) {
           <text className='cls-6' transform='translate(199.55 464.32)'>
             4
           </text>
-          <text className='cls-6' transform='translate(197.01 520.94)'>
+          <text className='cls-6' transform='translate(197.01 523.94)'>
             5
           </text>
           <text className='cls-6' transform='translate(220.49 527.79)'>
             6
           </text>
-          <text className='cls-6' transform='translate(255.34 532.88)'>
+          <text className='cls-6' transform='translate(255.34 534.88)'>
             7
           </text>
           <text className='cls-6' transform='translate(253.81 480.75)'>
@@ -245,10 +245,10 @@ export function Map({ active }: MapProps) {
           <text className='cls-6' transform='translate(288.56 445.42)'>
             9
           </text>
-          <text className='cls-6' transform='translate(283.12 405.58)'>
+          <text className='cls-6' transform='translate(282.12 405.58)'>
             10
           </text>
-          <text className='cls-6' transform='translate(268.16 379.27)'>
+          <text className='cls-6' transform='translate(267.16 379.27)'>
             11
           </text>
           <text className='cls-6' transform='translate(197.97 333.86)'>
@@ -257,19 +257,19 @@ export function Map({ active }: MapProps) {
           <text className='cls-6' transform='translate(249.95 316.93)'>
             13
           </text>
-          <text className='cls-6' transform='translate(317.81 293.35)'>
+          <text className='cls-6' transform='translate(314.81 293.35)'>
             14
           </text>
-          <text className='cls-6' transform='translate(317.81 259.06)'>
+          <text className='cls-6' transform='translate(314.81 259.06)'>
             15
           </text>
-          <text className='cls-6' transform='translate(320.24 205.26)'>
+          <text className='cls-6' transform='translate(314.81 205.26)'>
             16
           </text>
-          <text className='cls-6' transform='translate(317.81 139.48)'>
+          <text className='cls-6' transform='translate(314.81 139.48)'>
             17
           </text>
-          <text className='cls-6' transform='translate(318.43 110.27)'>
+          <text className='cls-6' transform='translate(314.43 110.27)'>
             18
           </text>
           <text className='cls-6' transform='translate(292.02 166.3)'>
@@ -347,7 +347,7 @@ export function Map({ active }: MapProps) {
           />
           <text className='cls-6' transform='translate(374.62 640.57)'>
             VI
-            <tspan className='cls-9' x='11.69' y='0'>
+            <tspan className='cls-9' x='17.46' y='0'>
               P
             </tspan>
           </text>
@@ -369,7 +369,7 @@ export function Map({ active }: MapProps) {
           </text>
           <text
             className={active == 0 ? 'cls-13-highlight' : 'cls-13'}
-            transform='translate(142.85 511.4) rotate(-1.81)'
+            transform='translate(141.85 511.4) rotate(-1.81)'
           >
             R
           </text>

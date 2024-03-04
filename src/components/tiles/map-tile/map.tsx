@@ -30,14 +30,7 @@ export function Map({ active }: MapProps) {
             className='cls-4'
             points='337.44 511.75 337.45 427.82 433.39 427.72 433.39 533.54 337.45 533.54 337.44 511.75'
           />
-          <rect
-            className={active === 0 ? 'anim' : ''}
-            x='137.47'
-            y='499.47'
-            width='20.04'
-            height='15.66'
-            transform='translate(146.39 -21) rotate(16.09)'
-          />
+          <rect x='137.47' y='499.47' width='20.04' height='15.66' transform='translate(146.39 -21) rotate(16.09)' />
         </g>
 
         <g id='Layer_7' data-name='Layer 7'>
@@ -50,7 +43,7 @@ export function Map({ active }: MapProps) {
             transform='translate(109.89 -34.5) rotate(11.61)'
           />
           <rect
-            className={active === 5 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='187.17'
             y='513.44'
             width='24.76'
@@ -58,7 +51,7 @@ export function Map({ active }: MapProps) {
             transform='translate(108.31 -29.57) rotate(11.61)'
           />
           <rect
-            className={active === 7 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='246.63'
             y='525.66'
             width='24.76'
@@ -66,7 +59,7 @@ export function Map({ active }: MapProps) {
             transform='translate(111.99 -41.28) rotate(11.61)'
           />
           <rect
-            className={active === 8 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='245.08'
             y='472.41'
             width='24.76'
@@ -74,7 +67,7 @@ export function Map({ active }: MapProps) {
             transform='translate(101.24 -42.06) rotate(11.61)'
           />
           <rect
-            className={active === 4 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='190.98'
             y='458.08'
             width='24.76'
@@ -82,7 +75,7 @@ export function Map({ active }: MapProps) {
             transform='translate(692.76 337.05) rotate(99.36)'
           />
           <rect
-            className={active === 3 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='195.93'
             y='429.62'
             width='24.76'
@@ -90,7 +83,7 @@ export function Map({ active }: MapProps) {
             transform='translate(670.42 299.08) rotate(99.36)'
           />
           <rect
-            className={active === 1 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='242.82'
             y='440.13'
             width='24.76'
@@ -98,7 +91,7 @@ export function Map({ active }: MapProps) {
             transform='translate(735.31 265.04) rotate(99.36)'
           />
           <rect
-            className={active === 9 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='279.64'
             y='438.63'
             width='24.76'
@@ -106,7 +99,7 @@ export function Map({ active }: MapProps) {
             transform='translate(776.64 226.96) rotate(99.36)'
           />
           <rect
-            className={active === 10 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='277.51'
             y='398.31'
             width='24.76'
@@ -114,7 +107,7 @@ export function Map({ active }: MapProps) {
             transform='translate(493.7 -49.7) rotate(60)'
           />
           <rect
-            className={active === 11 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='261.55'
             y='370.67'
             width='24.76'
@@ -122,7 +115,7 @@ export function Map({ active }: MapProps) {
             transform='translate(461.78 -49.7) rotate(60)'
           />
           <rect
-            className={active === 2 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='202.14'
             y='390.22'
             width='24.76'
@@ -130,7 +123,7 @@ export function Map({ active }: MapProps) {
             transform='translate(638.77 247.14) rotate(99.36)'
           />
           <rect
-            className={active === 12 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='191.86'
             y='326.25'
             width='24.76'
@@ -138,7 +131,7 @@ export function Map({ active }: MapProps) {
             transform='translate(437.12 641.78) rotate(174.89)'
           />
           <rect
-            className={active === 13 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='244.17'
             y='309.43'
             width='24.76'
@@ -146,7 +139,7 @@ export function Map({ active }: MapProps) {
             transform='translate(647.83 419.65) rotate(144.4)'
           />
           <rect
-            className={active === 14 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='311.52'
             y='285.88'
             width='24.76'
@@ -154,7 +147,7 @@ export function Map({ active }: MapProps) {
             transform='translate(614.16 -33.62) rotate(90)'
           />
           <rect
-            className={active === 15 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='311.52'
             y='251.59'
             width='24.76'
@@ -162,7 +155,7 @@ export function Map({ active }: MapProps) {
             transform='translate(579.88 -67.91) rotate(90)'
           />
           <rect
-            className={active === 16 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='313.74'
             y='198.05'
             width='24.76'
@@ -170,7 +163,7 @@ export function Map({ active }: MapProps) {
             transform='translate(528.56 -123.68) rotate(90)'
           />
           <rect
-            className={active === 19 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='286.27'
             y='158.7'
             width='24.76'
@@ -178,7 +171,15 @@ export function Map({ active }: MapProps) {
             transform='translate(331.79 -175.57) rotate(66.95)'
           />
           <rect
-            className={active === 17 ? 'anim' : 'cls-5'}
+            x='270'
+            y='285.8'
+            transform='matrix(0.6013 -0.799 0.799 0.6013 -119.2798 341.3524)'
+            className='cls-5'
+            width='24.8'
+            height='8.8'
+          />
+          <rect
+            className='cls-5'
             x='311.88'
             y='132.12'
             width='24.76'
@@ -186,7 +187,7 @@ export function Map({ active }: MapProps) {
             transform='translate(460.77 -187.74) rotate(90)'
           />
           <rect
-            className={active === 18 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='311.88'
             y='101.42'
             width='24.76'
@@ -194,7 +195,7 @@ export function Map({ active }: MapProps) {
             transform='translate(430.07 -218.44) rotate(90)'
           />
           <rect
-            className={active === 20 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='267.38'
             y='129.17'
             width='24.76'
@@ -202,7 +203,7 @@ export function Map({ active }: MapProps) {
             transform='translate(192.86 -164.02) rotate(48.2)'
           />
           <rect
-            className={active === 21 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='246.2'
             y='111.23'
             width='24.76'
@@ -230,7 +231,7 @@ export function Map({ active }: MapProps) {
             </>
           )}
         </circle>
-        <circle className='yellow' cx='258.2' cy='475.5' r='0'>
+        <circle className='yellow' cx='258.7' cy='474.5' r='0'>
           {active == 8 && (
             <>
               <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
@@ -238,7 +239,7 @@ export function Map({ active }: MapProps) {
             </>
           )}
         </circle>
-        <circle className='yellow' cx='292.6' cy='441.2' r='0'>
+        <circle className='yellow' cx='293' cy='442.2' r='0'>
           {active == 9 && (
             <>
               <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
@@ -246,26 +247,166 @@ export function Map({ active }: MapProps) {
             </>
           )}
         </circle>
-        {/* <circle className='st16' cx='291.6' cy='441.2' r='4.2' />
-        <circle className='st16' cx='289.9' cy='401.3' r='4.2' />
-        <circle className='st16' cx='200.5' cy='516.8' r='4.2' />
-        <circle className='st16' cx='275' cy='375' r='4.2' />
-        <circle className='st16' cx='214.2' cy='394.5' r='4.2' />
-        <circle className='st16' cx='205.3' cy='329.5' r='4.2' />
-        <circle className='st16' cx='257.5' cy='312.7' r='4.2' />
-        <circle className='st16' cx='325.3' cy='288.9' r='4.2' />
-        <circle className='st16' cx='325.2' cy='254.6' r='4.2' />
-        <circle className='st16' cx='327.7' cy='201.2' r='4.2' />
-        <circle className='st16' cx='299.2' cy='162.1' r='4.2' />
-        <circle className='st16' cx='325.1' cy='135.2' r='4.2' />
-        <circle className='st16' cx='325.8' cy='105.8' r='4.2' />
-        <circle className='st16' cx='279.8' cy='133.6' r='4.2' />
-        <circle className='st16' cx='258.9' cy='114.7' r='4.2' />
-        <circle className='st16' cx='208' cy='432' r='4.2' />
-        <circle className='st16' cx='255.7' cy='443.6' r='4.1' />
-        <circle className='st16' cx='258.5' cy='528.6' r='4.2' />
-        <circle className='st16' cx='147.1' cy='507.2' r='4.2' />
-        <circle className='st16' cx='203.4' cy='460.1' r='4.4' /> */}
+        <circle className='yellow' cx='201.5' cy='519.8' r='0'>
+          {active == 5 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='291' cy='400.5' r='0'>
+          {active == 10 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='276' cy='375' r='0'>
+          {active == 11 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='215.2' cy='394' r='0'>
+          {active == 2 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='208.3' cy='329.5' r='0'>
+          {active == 12 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='260' cy='312.7' r='0'>
+          {active == 13 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='325.3' cy='288.9' r='0'>
+          {active == 15 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='285' cy='290.2' r='0'>
+          {active == 14 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='325.2' cy='254' r='0'>
+          {active == 16 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='325' cy='201.2' r='0'>
+          {active == 17 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='301.5' cy='162.1' r='0'>
+          {active == 20 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='325.1' cy='133.7' r='0'>
+          {active == 18 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='325.1' cy='105.8' r='0'>
+          {active == 19 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='283' cy='133' r='0'>
+          {active == 21 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='263' cy='114' r='0'>
+          {active == 22 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='210' cy='432.5' r='0'>
+          {active == 3 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='257' cy='443.6' r='0'>
+          {active == 1 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='260' cy='530' r='0'>
+          {active == 7 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='147.1' cy='507.2' r='0'>
+          {active == 0 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='204' cy='461' r='0'>
+          {active == 4 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
         <g id='szamok'>
           <text className='cls-6' transform='translate(252.27 447.87)'>
             1
@@ -307,29 +448,32 @@ export function Map({ active }: MapProps) {
           <text className='cls-6' transform='translate(249.95 316.93)'>
             13
           </text>
-          <text className='cls-6' transform='translate(314.81 293.35)'>
+          <text transform='translate(275.29 294.64)' className='cls-6'>
             14
           </text>
-          <text className='cls-6' transform='translate(314.81 259.06)'>
+          <text className='cls-6' transform='translate(314.81 293.35)'>
             15
           </text>
-          <text className='cls-6' transform='translate(314.81 205.26)'>
+          <text className='cls-6' transform='translate(314.81 259.06)'>
             16
           </text>
-          <text className='cls-6' transform='translate(314.81 139.48)'>
+          <text className='cls-6' transform='translate(314.81 205.26)'>
             17
           </text>
-          <text className='cls-6' transform='translate(314.43 110.27)'>
+          <text className='cls-6' transform='translate(314.81 139.48)'>
             18
           </text>
-          <text className='cls-6' transform='translate(292.02 166.3)'>
+          <text className='cls-6' transform='translate(314.43 110.27)'>
             19
           </text>
-          <text className='cls-6' transform='translate(273.06 137.51)'>
+          <text className='cls-6' transform='translate(292.02 166.3)'>
             20
           </text>
-          <text className='cls-6' transform='translate(252.27 118.88)'>
+          <text className='cls-6' transform='translate(273.06 137.51)'>
             21
+          </text>
+          <text className='cls-6' transform='translate(252.27 118.88)'>
+            22
           </text>
         </g>
         <g id='feliratok'>
@@ -417,10 +561,7 @@ export function Map({ active }: MapProps) {
           <text className='cls-12' transform='translate(360.78 488.13)'>
             IB025
           </text>
-          <text
-            className={active == 0 ? 'cls-13-highlight' : 'cls-13'}
-            transform='translate(141.85 511.4) rotate(-1.81)'
-          >
+          <text className='cls-13' transform='translate(141.85 511.4) rotate(-1.81)'>
             R
           </text>
           <g id='Environment_Coffee' data-name='Environment / Coffee'>

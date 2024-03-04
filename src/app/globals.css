@@ -85,3 +85,14 @@ h2 {
     #101010
   );
 }
+
+.presentation-grid {
+  display: grid;
+  justify-items: start;
+  align-content: stretch;
+  grid-template-columns: fit-content(16rem) minmax(320px, 1fr) minmax(320px, 1fr);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}

@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 
+import { LocationTile } from '@/components/tiles/location-tile';
 import { OrganiserTile } from '@/components/tiles/organizer-tile';
 import { getIndexData } from '@/models/get-index-data';
 
@@ -16,7 +17,7 @@ export default async function asyncontact() {
   };
 
   return (
-    <div className='flex flex-col px-4 sm:px-6 xl:px-0 max-w-6xl w-full'>
+    <div className='flex flex-col px-4 sm:px-6 xl:px-0 max-w-6xl w-full overflow-hidden'>
       <h1 className='mb-16 mt-8'>Kapcsolat</h1>
 
       <div className='flex flex-col gap-24'>
@@ -29,6 +30,7 @@ export default async function asyncontact() {
           {org.other.map((organiser) => (
             <OrganiserTile key={organiser.emailAddress} {...organiser} />
           ))}
+          <LocationTile />
         </div>
       </div>
     </div>

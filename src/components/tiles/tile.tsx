@@ -6,15 +6,17 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   clickable?: boolean;
+  disableMinHeight?: boolean;
 };
 
-function TileBase({ children, className, clickable }: Props) {
+function TileBase({ children, className, clickable, disableMinHeight }: Props) {
   return (
     <div
       className={clsx(
         styles.card,
-        'overflow-hidden relative p-[1.5px] min-h-[225px]',
+        'overflow-hidden relative p-[1.5px]',
         clickable && styles['card-clickable'],
+        !disableMinHeight && 'min-h-[225px]',
         className
       )}
     >

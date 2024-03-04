@@ -19,7 +19,7 @@ export default function CountdownTileImplementation() {
     <>
       <p className='text-4xl font-bold'>
         még{' '}
-        <span className='text-8xl sm:text-9xl md:text-8xl lg:text-9xl'>
+        <span className='text-7xl xxs:text-8xl sm:text-9xl md:text-8xl lg:text-9xl'>
           {duration.months ? (duration.days ?? 0) + 30 : duration.days}
         </span>{' '}
         nap

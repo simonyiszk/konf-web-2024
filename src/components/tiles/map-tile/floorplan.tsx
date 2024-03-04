@@ -45,7 +45,7 @@ export function Floorplan() {
               <li key={name} className='text-lg'>
                 <button
                   type='button'
-                  className='group py-1 pl-1 text-left'
+                  className='group py-1 pl-1 '
                   onClick={() => {
                     if (ref.current && window.innerWidth < 940) {
                       ref.current.scrollIntoView({

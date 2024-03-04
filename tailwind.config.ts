@@ -30,6 +30,7 @@ const config: Config = {
       },
     },
     screens: {
+      xxs: '500px',
       xs: '600px',
       sm: defaultTheme.screens.sm,
       md: defaultTheme.screens.md,

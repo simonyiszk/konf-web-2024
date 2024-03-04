@@ -84,20 +84,26 @@
 .cls-13-highlight {
   font-weight: 800;
 }
+.st16 {
+  fill: #ffe500;
+}
 .anim {
   animation: anim 1s ease-in-out infinite;
   fill: #ffe500;
   /* opacity: 1; */
 }
+.yellow {
+  fill: #ffe500;
+}
 
 @keyframes anim {
   0% {
-    opacity: 1;
+    r: 3.2;
   }
   50% {
-    opacity: 0;
+    r: 5;
   }
   100% {
-    opacity: 1;
+    r: 3.2;
   }
 }

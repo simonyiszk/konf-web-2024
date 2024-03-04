@@ -1,5 +1,4 @@
 'use client';
-import clsx from 'clsx';
 import { useRef, useState } from 'react';
 import { MdLocationPin } from 'react-icons/md';
 
@@ -20,6 +19,7 @@ const map = [
   'OTP Bank',
   'Knorr-Bremse',
   'Schönherz Iskolaszövetkezet',
+  'BME EELISA',
   'PARIPA',
   'BME Suborbitals',
   'BME Formula Racing Team',
@@ -59,10 +59,9 @@ export function Floorplan() {
                   {i == 0 ? 'R: Regisztrációs pult' : `${i}:  ${name}`}
                   <span>
                     <MdLocationPin
-                      className={clsx(
-                        'inline pb-1  group-hover:text-konf-accent-yellow',
+                      className={`inline pb-1  group-hover:text-konf-accent-yellow ${
                         active === i ? 'text-[#ffe500]' : 'text-white'
-                      )}
+                      }`}
                     />
                   </span>
                 </button>

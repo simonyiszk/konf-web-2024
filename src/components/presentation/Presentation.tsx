@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import { Presentation } from '@/models/models';
+import { dateToHourAndMinuteString } from '@/utils/dateHelper';
 import slugify from '@/utils/slugify';
 
 import uk from '../../../public/img/uk.svg';
@@ -17,13 +18,9 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
   const { title, description, presenter, imageUrls } = presentation;
   let time = '';
   if (presentation.startTime && presentation.endTime) {
-    time = ` | ${new Date(presentation.startTime).toLocaleTimeString('hu', {
-      hour: '2-digit',
-      minute: '2-digit',
-    })} - ${new Date(presentation.endTime).toLocaleTimeString('hu', {
-      hour: '2-digit',
-      minute: '2-digit',
-    })}`;
+    time = ` | ${dateToHourAndMinuteString(new Date(presentation.startTime))} - ${dateToHourAndMinuteString(
+      new Date(presentation.endTime)
+    )}`;
   }
   return (
     <Tile className={clsx(isFrontPage && 'sm:col-span-6')}>

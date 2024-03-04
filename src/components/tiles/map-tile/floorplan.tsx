@@ -13,7 +13,7 @@ const map = [
   'Silicon Labs',
   'Interactive Brokers',
   'Paks II.',
-  'Barré',
+  'Barré Technologies',
   'Nova Services',
   'KUKA',
   'OTP Bank',

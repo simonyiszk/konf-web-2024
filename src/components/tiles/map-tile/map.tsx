@@ -39,9 +39,10 @@ export function Map({ active }: MapProps) {
             transform='translate(146.39 -21) rotate(16.09)'
           />
         </g>
+
         <g id='Layer_7' data-name='Layer 7'>
           <rect
-            className={active === 6 ? 'anim' : 'cls-5'}
+            className='cls-5'
             x='212.24'
             y='518.74'
             width='24.76'
@@ -217,6 +218,54 @@ export function Map({ active }: MapProps) {
             transform='translate(81.19 264.77) rotate(-62.38)'
           />
         </g>
+        {/* <circle className='anim' cx='200.2' cy='517.8' r='3.2'>
+          <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+          <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+        </circle> */}
+        <circle className='yellow' cx='225.2' cy='522.4' r='0'>
+          {active == 6 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='258.2' cy='475.5' r='0'>
+          {active == 8 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        <circle className='yellow' cx='292.6' cy='441.2' r='0'>
+          {active == 9 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
+        {/* <circle className='st16' cx='291.6' cy='441.2' r='4.2' />
+        <circle className='st16' cx='289.9' cy='401.3' r='4.2' />
+        <circle className='st16' cx='200.5' cy='516.8' r='4.2' />
+        <circle className='st16' cx='275' cy='375' r='4.2' />
+        <circle className='st16' cx='214.2' cy='394.5' r='4.2' />
+        <circle className='st16' cx='205.3' cy='329.5' r='4.2' />
+        <circle className='st16' cx='257.5' cy='312.7' r='4.2' />
+        <circle className='st16' cx='325.3' cy='288.9' r='4.2' />
+        <circle className='st16' cx='325.2' cy='254.6' r='4.2' />
+        <circle className='st16' cx='327.7' cy='201.2' r='4.2' />
+        <circle className='st16' cx='299.2' cy='162.1' r='4.2' />
+        <circle className='st16' cx='325.1' cy='135.2' r='4.2' />
+        <circle className='st16' cx='325.8' cy='105.8' r='4.2' />
+        <circle className='st16' cx='279.8' cy='133.6' r='4.2' />
+        <circle className='st16' cx='258.9' cy='114.7' r='4.2' />
+        <circle className='st16' cx='208' cy='432' r='4.2' />
+        <circle className='st16' cx='255.7' cy='443.6' r='4.1' />
+        <circle className='st16' cx='258.5' cy='528.6' r='4.2' />
+        <circle className='st16' cx='147.1' cy='507.2' r='4.2' />
+        <circle className='st16' cx='203.4' cy='460.1' r='4.4' /> */}
         <g id='szamok'>
           <text className='cls-6' transform='translate(252.27 447.87)'>
             1
@@ -230,6 +279,7 @@ export function Map({ active }: MapProps) {
           <text className='cls-6' transform='translate(199.55 464.32)'>
             4
           </text>
+
           <text className='cls-6' transform='translate(197.01 523.94)'>
             5
           </text>

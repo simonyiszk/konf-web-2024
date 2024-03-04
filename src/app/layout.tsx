@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           customDomain={process.env.NEXT_PUBLIC_PLAUSIBLE_URL}
           selfHosted
         />
-        <main className='flex flex-col min-h-screen overflow-hidden'>
+        <main className='flex flex-col min-h-screen'>
           <Navbar />
           <div className='flex-grow relative mt-24 md:mt-28 flex flex-col justify-center items-center'>{children}</div>
           <Footer />

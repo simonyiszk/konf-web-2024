@@ -1,7 +1,8 @@
 export const navbarOnDarkBg = (navbarSelector: string) => {
   const sponsorSection = document.getElementById('sponsor-container');
   const navbar = document.getElementById(navbarSelector);
-  if (!sponsorSection || !navbar) throw Error('navbar not found');
+  if (!navbar) throw Error('navbar not found');
+  if (!sponsorSection) return true;
   const navbarScrollY = window.scrollY - navbar.offsetTop - 24;
   if (navbarScrollY < sponsorSection.offsetTop) {
     return true;

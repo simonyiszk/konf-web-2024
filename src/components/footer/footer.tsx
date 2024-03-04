@@ -6,7 +6,7 @@ import { SocialButtons } from './social-buttons';
 
 export function Footer() {
   return (
-    <footer className='max-w-6xl mx-auto mt-24 w-full flex flex-col gap-10 mb-10 px-8 xl:px-0'>
+    <footer className='max-w-6xl mx-auto mt-24 w-full flex flex-col gap-10 mb-10 px-8 xl:px-0 overflow-hidden'>
       <div className='flex flex-col md:flex-row gap-6 justify-between'>
         <div className='flex flex-col gap-4 w-full md:w-1/2 '>
           <Image src={konfLogo} width={560} height={135} alt='Simonyi Konferencia' />

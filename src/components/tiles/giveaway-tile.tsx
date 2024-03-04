@@ -15,7 +15,7 @@ export function GiveawayTile({ data: { description, sectionTitle, pictureUrl }, 
   return (
     <Tile className='sm:col-span-6'>
       <Tile.Body>
-        <h2 className='text-[32px] sm:text-6xl font-bold'>{sectionTitle}</h2>
+        <h2 className='text-3xl xxs:text-4xl xs:text-6xl font-bold'>{sectionTitle}</h2>
         <div className='mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4'>
           <div>
             <p className='text-lg sm:text-xl font-medium text-justify w-full'>{preText}</p>

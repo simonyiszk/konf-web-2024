@@ -14,7 +14,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
   const regularSponsors = companies.filter((c) => c.category === SponsorCategory.SPONSOR);
 
   return (
-    <div id='sponsor-container' className='w-full bg-white'>
+    <div id='sponsor-container' className='w-full bg-white overflow-hidden'>
       <section className={styles.section}>
         <h2 className='text-3xl font-bold order-first'>{sectionTitle}</h2>
 
@@ -24,7 +24,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
             {featuredSponsors.map(
               (c) =>
                 c.logoUrl && (
-                  <div key={c.name} className='col-span-2 h-auto max-w-[200px] w-full max-h-[75px]'>
+                  <div key={c.name} className='col-span-2 max-w-[200px] w-full h-[75px]'>
                     <SponsorLogo company={c} />
                   </div>
                 )
@@ -35,7 +35,7 @@ export function SponsorSection({ sectionTitle, companies }: Props) {
           <h3 className='mb-auto text-3xl'>Főtámogató</h3>
           <div className='my-auto flex flex-wrap items-center justify-evenly'>
             {mainSponsor?.logoUrl && (
-              <div className='mx-0 h-auto w-72 sm:w-96 2xl:w-80'>
+              <div key={mainSponsor.name} className='mx-0 h-auto w-72 sm:w-96 2xl:w-80'>
                 <SponsorLogo company={mainSponsor} />
               </div>
             )}

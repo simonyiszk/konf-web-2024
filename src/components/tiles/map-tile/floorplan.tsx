@@ -70,7 +70,7 @@ export function Floorplan() {
             );
           })}
         </ol>
-        <div className='pointer-events-none relative select-none bg-white/20 0 p-8 rounded-md md:flex-1 flex-0 w-full mdx:w-fit mdx:p-2 mdx:max-h-[1000px] max-h-full flex flex-row justify-center items-center'>
+        <div className='pointer-events-none relative select-none bg-white/20 0 p-8 rounded-md md:flex-1 flex-0 w-full mdx:w-fit mdx:p-2 md:max-h-[1000px] max-h-full flex flex-row justify-center items-center'>
           <Map active={active} />
         </div>
       </div>

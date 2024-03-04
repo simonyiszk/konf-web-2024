@@ -36,7 +36,6 @@
 }
 .cls-6 {
   fill: #1d1d1b;
-  font-family: Raleway-ExtraBold, Raleway;
   font-weight: 1000;
 }
 .cls-15,
@@ -61,7 +60,6 @@
 }
 .cls-10,
 .cls-12 {
-  font-family: Raleway-Bold, Raleway;
   font-weight: 700;
 }
 .cls-11 {
@@ -73,8 +71,7 @@
 }
 .cls-13 {
   fill: #f6f6f6;
-  font-family: Raleway-SemiBold, Raleway;
-  font-weight: 600;
+  font-weight: 800;
 }
 .cls-14,
 .cls-15 {
@@ -85,8 +82,7 @@
   stroke-width: 2.56px;
 }
 .cls-13-highlight {
-  font-family: Raleway-SemiBold, Raleway;
-  font-weight: 600;
+  font-weight: 800;
 }
 .anim {
   animation: anim 1s ease-in-out infinite;

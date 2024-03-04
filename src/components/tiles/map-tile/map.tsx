@@ -257,19 +257,19 @@ export function Map({ active }: MapProps) {
           <text className='cls-6' transform='translate(249.95 316.93)'>
             13
           </text>
-          <text className='cls-6' transform='translate(315.81 293.35)'>
+          <text className='cls-6' transform='translate(314.81 293.35)'>
             14
           </text>
-          <text className='cls-6' transform='translate(315.81 259.06)'>
+          <text className='cls-6' transform='translate(314.81 259.06)'>
             15
           </text>
-          <text className='cls-6' transform='translate(315.81 205.26)'>
+          <text className='cls-6' transform='translate(314.81 205.26)'>
             16
           </text>
-          <text className='cls-6' transform='translate(315.81 139.48)'>
+          <text className='cls-6' transform='translate(314.81 139.48)'>
             17
           </text>
-          <text className='cls-6' transform='translate(315.43 110.27)'>
+          <text className='cls-6' transform='translate(314.43 110.27)'>
             18
           </text>
           <text className='cls-6' transform='translate(292.02 166.3)'>
@@ -347,7 +347,7 @@ export function Map({ active }: MapProps) {
           />
           <text className='cls-6' transform='translate(374.62 640.57)'>
             VI
-            <tspan className='cls-9' x='11.69' y='0'>
+            <tspan className='cls-9' x='17.46' y='0'>
               P
             </tspan>
           </text>

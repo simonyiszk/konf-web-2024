@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Tile } from './tile';
@@ -14,7 +15,10 @@ export function WorkshopTile() {
           </p>
 
           <div className='flex flex-col items-center w-full'>
-            <img
+            <Image
+              width={200}
+              height={200}
+              quality={100}
               src='https://konf-api.kir-dev.hu/cdn/public/MEDVE_U6Y7SQZJ4HNQ.webp'
               className='object-cover rounded-3xl w-[200px] h-[200px]'
               alt='Workshop Image'

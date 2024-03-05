@@ -57,7 +57,11 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
                 <div className='flex flex-col sm:flex-row'>
                   {imageUrls?.map((image) => {
                     return (
-                      <img
+                      <Image
+                        width={64}
+                        height={64}
+                        quality={100}
+                        key={image}
                         src={image}
                         alt='presentation images'
                         className='p-2 max-w-full max-h-[75px] object-contain mt-5'
@@ -74,11 +78,14 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
                 'md:order-last'
               )}
             >
-              <img
+              <Image
+                width={384}
+                height={384}
+                quality={100}
                 src={presenter.pictureUrl}
                 className={clsx(
                   'object-cover rounded-3xl',
-                  isFrontPage ? 'w-72 h-72 sm:w-96 sm:h-96' : 'w-[250px] h-[250px] sm:w-[308px] sm:h-[308px]'
+                  isFrontPage ? 'w-72 h-72 sm:w-[384px] sm:h-[384px]' : 'w-[250px] h-[250px] sm:w-[308px] sm:h-[308px]'
                 )}
                 alt='Presentation Image'
               />
@@ -86,7 +93,10 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
               <p className='block mt-0.5 text-[20px]  text-[#FFE500]'>{presenter.rank}</p>
               {presenter.company && (
                 <div className='mt-2 bg-white rounded-xl max-w-[308px] max-h-[75px] w-full'>
-                  <img
+                  <Image
+                    width={308}
+                    height={75}
+                    quality={100}
                     src={presenter.company.logoUrl}
                     alt='Company logo'
                     className='p-2 max-w-full max-h-[75px] object-fit m-auto'

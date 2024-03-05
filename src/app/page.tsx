@@ -60,10 +60,24 @@ export default async function Landing() {
             <WorkshopTile />
             <MapTile />
           </div>
-          <Image src={redPlanet} alt='Vörös bolygó' className='planet red-planet -z-10' />
+          <Image
+            width={1000}
+            height={1000}
+            quality={100}
+            src={redPlanet.src}
+            alt='Vörös bolygó'
+            className='planet red-planet -z-10'
+          />
         </div>
         {data.previousConferences.conferences.length > 0 && <ImageCarouselSection data={data.previousConferences} />}
-        <Image src={whitePlanet} alt='Fehér bolygó' className='planet white-planet' />
+        <Image
+          width={1000}
+          height={1000}
+          quality={100}
+          src={whitePlanet.src}
+          alt='Fehér bolygó'
+          className='planet white-planet'
+        />
       </div>
       <SponsorSection companies={data.sponsors.companies} sectionTitle={data.sponsors.sectionTitle} />
     </div>

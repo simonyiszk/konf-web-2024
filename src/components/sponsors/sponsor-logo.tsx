@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import Image from 'next/image';
 
 import { Company, SponsorCategory } from '@/models/models';
 
@@ -32,8 +33,10 @@ export function SponsorLogo({ company: { logoUrl, name, url, category } }: Props
       )}
     >
       <div className='relative p-2 h-full'>
-        <img
-          loading='lazy'
+        <Image
+          width={200}
+          height={200}
+          quality={100}
           src={logoUrl}
           alt={`${name} logo`}
           className={clsx(category === SponsorCategory.MAIN_SPONSOR ? '' : 'max-h-[75px]', 'mx-auto my-auto h-full')}

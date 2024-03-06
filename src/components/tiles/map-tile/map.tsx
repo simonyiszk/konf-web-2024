@@ -6,7 +6,12 @@ type MapProps = {
 
 export function Map({ active }: MapProps) {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 436.39 700.05' className='md:max-h-[800px] max-h-max'>
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 436.39 700.05'
+      height={800}
+      className='mdx:max-h-[800px] max-h-[400px] max-w-full'
+    >
       <g id='Layer_2' data-name='Layer 2'>
         <g id='Layer_2-2' data-name='Layer 2'>
           <polygon

@@ -6,6 +6,7 @@ import { CSSProperties, useRef } from 'react';
 
 import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates, SponsorCategory } from '@/models/models';
+import { dateToHourAndMinuteString } from '@/utils/dateHelper';
 import slugify from '@/utils/slugify';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
@@ -156,11 +157,6 @@ function TimeMarker({ markerDate, startDate }: { markerDate: Date; startDate: nu
       </Tile>
     </li>
   );
-}
-
-function dateToHourAndMinuteString(date: Date): string {
-  // https://imgflip.com/i/8hrgho
-  return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
 }
 
 function* timeMarkerGenerator(startDate: number, endDate: number): Generator<Date> {

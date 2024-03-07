@@ -101,6 +101,17 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
               )}
             </div>
           </div>
+          {presentation.questionsUrl && (
+            <div className='aspect-video w-100 md:w-3/4 mx-auto my-5 md:my-10'>
+              <iframe
+                className='rounded w-full h-full'
+                src={presentation.questionsUrl}
+                title={'XXI. Simonyi Konferencia - ' + presentation.title}
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
         </div>
         {isFrontPage && (
           <div className='flex flex-col md:flex-row gap-6 md:gap-16 items-center pt-6 justify-center'>

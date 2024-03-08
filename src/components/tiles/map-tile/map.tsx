@@ -9,8 +9,7 @@ export function Map({ active }: MapProps) {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 436.39 700.05'
-      height={800}
-      className='mdx:max-h-[800px] max-h-[400px] max-w-full'
+      className='max-h-max md:max-h-[800px] h-[365px] xxs:h-[500px] xs:h-[600px] sm:h-[650px] md:h[800px] max-w-full'
     >
       <g id='Layer_2' data-name='Layer 2'>
         <g id='Layer_2-2' data-name='Layer 2'>

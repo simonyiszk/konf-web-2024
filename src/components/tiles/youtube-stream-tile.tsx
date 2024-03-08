@@ -7,10 +7,12 @@ type Props = {
 };
 export function StreamTile({ title, url }: Props) {
   return (
-    <Tile className='sm:col-span-6 md:col-span-3'>
+    <Tile className='sm:col-span-6 lg:col-span-3'>
       <Tile.Body>
         <h2 className='sm:text-2xl md:text-4xl'>{title}</h2>
-        <YoutubeVideo title={title} url={url} />
+        <div className='sm:w-full md:w-6/7 mx-auto mt-2'>
+          <YoutubeVideo title={title} url={url} />
+        </div>
       </Tile.Body>
     </Tile>
   );

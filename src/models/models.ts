@@ -98,3 +98,8 @@ export interface IndexPageData {
   };
   presentations: Presentation[];
 }
+
+export interface StreamData {
+  title: string;
+  url: string;
+}

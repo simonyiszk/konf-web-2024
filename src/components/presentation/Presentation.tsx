@@ -58,8 +58,8 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
                   {imageUrls?.map((image) => {
                     return (
                       <Image
-                        width={64}
-                        height={64}
+                        width={image.includes('KODEE') ? 75 : 259}
+                        height={75}
                         quality={100}
                         key={image}
                         src={image}

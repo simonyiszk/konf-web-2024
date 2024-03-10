@@ -44,7 +44,7 @@ export default async function Landing() {
             {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
             <StatTile desc='előadás' number='21' />
-            <StatTile desc='kiállító az expón' number='21' />
+            <StatTile desc='kiállító az expón' number='21+' />
             <StatTile desc='év tapasztalat' number='21' />
 
             <Presentation presentation={kotlinPresentation} isFrontPage />

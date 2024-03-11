@@ -54,14 +54,8 @@ export function Map({ active }: MapProps) {
             height='24.76'
             transform='translate(-347.83 609.1) rotate(-78.39)'
           />
-          <rect
-            className='cls-5'
-            x='166.84'
-            y='636.18'
-            width='24.76'
-            height='8.79'
-            transform='translate(-4.27 1.22) rotate(-0.38)'
-          />
+          <rect className='cls-5' x='166.84' y='636.18' width='24.76' height='8.79' />
+          {/* this is the solar team ↑*/}
           <rect
             className='cls-5'
             x='254.63'

@@ -14,7 +14,8 @@ export default function WorkshopPage() {
         <Tile.Body>
           <div>
             <h1 className='mb-2 text-3xl sm:text-4xl md:text-[42px]'>A 21. század műanyaga az AI - Workshop</h1>
-            <p className='mb-16 text-[22px] font-bold block lg:hidden text-[#FFE500]'>IB110 | 14:30-16:30</p>
+            <p className='mb-2 text-[22px] font-bold block lg:hidden text-[#FFE500]'>IB110 | 14:30-16:30</p>
+            <p className='mb-8 lg:mb-16 text-[22px] font-bold block lg:hidden text-[#FFE500]'>IB110 | 17:00-19:00</p>
           </div>
           <div className='flex flex-col lg:flex-row gap-8'>
             <div>

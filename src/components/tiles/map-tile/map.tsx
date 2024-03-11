@@ -40,91 +40,99 @@ export function Map({ active }: MapProps) {
         <g id='Layer_7' data-name='Layer 7'>
           <rect
             className='cls-5'
-            x='212.24'
-            y='518.74'
-            width='24.76'
-            height='8.79'
-            transform='translate(109.89 -34.5) rotate(11.61)'
+            x='220.24'
+            y='510.76'
+            width='8.79'
+            height='24.76'
+            transform='translate(-333.01 637.9) rotate(-78.39)'
           />
           <rect
             className='cls-5'
-            x='187.17'
-            y='513.44'
-            width='24.76'
-            height='8.79'
-            transform='translate(108.31 -29.57) rotate(11.61)'
+            x='195.17'
+            y='505.45'
+            width='8.79'
+            height='24.76'
+            transform='translate(-347.83 609.1) rotate(-78.39)'
           />
           <rect
             className='cls-5'
-            x='246.63'
-            y='525.66'
+            x='166.84'
+            y='636.18'
             width='24.76'
             height='8.79'
-            transform='translate(111.99 -41.28) rotate(11.61)'
+            transform='translate(-4.27 1.22) rotate(-0.38)'
           />
           <rect
             className='cls-5'
-            x='245.08'
-            y='472.41'
-            width='24.76'
-            height='8.79'
-            transform='translate(101.24 -42.06) rotate(11.61)'
+            x='254.63'
+            y='517.68'
+            width='8.79'
+            height='24.76'
+            transform='translate(-312.31 677.12) rotate(-78.39)'
           />
           <rect
             className='cls-5'
-            x='190.98'
-            y='458.08'
-            width='24.76'
-            height='8.79'
-            transform='translate(692.76 337.05) rotate(99.36)'
+            x='253.08'
+            y='464.42'
+            width='8.79'
+            height='24.76'
+            transform='translate(-261.39 633.06) rotate(-78.39)'
           />
           <rect
             className='cls-5'
-            x='195.93'
-            y='429.62'
+            x='190.99'
+            y='458.09'
             width='24.76'
             height='8.79'
-            transform='translate(670.42 299.08) rotate(99.36)'
+            transform='matrix(0.16, -0.99, 0.99, 0.16, -286.04, 587.94)'
+          />
+          <rect
+            className='cls-5'
+            x='195.92'
+            y='429.63'
+            width='24.76'
+            height='8.79'
+            transform='translate(-253.83 568.98) rotate(-80.64)'
           />
           <rect
             className='cls-5'
             x='242.82'
-            y='440.13'
+            y='440.15'
             width='24.76'
             height='8.79'
-            transform='translate(735.31 265.04) rotate(99.36)'
+            transform='translate(-224.94 624.05) rotate(-80.64)'
           />
           <rect
             className='cls-5'
             x='279.64'
-            y='438.63'
+            y='438.64'
             width='24.76'
             height='8.79'
-            transform='translate(776.64 226.96) rotate(99.36)'
+            transform='translate(-192.62 659.12) rotate(-80.64)'
           />
           <rect
             className='cls-5'
-            x='277.51'
-            y='398.31'
-            width='24.76'
-            height='8.79'
-            transform='translate(493.7 -49.7) rotate(60)'
+            x='285.5'
+            y='390.32'
+            width='8.79'
+            height='24.76'
+            transform='translate(-162.52 198.9) rotate(-30)'
           />
           <rect
             className='cls-5'
-            x='261.55'
-            y='370.67'
-            width='24.76'
-            height='8.79'
-            transform='translate(461.78 -49.7) rotate(60)'
+            x='269.53'
+            y='362.68'
+            width='8.79'
+            height='24.76'
+            transform='translate(-150.83 187.22) rotate(-30)'
           />
           <rect
             className='cls-5'
             x='202.14'
-            y='390.22'
+            y='390.23'
             width='24.76'
             height='8.79'
-            transform='translate(638.77 247.14) rotate(99.36)'
+            transform='translate(-209.74 542.11) rotate(-80.64)'
           />
           <rect
             className='cls-5'
@@ -132,87 +140,52 @@ export function Map({ active }: MapProps) {
             y='326.25'
             width='24.76'
             height='8.79'
-            transform='translate(437.12 641.78) rotate(174.89)'
+            transform='translate(-28.64 19.51) rotate(-5.11)'
           />
           <rect
             className='cls-5'
-            x='244.17'
+            x='244.16'
             y='309.43'
             width='24.76'
             height='8.79'
-            transform='translate(647.83 419.65) rotate(144.4)'
+            transform='translate(-134.74 208) rotate(-35.6)'
           />
           <rect
             className='cls-5'
-            x='311.52'
-            y='285.88'
+            x='271.24'
+            y='285'
             width='24.76'
             height='8.79'
-            transform='translate(614.16 -33.62) rotate(90)'
+            transform='translate(-120.84 313.8) rotate(-49.03)'
+          />
+          <rect className='cls-5' x='319.49' y='277.91' width='8.79' height='24.76' />
+          <rect className='cls-5' x='319.5' y='243.62' width='8.79' height='24.76' />
+          <rect className='cls-5' x='321.72' y='190.07' width='8.79' height='24.76' />
+          <rect
+            className='cls-5'
+            x='294.25'
+            y='150.71'
+            width='8.79'
+            height='24.76'
+            transform='translate(-40.02 129.96) rotate(-23.05)'
+          />
+          <rect className='cls-5' x='319.86' y='124.15' width='8.79' height='24.76' />
+          <rect className='cls-5' x='319.86' y='93.45' width='8.79' height='24.76' />
+          <rect
+            className='cls-5'
+            x='275.36'
+            y='121.18'
+            width='8.79'
+            height='24.76'
+            transform='translate(-17.82 220.47) rotate(-41.8)'
           />
           <rect
             className='cls-5'
-            x='311.52'
-            y='251.59'
-            width='24.76'
-            height='8.79'
-            transform='translate(579.88 -67.91) rotate(90)'
-          />
-          <rect
-            className='cls-5'
-            x='313.74'
-            y='198.05'
-            width='24.76'
-            height='8.79'
-            transform='translate(528.56 -123.68) rotate(90)'
-          />
-          <rect
-            className='cls-5'
-            x='286.27'
-            y='158.7'
-            width='24.76'
-            height='8.79'
-            transform='translate(331.79 -175.57) rotate(66.95)'
-          />
-          <rect
-            x='270'
-            y='285.8'
-            transform='matrix(0.6013 -0.799 0.799 0.6013 -119.2798 341.3524)'
-            className='cls-5'
-            width='24.8'
-            height='8.8'
-          />
-          <rect
-            className='cls-5'
-            x='311.88'
-            y='132.12'
-            width='24.76'
-            height='8.79'
-            transform='translate(460.77 -187.74) rotate(90)'
-          />
-          <rect
-            className='cls-5'
-            x='311.88'
-            y='101.42'
-            width='24.76'
-            height='8.79'
-            transform='translate(430.07 -218.44) rotate(90)'
-          />
-          <rect
-            className='cls-5'
-            x='267.38'
-            y='129.17'
-            width='24.76'
-            height='8.79'
-            transform='translate(192.86 -164.02) rotate(48.2)'
-          />
-          <rect
-            className='cls-5'
-            x='246.2'
-            y='111.23'
-            width='24.76'
-            height='8.79'
-            transform='translate(102.22 -120.56) rotate(32.4)'
+            x='254.2'
+            y='103.24'
+            width='8.79'
+            height='24.76'
+            transform='translate(22.41 272.01) rotate(-57.6)'
           />
           <rect
             className='cls-5'
@@ -220,7 +193,7 @@ export function Map({ active }: MapProps) {
             y='48.82'
             width='59.57'
             height='33.02'
-            transform='translate(81.19 264.77) rotate(-62.38)'
+            transform='translate(81.19 264.78) rotate(-62.38)'
           />
         </g>
         {/* <circle className='anim' cx='200.2' cy='517.8' r='3.2'>
@@ -411,6 +384,14 @@ export function Map({ active }: MapProps) {
             </>
           )}
         </circle>
+        <circle className='yellow' cx='179.66' cy='640.82' r='0'>
+          {active == 23 && (
+            <>
+              <animate attributeName='r' from='3.2' to='20' dur='2s' repeatCount='indefinite' />
+              <animate attributeName='opacity' from='1' to='0.5' dur='2s' repeatCount='indefinite' />
+            </>
+          )}
+        </circle>
         <g id='szamok'>
           <text className='cls-6' transform='translate(252.27 447.87)'>
             1
@@ -478,6 +459,9 @@ export function Map({ active }: MapProps) {
           </text>
           <text className='cls-6' transform='translate(252.27 118.88)'>
             22
+          </text>
+          <text className='cls-6' transform='translate(169.66 644.82)'>
+            23
           </text>
         </g>
         <g id='feliratok'>

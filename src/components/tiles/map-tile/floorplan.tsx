@@ -28,6 +28,7 @@ const map = [
   'SEM',
   'HA5KFU',
   'LEGO Kör',
+  'BME Solar Boat Team',
 ];
 
 export function Floorplan() {

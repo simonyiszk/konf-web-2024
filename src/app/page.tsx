@@ -46,7 +46,7 @@ export default async function Landing() {
         <div className='relative'>
           <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-4 sm:px-6 xl:px-0'>
             {streams &&
-              streams.map((stream) => <StreamTile key={stream.title} title={stream.title} url={stream.url} />)}
+              streams.map((stream) => <StreamTile key={stream.title} title={stream.title} url={stream.youtubeUrl} />)}
 
             {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 

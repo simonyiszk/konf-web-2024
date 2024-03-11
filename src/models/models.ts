@@ -101,5 +101,5 @@ export interface IndexPageData {
 
 export interface StreamData {
   title: string;
-  url: string;
+  youtubeUrl: string;
 }

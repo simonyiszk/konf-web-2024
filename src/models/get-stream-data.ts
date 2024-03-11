@@ -6,10 +6,5 @@ export async function getStreams(): Promise<StreamData[] | undefined> {
     console.error(response);
     return;
   }
-  const jsonData = await response.json();
-  const jsonKeys = Object.keys(jsonData);
-  return jsonKeys.map((key: string) => ({
-    title: key,
-    url: jsonData[key],
-  }));
+  return await response.json();
 }

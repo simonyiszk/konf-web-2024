@@ -18,7 +18,7 @@ export function YoutubeVideoTile({ title, youtubeUrl, link }: Props) {
         </div>
         {link && (
           <div className='flex justify-center pt-8'>
-            <Link href={link} className='inline-flex items-center font-semibold text-2xl text-white brand-link'>
+            <Link href={link} className='inline-flex items-center font-semibold text-xl text-white brand-link'>
               Részletek
               <svg
                 className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'

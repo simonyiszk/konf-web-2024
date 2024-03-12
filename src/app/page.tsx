@@ -68,8 +68,6 @@ export default async function Landing() {
                 />
               ))}
 
-            {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
-
             <Presentation presentation={tresoritPresentation} isFrontPage />
 
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={true} />}

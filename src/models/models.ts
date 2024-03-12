@@ -98,3 +98,12 @@ export interface IndexPageData {
   };
   presentations: Presentation[];
 }
+
+export interface StreamData {
+  title: string;
+  youtubeUrl: string;
+}
+
+export interface InterviewData extends StreamData {
+  link: string;
+}

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
+import { YoutubeVideo } from '@/components/youtube-video';
 import { Presentation } from '@/models/models';
 import { dateToHourAndMinuteString } from '@/utils/dateHelper';
 import slugify from '@/utils/slugify';
@@ -100,6 +101,11 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
                 </div>
               )}
             </div>
+          </div>
+          <div className='sm:w-full md:w-6/7 lg:w-5/6 mx-auto mt-8'>
+            {presentation.questionsUrl && !isFrontPage && (
+              <YoutubeVideo title={presentation.title} url={presentation.questionsUrl} />
+            )}
           </div>
         </div>
         {isFrontPage && (

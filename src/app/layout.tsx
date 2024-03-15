@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description: 'Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája.',
   keywords:
     'Simonyi Konferencia 2024, technológiai konferencia, egyetemi rendezvény, hallgatók, hallgatók szervezése, Simonyi Károly Szakkollégium, BME-VIK, innováció, digitalizáció, műszaki fejlesztések, tudományos esemény, inspiráló előadások, szakmai workshopok, Magyarország eseményei, fiatal tehetségek, digitális megoldások, jövő technológiái, iparági trendek, tudásátadás, innovatív gondolkodás, egyetemi közösség, kreatív technológia, networking lehetőségek, szakmai előadók, technológiai innovációk, informatikai fejlődés, egyetemi tapasztalatok, mérnöki világ, vezető szakemberek, digitális társadalom, tudományos találkozó',
+  other: {
+    'apple-itunes-app': 'app-id=6478986330',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

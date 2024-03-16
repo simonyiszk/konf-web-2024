@@ -8,11 +8,13 @@ import { SponsorSection } from '@/components/sponsors/sponsor-section';
 import { GiveawayTile } from '@/components/tiles/giveaway-tile';
 import MapTile from '@/components/tiles/map-tile/map-tile';
 import { MobilAppTile } from '@/components/tiles/mobil-app-tile';
-import { PromoVideoTile } from '@/components/tiles/promo-video-tile';
 import { RegisterTile } from '@/components/tiles/register-tile';
 import { StatTile } from '@/components/tiles/stat-tile';
 import { WorkshopTile } from '@/components/tiles/workshop-tile';
+import { YoutubeVideoTile } from '@/components/tiles/youtube-video-tile';
 import { getIndexData } from '@/models/get-index-data';
+import { getInterviews, getStreams } from '@/models/get-youtube-video-data';
+import { InterviewData, StreamData } from '@/models/models';
 import { kotlinPresentation, tresoritPresentation } from '@/models/staticPresentationData';
 
 import konfLogo from '../../public/img/konf.svg';
@@ -24,6 +26,8 @@ export default async function Landing() {
   if (!data) {
     redirect('/error');
   }
+  const streams: StreamData[] | undefined = await getStreams();
+  const interviews: InterviewData[] | undefined = await getInterviews();
   return (
     <div className='flex-grow relative flex flex-col justify-center items-center self-stretch overflow-hidden'>
       <div className='md:mt-0 p-10 relative '>
@@ -41,15 +45,27 @@ export default async function Landing() {
       <div className='relative'>
         <div className='relative'>
           <div className='grid grid-cols-1 sm:grid-cols-6 max-w-6xl w-full mt-40 gap-6 px-4 sm:px-6 xl:px-0'>
+            {streams &&
+              streams.map((stream) => (
+                <YoutubeVideoTile key={stream.title} title={stream.title} youtubeUrl={stream.youtubeUrl} />
+              ))}
+
             {data.registration.cooltixEventId && <RegisterTile data={data.registration} />}
 
             <StatTile desc='előadás' number='21' />
-            <StatTile desc='kiállító az expón' number='21' />
+            <StatTile desc='kiállító az expón' number='21+' />
             <StatTile desc='év tapasztalat' number='21' />
-
             <Presentation presentation={kotlinPresentation} isFrontPage />
 
-            {data.promoVideo.youtubeUrl && <PromoVideoTile data={data.promoVideo} />}
+            {interviews &&
+              interviews.map((interview) => (
+                <YoutubeVideoTile
+                  key={interview.title}
+                  title={interview.title}
+                  youtubeUrl={interview.youtubeUrl}
+                  link={interview.link}
+                />
+              ))}
 
             <Presentation presentation={tresoritPresentation} isFrontPage />
 

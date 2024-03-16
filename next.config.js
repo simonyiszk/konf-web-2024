@@ -16,6 +16,15 @@ const nextConfig = withPlausibleProxy({
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/golya',
+        destination: 'https://golyakonf.simonyi.bme.hu',
+        permanent: true,
+      },
+    ];
+  },
 });
 
 module.exports = nextConfig;

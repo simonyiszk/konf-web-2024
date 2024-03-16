@@ -18,10 +18,10 @@ export function MobilAppTile({ data }: Props) {
           </p>
         </div>
         <div className='w-full flex lg:flex-row flex-col justify-center lg:gap-10 gap-4 items-center mt-4'>
-          <a href={data.androidUrl} className='h-fit'>
+          <a href={data.androidUrl} className='h-fit' target='_blank'>
             <img className='h-[57px] min-w-[190]' src='img/google-play-badge-hu.png' alt='Play Store' />
           </a>
-          <a href={data.iosUrl}>
+          <a href={data.iosUrl} target='_blank'>
             <img className='h-[60px] min-w-[180]' src='img/apple-store-hu-black.svg' alt='Apple Store' />
           </a>
         </div>

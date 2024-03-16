@@ -23,12 +23,12 @@ export function Footer() {
           <Link href='/contact' className='brand-link'>
             Kapcsolat
           </Link>
+          <Link href='/golya' target='blank' className='brand-link'>
+            Gólyáknak
+          </Link>
           <Link href='/giveaway' className='brand-link'>
             Nyereményjáték
           </Link>
-          {/* <Link href='https://golya.konferencia.bme.hu' target='blank' className='brand-link'>
-            Gólyáknak
-          </Link> */}
           <Link href='/conferences' className='brand-link'>
             Előző évek konferenciái
           </Link>

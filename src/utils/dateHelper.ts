@@ -6,3 +6,8 @@ export function dateToHourAndMinuteString(date: Date): string {
     timeZone: 'Europe/Budapest',
   });
 }
+
+export function getCurrentDate() {
+  return new Date(2024, 2, 19, 14, 12);
+  // return new Date();
+}

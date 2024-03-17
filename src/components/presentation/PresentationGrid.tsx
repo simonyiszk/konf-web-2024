@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import Link from 'next/link';
-import { CSSProperties, useRef } from 'react';
+import { CSSProperties, useRef, useState } from 'react';
 
 import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates, SponsorCategory } from '@/models/models';
@@ -88,9 +88,16 @@ export function PresentationGrid({
   );
 }
 
-function PresentationTile({ presentation }: { presentation: PresentationWithDates }) {
+export function PresentationTile({
+  presentation,
+  preview = false,
+}: {
+  presentation: PresentationWithDates;
+  preview?: boolean;
+}) {
+  const [question, setQuestion] = useState('');
   return (
-    <Tile clickable={!presentation.placeholder} className='w-full h-full' disableMinHeight={true}>
+    <Tile clickable={!presentation.placeholder && !preview} className='w-full h-full' disableMinHeight={true}>
       <Tile.Body lessPadding='5' className='flex flex-col'>
         <span className='pb-2 text-xs'>
           {presentation.room !== 'BOTH' && `${presentation.room}  | `}
@@ -132,9 +139,18 @@ function PresentationTile({ presentation }: { presentation: PresentationWithDate
               </div>
             </div>
           )}
-          {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && (
+          {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
             <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
           )}
+          <div className='mt-10 w-full'>
+            <textarea
+              className='w-full rounded-md p-2 bg-transparent'
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+              rows={4}
+              placeholder='Ide írd a kérdésed!'
+            />
+          </div>
         </div>
       </Tile.Body>
     </Tile>

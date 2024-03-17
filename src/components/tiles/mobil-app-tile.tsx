@@ -28,7 +28,7 @@ export function MobilAppTile({ data }: Props) {
           </a>
         </div>
         <Link className='text-primary-500 underline block mt-10 mx-auto w-fit' href='/mobile'>
-          További információk
+          Részletek
         </Link>
       </Tile.Body>
     </Tile>

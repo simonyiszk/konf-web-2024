@@ -171,21 +171,23 @@ export function PresentationTile({
             {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
               <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
             )}
-            <div className='mt-10 w-full'>
-              <textarea
-                className='w-full rounded-md p-2 bg-transparent border-white border-[0.5px]'
-                value={question}
-                onChange={(e) => setQuestion(e.target.value)}
-                rows={4}
-                placeholder='Ide írd a kérdésed!'
-              />
-              {error && <p className='text-red-500 my-2'>{error}</p>}
-              <div className='w-full my-4 flex justify-center'>
-                <WhiteButton onClick={onSend} disabled={!question.trim() || isLoading}>
-                  Kérdés küldése
-                </WhiteButton>
+            {preview && (
+              <div className='mt-10 w-full'>
+                <textarea
+                  className='w-full rounded-md p-2 bg-transparent border-white border-[0.5px]'
+                  value={question}
+                  onChange={(e) => setQuestion(e.target.value)}
+                  rows={4}
+                  placeholder='Ide írd a kérdésed!'
+                />
+                {error && <p className='text-red-500 my-2'>{error}</p>}
+                <div className='w-full my-4 flex justify-center'>
+                  <WhiteButton onClick={onSend} disabled={!question.trim() || isLoading}>
+                    Kérdés küldése
+                  </WhiteButton>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </Tile.Body>
       </Tile>

@@ -8,14 +8,18 @@ export default async function questionsPage() {
       <h1 className='mb-16 mt-8'>Kérdezz az elődóktól!</h1>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
-        <div className='sm:col-span-2 lg:col-span-1'>
-          <h2 className='sm:text-3xl md:text-4xl text-center'>IB028</h2>
+        <div className='order-1'>
+          <h2 className='text-4xl text-center'>IB028</h2>
         </div>
-        <div className='sm:col-span-2 lg:col-span-1'>
-          <h2 className='sm:text-3xl md:text-4xl text-center'>IB025</h2>
+        <div className='order-3 sm:order-2'>
+          <h2 className='text-4xl text-center'>IB025</h2>
         </div>
-        <RoomQuestion presentations={presentations ?? []} room='IB028' />
-        <RoomQuestion presentations={presentations ?? []} room='IB025' />
+        <div className='order-2 sm:order-3'>
+          <RoomQuestion presentations={presentations ?? []} room='IB028' />
+        </div>
+        <div className='order-4'>
+          <RoomQuestion presentations={presentations ?? []} room='IB025' />
+        </div>
       </div>
     </div>
   );

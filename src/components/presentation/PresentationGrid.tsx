@@ -1,13 +1,18 @@
 'use client';
 
+import { Dialog } from '@headlessui/react';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { CSSProperties, useRef, useState } from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
 
+import { sendQuestion } from '@/app/actions';
 import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates, SponsorCategory } from '@/models/models';
 import { dateToHourAndMinuteString } from '@/utils/dateHelper';
 import slugify from '@/utils/slugify';
+
+import { WhiteButton } from '../white-button';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
 const TimespanUnitHeight = 'minmax(5rem, auto)';
@@ -96,64 +101,111 @@ export function PresentationTile({
   preview?: boolean;
 }) {
   const [question, setQuestion] = useState('');
+  const [error, setError] = useState('');
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSend = async () => {
+    if (question.trim()) {
+      setIsLoading(true);
+      const status = await sendQuestion({ question, slug: 'presentation.slug' });
+      setIsLoading(false);
+      switch (status) {
+        case 201:
+          setIsSuccessOpen(true);
+          setQuestion('');
+          break;
+        case 400:
+          setError('Hibás formátum!');
+          break;
+        default:
+          setError('Ismeretlen hiba!');
+      }
+    }
+  };
+
   return (
-    <Tile clickable={!presentation.placeholder && !preview} className='w-full h-full' disableMinHeight={true}>
-      <Tile.Body lessPadding='5' className='flex flex-col'>
-        <span className='pb-2 text-xs'>
-          {presentation.room !== 'BOTH' && `${presentation.room}  | `}
-          {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
-        </span>
-        <div className='flex flex-col justify-center flex-1'>
-          <div className={clsx('flex', presentation.placeholder && 'justify-around')}>
-            <h2
-              className={clsx(
-                'text-lg lg:text-xl font-medium',
-                !presentation.presenter ? 'text-center pb-4' : 'pb-4 lg:pb-6'
-              )}
-            >
-              {presentation.title}
-            </h2>
-            {presentation.room === 'BOTH' && presentation.placeholder && (
+    <>
+      <Tile clickable={!presentation.placeholder && !preview} className='w-full h-full' disableMinHeight={true}>
+        <Tile.Body lessPadding='5' className='flex flex-col'>
+          <span className='pb-2 text-xs'>
+            {presentation.room !== 'BOTH' && `${presentation.room}  | `}
+            {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
+          </span>
+          <div className='flex flex-col justify-center flex-1'>
+            <div className={clsx('flex', presentation.placeholder && 'justify-around')}>
               <h2
-                aria-hidden={true}
                 className={clsx(
-                  'text-lg lg:text-xl pb-4 lg:pb-6 font-medium',
-                  !presentation.presenter && 'text-center'
+                  'text-lg lg:text-xl font-medium',
+                  !presentation.presenter ? 'text-center pb-4' : 'pb-4 lg:pb-6'
                 )}
               >
                 {presentation.title}
               </h2>
+              {presentation.room === 'BOTH' && presentation.placeholder && (
+                <h2
+                  aria-hidden={true}
+                  className={clsx(
+                    'text-lg lg:text-xl pb-4 lg:pb-6 font-medium',
+                    !presentation.presenter && 'text-center'
+                  )}
+                >
+                  {presentation.title}
+                </h2>
+              )}
+            </div>
+            {!!presentation.presenter && (
+              <div className='flex gap-4'>
+                <img
+                  src={presentation.presenter.pictureUrl}
+                  className='object-cover rounded-3xl w-16 h-16'
+                  alt='Presentation Image'
+                />
+                <div>
+                  <h3 className='text-lg lg:text-2xl font-bold text-[#FFE500]'>{presentation.presenter.name}</h3>
+                  <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
+                  <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
+                </div>
+              </div>
             )}
-          </div>
-          {!!presentation.presenter && (
-            <div className='flex gap-4'>
-              <img
-                src={presentation.presenter.pictureUrl}
-                className='object-cover rounded-3xl w-16 h-16'
-                alt='Presentation Image'
+            {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
+              <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
+            )}
+            <div className='mt-10 w-full'>
+              <textarea
+                className='w-full rounded-md p-2 bg-transparent'
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                rows={4}
+                placeholder='Ide írd a kérdésed!'
               />
-              <div>
-                <h3 className='text-lg lg:text-2xl font-bold text-[#FFE500]'>{presentation.presenter.name}</h3>
-                <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
-                <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
+              {error && <p className='text-red-500 my-2'>{error}</p>}
+              <div className='w-full my-4 flex justify-center'>
+                <WhiteButton onClick={onSend} disabled={!question.trim() || isLoading}>
+                  Kérdés küldése
+                </WhiteButton>
               </div>
             </div>
-          )}
-          {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
-            <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
-          )}
-          <div className='mt-10 w-full'>
-            <textarea
-              className='w-full rounded-md p-2 bg-transparent'
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
-              rows={4}
-              placeholder='Ide írd a kérdésed!'
-            />
           </div>
+        </Tile.Body>
+      </Tile>
+      <Dialog open={isSuccessOpen} onClose={() => setIsSuccessOpen(false)} className='relative z-50'>
+        <div className='fixed inset-0 bg-black/80' aria-hidden='true' />
+
+        <div className='fixed inset-0 flex w-screen items-center justify-center p-4'>
+          <Dialog.Panel className='mx-auto max-w-lg rounded bg-[#0f181c] p-8 flex flex-col items-center gap-5'>
+            <div className='text-8xl text-white'>
+              <FaCheckCircle />
+            </div>
+            <Dialog.Title className='font-bold text-2xl mb-5 text-center'>
+              A kérdésed megkaptuk és moderálás után a felolvasandó kérdések közé kerül. Köszönjük!
+            </Dialog.Title>
+
+            <WhiteButton onClick={() => setIsSuccessOpen(false)}>Rendben</WhiteButton>
+          </Dialog.Panel>
         </div>
-      </Tile.Body>
-    </Tile>
+      </Dialog>
+    </>
   );
 }
 

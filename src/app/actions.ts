@@ -34,3 +34,19 @@ export async function addToGroup({ email }: { email: string }) {
     return 500;
   }
 }
+
+export async function sendQuestion({ question, slug }: { question: string; slug: string }) {
+  if (!question || !slug) {
+    return 400;
+  }
+  const res = await fetch(`https://konf-qna.kir-dev.hu/api/presentation/${slug}/question`, {
+    method: 'POST',
+    body: JSON.stringify({ content: question, userId: 'zokni' }),
+  });
+  if (res.status === 200) {
+    return 201;
+  } else if (res.status === 400) {
+    return 400;
+  }
+  return 500;
+}

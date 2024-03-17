@@ -19,6 +19,10 @@ const links = [
     label: 'kapcsolat',
   },
   {
+    href: '/questions',
+    label: 'kérdések',
+  },
+  {
     href: '/golya',
     label: 'gólyáknak',
     external: true,

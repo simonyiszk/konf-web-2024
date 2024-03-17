@@ -108,7 +108,7 @@ export function PresentationTile({
   const onSend = async () => {
     if (question.trim()) {
       setIsLoading(true);
-      const status = await sendQuestion({ question, slug: 'presentation.slug' });
+      const status = await sendQuestion({ question, slug: presentation.slug });
       setIsLoading(false);
       switch (status) {
         case 201:
@@ -173,7 +173,7 @@ export function PresentationTile({
             )}
             <div className='mt-10 w-full'>
               <textarea
-                className='w-full rounded-md p-2 bg-transparent'
+                className='w-full rounded-md p-2 bg-transparent border-white border-[0.5px]'
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
                 rows={4}

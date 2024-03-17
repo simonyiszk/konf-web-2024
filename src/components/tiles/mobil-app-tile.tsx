@@ -23,9 +23,6 @@ export function MobilAppTile({ data }: Props) {
           <a href={data.iosUrl} target='_blank'>
             <img className='h-[60px] min-w-[180]' src='/img/appstore.svg' alt='App Store' />
           </a>
-          <a href={data.androidUrl} className='h-fit' target='_blank'>
-            <img className='h-[57px] min-w-[190]' src='/img/androidapk.svg' alt='Play Store' />
-          </a>
         </div>
         <Link
           href='/mobile'

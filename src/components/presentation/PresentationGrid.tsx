@@ -102,7 +102,7 @@ export function PresentationTile({
       <Tile clickable={!presentation.placeholder && !preview} className='w-full h-full' disableMinHeight={true}>
         <Tile.Body lessPadding='5' className='flex flex-col'>
           <span className='pb-2 text-xs'>
-            {presentation.room !== 'BOTH' && `${presentation.room}  | `}
+            {presentation.room !== 'BOTH' && !preview && `${presentation.room}  | `}
             {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
           </span>
           <div className='flex flex-col justify-center flex-1'>

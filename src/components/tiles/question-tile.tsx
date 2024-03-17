@@ -1,6 +1,5 @@
 'use client';
 import { PresentationWithDates } from '@/models/models';
-import { getCurrentDate } from '@/utils/dateHelper';
 
 import { PresentationTile } from '../presentation/PresentationGrid';
 
@@ -10,8 +9,10 @@ type Props = {
 };
 
 export function RoomQuestion({ presentations, room }: Props) {
-  const now = getCurrentDate();
-  const presentation = presentations.find((p) => p.room === room && p.startDate < now && p.endDate > now);
+  const now = new Date();
+  const presentation = presentations.find(
+    (p) => p.room === room && !p.placeholder && p.startDate < now && p.endDate > now
+  );
   return presentation ? (
     <PresentationTile presentation={presentation} preview />
   ) : (

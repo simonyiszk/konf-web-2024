@@ -2,8 +2,10 @@
 
 import clsx from 'clsx';
 import Link from 'next/link';
-import { CSSProperties, useRef } from 'react';
+import React, { CSSProperties, useRef } from 'react';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
+import { PresentationQuestionForm } from '@/components/presentation/PresentationQuestion';
 import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates, SponsorCategory } from '@/models/models';
 import { dateToHourAndMinuteString } from '@/utils/dateHelper';
@@ -88,56 +90,69 @@ export function PresentationGrid({
   );
 }
 
-function PresentationTile({ presentation }: { presentation: PresentationWithDates }) {
+export function PresentationTile({
+  presentation,
+  preview = false,
+}: {
+  presentation: PresentationWithDates;
+  preview?: boolean;
+}) {
   return (
-    <Tile clickable={!presentation.placeholder} className='w-full h-full' disableMinHeight={true}>
-      <Tile.Body lessPadding='5' className='flex flex-col'>
-        <span className='pb-2 text-xs'>
-          {presentation.room !== 'BOTH' && `${presentation.room}  | `}
-          {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
-        </span>
-        <div className='flex flex-col justify-center flex-1'>
-          <div className={clsx('flex', presentation.placeholder && 'justify-around')}>
-            <h2
-              className={clsx(
-                'text-lg lg:text-xl font-medium',
-                !presentation.presenter ? 'text-center pb-4' : 'pb-4 lg:pb-6'
-              )}
-            >
-              {presentation.title}
-            </h2>
-            {presentation.room === 'BOTH' && presentation.placeholder && (
+    <>
+      <Tile clickable={!presentation.placeholder && !preview} className='w-full h-full' disableMinHeight={true}>
+        <Tile.Body lessPadding='5' className='flex flex-col'>
+          <span className='pb-2 text-xs'>
+            {presentation.room !== 'BOTH' && `${presentation.room}  | `}
+            {dateToHourAndMinuteString(presentation.startDate)} - {dateToHourAndMinuteString(presentation.endDate)}
+          </span>
+          <div className='flex flex-col justify-center flex-1'>
+            <div className={clsx('flex', presentation.placeholder && 'justify-around')}>
               <h2
-                aria-hidden={true}
                 className={clsx(
-                  'text-lg lg:text-xl pb-4 lg:pb-6 font-medium',
-                  !presentation.presenter && 'text-center'
+                  'text-lg lg:text-xl font-medium',
+                  !presentation.presenter ? 'text-center pb-4' : 'pb-4 lg:pb-6'
                 )}
               >
                 {presentation.title}
               </h2>
+              {presentation.room === 'BOTH' && presentation.placeholder && (
+                <h2
+                  aria-hidden={true}
+                  className={clsx(
+                    'text-lg lg:text-xl pb-4 lg:pb-6 font-medium',
+                    !presentation.presenter && 'text-center'
+                  )}
+                >
+                  {presentation.title}
+                </h2>
+              )}
+            </div>
+            {!!presentation.presenter && (
+              <div className='flex gap-4'>
+                <img
+                  src={presentation.presenter.pictureUrl}
+                  className='object-cover rounded-3xl w-16 h-16'
+                  alt='Presentation Image'
+                />
+                <div>
+                  <h3 className='text-lg lg:text-2xl font-bold text-[#FFE500]'>{presentation.presenter.name}</h3>
+                  <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
+                  <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
+                </div>
+              </div>
+            )}
+            {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
+              <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
+            )}
+            {preview && (
+              <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}>
+                <PresentationQuestionForm slug={presentation.slug} />
+              </GoogleReCaptchaProvider>
             )}
           </div>
-          {!!presentation.presenter && (
-            <div className='flex gap-4'>
-              <img
-                src={presentation.presenter.pictureUrl}
-                className='object-cover rounded-3xl w-16 h-16'
-                alt='Presentation Image'
-              />
-              <div>
-                <h3 className='text-lg lg:text-2xl font-bold text-[#FFE500]'>{presentation.presenter.name}</h3>
-                <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
-                <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
-              </div>
-            </div>
-          )}
-          {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && (
-            <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
-          )}
-        </div>
-      </Tile.Body>
-    </Tile>
+        </Tile.Body>
+      </Tile>
+    </>
   );
 }
 

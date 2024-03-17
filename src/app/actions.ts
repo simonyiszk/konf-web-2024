@@ -35,7 +35,20 @@ export async function addToGroup({ email }: { email: string }) {
   }
 }
 
-export async function sendQuestion({ question, slug }: { question: string; slug: string }) {
+export async function sendQuestion({
+  question,
+  slug,
+  recaptchaToken,
+}: {
+  question: string;
+  slug: string;
+  recaptchaToken: string;
+}) {
+  const isRecaptchaValid = await validateRecaptcha(recaptchaToken);
+  if (!isRecaptchaValid) {
+    console.error('Recaptcha validation failed');
+    return 400;
+  }
   if (!question || !slug) {
     return 400;
   }
@@ -49,4 +62,16 @@ export async function sendQuestion({ question, slug }: { question: string; slug:
     return 400;
   }
   return 500;
+}
+
+async function validateRecaptcha(token: string) {
+  const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `secret=${process.env.RECAPTCHA_SECRET}&response=${token}`,
+  });
+  const data = await res.json();
+  return data.success;
 }

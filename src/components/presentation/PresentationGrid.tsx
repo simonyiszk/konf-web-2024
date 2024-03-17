@@ -1,18 +1,15 @@
 'use client';
 
-import { Dialog } from '@headlessui/react';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { CSSProperties, useRef, useState } from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
+import React, { CSSProperties, useRef } from 'react';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-import { sendQuestion } from '@/app/actions';
+import { PresentationQuestionForm } from '@/components/presentation/PresentationQuestion';
 import { Tile } from '@/components/tiles/tile';
 import { PresentationWithDates, SponsorCategory } from '@/models/models';
 import { dateToHourAndMinuteString } from '@/utils/dateHelper';
 import slugify from '@/utils/slugify';
-
-import { WhiteButton } from '../white-button';
 
 const TimespanUnit = 15 * 60 * 1000; // fifteen minutes
 const TimespanUnitHeight = 'minmax(5rem, auto)';
@@ -100,30 +97,6 @@ export function PresentationTile({
   presentation: PresentationWithDates;
   preview?: boolean;
 }) {
-  const [question, setQuestion] = useState('');
-  const [error, setError] = useState('');
-  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const onSend = async () => {
-    if (question.trim()) {
-      setIsLoading(true);
-      const status = await sendQuestion({ question, slug: presentation.slug });
-      setIsLoading(false);
-      switch (status) {
-        case 201:
-          setIsSuccessOpen(true);
-          setQuestion('');
-          break;
-        case 400:
-          setError('Hibás formátum!');
-          break;
-        default:
-          setError('Ismeretlen hiba!');
-      }
-    }
-  };
-
   return (
     <>
       <Tile clickable={!presentation.placeholder && !preview} className='w-full h-full' disableMinHeight={true}>
@@ -172,41 +145,13 @@ export function PresentationTile({
               <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
             )}
             {preview && (
-              <div className='mt-10 w-full'>
-                <textarea
-                  className='w-full rounded-md p-2 bg-transparent border-white border-[0.5px]'
-                  value={question}
-                  onChange={(e) => setQuestion(e.target.value)}
-                  rows={4}
-                  placeholder='Ide írd a kérdésed!'
-                />
-                {error && <p className='text-red-500 my-2'>{error}</p>}
-                <div className='w-full my-4 flex justify-center'>
-                  <WhiteButton onClick={onSend} disabled={!question.trim() || isLoading}>
-                    Kérdés küldése
-                  </WhiteButton>
-                </div>
-              </div>
+              <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}>
+                <PresentationQuestionForm slug={presentation.slug} />
+              </GoogleReCaptchaProvider>
             )}
           </div>
         </Tile.Body>
       </Tile>
-      <Dialog open={isSuccessOpen} onClose={() => setIsSuccessOpen(false)} className='relative z-50'>
-        <div className='fixed inset-0 bg-black/80' aria-hidden='true' />
-
-        <div className='fixed inset-0 flex w-screen items-center justify-center p-4'>
-          <Dialog.Panel className='mx-auto max-w-lg rounded bg-[#0f181c] p-8 flex flex-col items-center gap-5'>
-            <div className='text-8xl text-white'>
-              <FaCheckCircle />
-            </div>
-            <Dialog.Title className='font-bold text-2xl mb-5 text-center'>
-              A kérdésed megkaptuk és moderálás után a felolvasandó kérdések közé kerül. Köszönjük!
-            </Dialog.Title>
-
-            <WhiteButton onClick={() => setIsSuccessOpen(false)}>Rendben</WhiteButton>
-          </Dialog.Panel>
-        </div>
-      </Dialog>
     </>
   );
 }

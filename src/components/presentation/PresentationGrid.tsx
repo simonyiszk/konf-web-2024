@@ -1,6 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
+import Image from 'next/image';
 import Link from 'next/link';
 import { CSSProperties, useRef } from 'react';
 
@@ -120,9 +121,12 @@ function PresentationTile({ presentation }: { presentation: PresentationWithDate
           </div>
           {!!presentation.presenter && (
             <div className='flex gap-4'>
-              <img
+              <Image
+                width={64}
+                height={64}
+                quality={100}
                 src={presentation.presenter.pictureUrl}
-                className='object-cover rounded-3xl w-16 h-16'
+                className='object-cover rounded-3xl w-[64px] h-[64px]'
                 alt='Presentation Image'
               />
               <div>

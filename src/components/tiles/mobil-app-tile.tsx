@@ -27,8 +27,20 @@ export function MobilAppTile({ data }: Props) {
             <img className='h-[57px] min-w-[190]' src='/img/androidapk.svg' alt='Play Store' />
           </a>
         </div>
-        <Link className='text-primary-500 underline block mt-10 mx-auto w-fit' href='/mobile'>
+        <Link
+          href='/mobile'
+          className='mt-6 inline-flex w-full justify-center items-center font-semibold text-xl text-white brand-link'
+        >
           Részletek
+          <svg
+            className=' w-2.5 h-2.5 ms-2 rtl:rotate-180'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 6 10'
+          >
+            <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='m1 9 4-4-4-4' />
+          </svg>
         </Link>
       </Tile.Body>
     </Tile>

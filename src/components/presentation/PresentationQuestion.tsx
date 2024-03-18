@@ -39,6 +39,7 @@ export function PresentationQuestionForm({ slug }: PresentationQuestionFormProps
           setQuestionCount(questionCount + 1);
           setIsSuccessOpen(true);
           setQuestion('');
+          setError('');
           break;
         case 400:
           setError('Hibás formátum!');

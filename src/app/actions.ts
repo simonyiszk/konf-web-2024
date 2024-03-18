@@ -39,10 +39,12 @@ export async function sendQuestion({
   question,
   slug,
   recaptchaToken,
+  userId,
 }: {
   question: string;
   slug: string;
   recaptchaToken: string;
+  userId: string;
 }) {
   const isRecaptchaValid = await validateRecaptcha(recaptchaToken);
   if (!isRecaptchaValid) {
@@ -54,7 +56,7 @@ export async function sendQuestion({
   }
   const res = await fetch(`https://konf-qna.kir-dev.hu/api/presentation/${slug}/question`, {
     method: 'POST',
-    body: JSON.stringify({ content: question, userId: 'zokni' }),
+    body: JSON.stringify({ content: question, userId }),
   });
   if (res.status === 200) {
     return 201;

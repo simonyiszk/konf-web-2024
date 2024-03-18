@@ -3,7 +3,6 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import React, { CSSProperties, useRef } from 'react';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 import { PresentationQuestionForm } from '@/components/presentation/PresentationQuestion';
 import { Tile } from '@/components/tiles/tile';
@@ -144,11 +143,7 @@ export function PresentationTile({
             {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
               <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
             )}
-            {preview && (
-              <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}>
-                <PresentationQuestionForm slug={presentation.slug} />
-              </GoogleReCaptchaProvider>
-            )}
+            {preview && <PresentationQuestionForm slug={presentation.slug} />}
           </div>
         </Tile.Body>
       </Tile>

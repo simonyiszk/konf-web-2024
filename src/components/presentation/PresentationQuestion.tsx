@@ -1,10 +1,11 @@
 import { Dialog } from '@headlessui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { FaCheckCircle } from 'react-icons/fa';
 
 import { sendQuestion } from '@/app/actions';
 import { WhiteButton } from '@/components/white-button';
+import { AllowedQuestionCount, getQuestionCount, getUserId, incrementQuestionCount } from '@/utils/questionHelpers';
 
 interface PresentationQuestionFormProps {
   slug: string;
@@ -17,16 +18,25 @@ export function PresentationQuestionForm({ slug }: PresentationQuestionFormProps
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [question, setQuestion] = useState('');
+  const [questionCount, setQuestionCount] = useState(0);
+
+  const canAskQuestions = questionCount < AllowedQuestionCount;
+
+  useEffect(() => {
+    setQuestionCount(getQuestionCount(slug));
+  }, []);
 
   const onSend = async () => {
     if (!executeRecaptcha) return;
     const recaptchaToken = await executeRecaptcha('presentation_question');
-    if (question.trim()) {
+    if (question.trim() && canAskQuestions) {
       setIsLoading(true);
-      const status = await sendQuestion({ question, slug, recaptchaToken });
+      const status = await sendQuestion({ question, slug, recaptchaToken, userId: getUserId() });
       setIsLoading(false);
       switch (status) {
         case 201:
+          incrementQuestionCount(slug);
+          setQuestionCount(questionCount + 1);
           setIsSuccessOpen(true);
           setQuestion('');
           break;
@@ -41,19 +51,34 @@ export function PresentationQuestionForm({ slug }: PresentationQuestionFormProps
 
   return (
     <div className='mt-10 w-full'>
-      <textarea
-        className='w-full rounded-md p-2 bg-transparent border-white border-[0.5px]'
-        value={question}
-        onChange={(e) => setQuestion(e.target.value)}
-        rows={4}
-        placeholder='Ide írd a kérdésed!'
-      />
-      {error && <p className='text-red-500 my-2'>{error}</p>}
-      <div className='w-full my-4 flex justify-center'>
-        <WhiteButton onClick={onSend} disabled={!question.trim() || isLoading || !executeRecaptcha}>
-          Kérdés küldése
-        </WhiteButton>
-      </div>
+      {canAskQuestions ? (
+        <>
+          <div className='relative'>
+            <textarea
+              className='w-full rounded-md p-2 bg-transparent border-white border-[0.5px]'
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+              rows={4}
+              placeholder='Ide írd a kérdésed!'
+            />
+            <p className='absolute right-0 bottom-0 p-4'>
+              {questionCount}/{AllowedQuestionCount} Kérdés feltéve
+            </p>
+          </div>
+          {error && <p className='text-red-500 my-2'>{error}</p>}
+          <div className='w-full my-4 flex justify-center'>
+            <WhiteButton onClick={onSend} disabled={!question.trim() || isLoading || !executeRecaptcha}>
+              Kérdés küldése
+            </WhiteButton>
+          </div>
+        </>
+      ) : (
+        <div className='w-full my-4 flex justify-center'>
+          <WhiteButton disabled={true} onClick={() => {}}>
+            Elfogytak a feltehető kérdések!
+          </WhiteButton>
+        </div>
+      )}
       <Dialog open={isSuccessOpen} onClose={() => setIsSuccessOpen(false)} className='relative z-50'>
         <div className='fixed inset-0 bg-black/80' aria-hidden='true' />
 

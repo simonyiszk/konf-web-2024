@@ -31,7 +31,7 @@ export function NavbarMobile() {
   }, []);
 
   return (
-    <nav className='md:hidden overflow-hidden'>
+    <nav className='lg:hidden overflow-hidden'>
       <div className='w-full px-5 py-3 fixed top-0 z-20' onClick={onLinkClick}>
         <div
           id='mobile-nav-container'

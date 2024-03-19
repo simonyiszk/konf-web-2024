@@ -71,9 +71,7 @@ export default async function Landing() {
 
             {data.giveaway.pictureUrl && <GiveawayTile data={data.giveaway} showLink={true} />}
 
-            {/* <CountdownTile /> */}
             {(data.mobilApp.androidUrl || data.mobilApp.iosUrl) && <MobilAppTile data={data.mobilApp} />}
-            {/* <NewsletterTile /> */}
             <WorkshopTile />
             <MapTile />
           </div>

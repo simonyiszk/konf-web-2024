@@ -6,7 +6,7 @@ import React, { CSSProperties, useRef } from 'react';
 
 import { PresentationQuestionForm } from '@/components/presentation/PresentationQuestion';
 import { Tile } from '@/components/tiles/tile';
-import { PresentationWithDates, SponsorCategory } from '@/models/models';
+import { BreakWithDates, PresentationWithDates, SponsorCategory } from '@/models/models';
 import { dateToHourAndMinuteString } from '@/utils/dateHelper';
 import slugify from '@/utils/slugify';
 
@@ -18,7 +18,7 @@ export function PresentationGrid({
   startDate,
   endDate,
 }: {
-  presentations: PresentationWithDates[];
+  presentations: (PresentationWithDates | BreakWithDates)[];
   startDate: number;
   endDate: number;
 }) {
@@ -93,9 +93,11 @@ export function PresentationTile({
   presentation,
   preview = false,
 }: {
-  presentation: PresentationWithDates;
+  presentation: PresentationWithDates | BreakWithDates;
   preview?: boolean;
 }) {
+  const presenter = presentation.placeholder ? null : (presentation as PresentationWithDates).presenter;
+  const description = presentation.placeholder ? null : (presentation as PresentationWithDates).description;
   return (
     <>
       <Tile clickable={!presentation.placeholder && !preview} className='w-full h-full' disableMinHeight={true}>
@@ -106,42 +108,34 @@ export function PresentationTile({
           </span>
           <div className='flex flex-col justify-center flex-1'>
             <div className={clsx('flex', presentation.placeholder && 'justify-around')}>
-              <h2
-                className={clsx(
-                  'text-lg lg:text-xl font-medium',
-                  !presentation.presenter ? 'text-center pb-4' : 'pb-4 lg:pb-6'
-                )}
-              >
+              <h2 className={clsx('text-lg lg:text-xl font-medium', !presenter ? 'text-center pb-4' : 'pb-4 lg:pb-6')}>
                 {presentation.title}
               </h2>
               {presentation.room === 'BOTH' && presentation.placeholder && (
                 <h2
                   aria-hidden={true}
-                  className={clsx(
-                    'text-lg lg:text-xl pb-4 lg:pb-6 font-medium',
-                    !presentation.presenter && 'text-center'
-                  )}
+                  className={clsx('text-lg lg:text-xl pb-4 lg:pb-6 font-medium', !presenter && 'text-center')}
                 >
                   {presentation.title}
                 </h2>
               )}
             </div>
-            {!!presentation.presenter && (
+            {!!presenter && (
               <div className='flex gap-4'>
                 <img
-                  src={presentation.presenter.pictureUrl}
+                  src={presenter.pictureUrl}
                   className='object-cover rounded-3xl w-16 h-16'
                   alt='Presentation Image'
                 />
                 <div>
-                  <h3 className='text-lg lg:text-2xl font-bold text-[#FFE500]'>{presentation.presenter.name}</h3>
-                  <div className='text-xs lg:text-sm'>{presentation.presenter.rank}</div>
-                  <div className='hidden lg:block text-xs pt-0.5'>{presentation.presenter.company?.name}</div>
+                  <h3 className='text-lg lg:text-2xl font-bold text-[#FFE500]'>{presenter.name}</h3>
+                  <div className='text-xs lg:text-sm'>{presenter.rank}</div>
+                  <div className='hidden lg:block text-xs pt-0.5'>{presenter.company?.name}</div>
                 </div>
               </div>
             )}
-            {presentation.presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
-              <p className='mt-2 text-base whitespace-pre-line'>{presentation.description.split('\n')[0]}</p>
+            {presenter?.company?.category === SponsorCategory.MAIN_SPONSOR && !preview && (
+              <p className='mt-2 text-base whitespace-pre-line'>{description?.split('\n')[0]}</p>
             )}
             {preview && <PresentationQuestionForm slug={presentation.slug} />}
           </div>
@@ -182,7 +176,10 @@ function getTimeRowPositionInGrid(time: number, startDate: number) {
   return Math.floor((time - startDate) / TimespanUnit);
 }
 
-function getPresentationCellStyles(startDate: number, presentation: PresentationWithDates): CSSProperties {
+function getPresentationCellStyles(
+  startDate: number,
+  presentation: PresentationWithDates | BreakWithDates
+): CSSProperties {
   const cellStart = getTimeRowPositionInGrid(presentation.startDate.getTime(), startDate);
   const cellEnd = getTimeRowPositionInGrid(presentation.endDate.getTime(), startDate);
   let columLocation: CSSProperties = { gridColumnStart: 2, gridColumnEnd: 4 };

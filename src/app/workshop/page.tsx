@@ -36,7 +36,7 @@ export default function WorkshopPage() {
             </div>
             <div className='flex flex-col items-center flex-shrink-0 text-center lg:max-w-sm order-first lg:order-last'>
               <img
-                src='https://konf-api.kir-dev.hu/cdn/public/MEDVE_U6Y7SQZJ4HNQ.webp'
+                src='/img/MEDVE_U6Y7SQZJ4HNQ.webp'
                 className='object-cover rounded-3xl w-[250px] h-[250px] sm:w-[308px] sm:h-[308px]'
                 alt='Presentation Image'
               />

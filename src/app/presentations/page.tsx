@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { PresentationGrid } from '@/components/presentation/PresentationGrid';
 import { getPresentationData } from '@/models/get-presentation-data';
-import { PresentationWithDates } from '@/models/models';
+import { BreakWithDates, PresentationWithDates } from '@/models/models';
 
 export const metadata: Metadata = {
   title: 'Előadások',
@@ -25,7 +25,7 @@ export default async function Presentations() {
   );
 }
 
-function getStartAndEndDates(presentations: PresentationWithDates[]): [number, number] {
+function getStartAndEndDates(presentations: (PresentationWithDates | BreakWithDates)[]): [number, number] {
   const endDates = presentations.map((presentations) => presentations.endDate.getTime());
   const startDates = presentations.map((presentation) => presentation.startDate.getTime());
   return [Math.min(...startDates), Math.max(...endDates)];

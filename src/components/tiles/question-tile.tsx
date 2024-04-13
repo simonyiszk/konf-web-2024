@@ -1,12 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-import { PresentationWithDates } from '@/models/models';
+import { BreakWithDates, PresentationWithDates } from '@/models/models';
 
 import { PresentationTile } from '../presentation/PresentationGrid';
 
 type Props = {
-  presentations: PresentationWithDates[];
+  presentations: (PresentationWithDates | BreakWithDates)[];
   room: 'IB028' | 'IB025';
   delay: number;
 };

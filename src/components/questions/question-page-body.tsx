@@ -3,13 +3,13 @@
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 import { RoomQuestion } from '@/components/tiles/question-tile';
-import { PresentationWithDates } from '@/models/models';
+import { BreakWithDates, PresentationWithDates } from '@/models/models';
 
 export function QuestionPageBody({
   presentations,
   delay,
 }: {
-  presentations: PresentationWithDates[] | undefined;
+  presentations: (PresentationWithDates | BreakWithDates)[] | undefined;
   delay: number;
 }) {
   return (

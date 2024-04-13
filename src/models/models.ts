@@ -32,6 +32,16 @@ export interface Presenter {
   company?: Company;
 }
 
+export interface Break {
+  slug: string;
+  title: string;
+  room: 'IB028' | 'IB025' | 'BOTH';
+  language: 'en' | 'hu';
+  startTime: string;
+  endTime: string;
+  placeholder?: boolean;
+}
+
 export interface Presentation {
   slug: string;
   title: string;
@@ -46,7 +56,16 @@ export interface Presentation {
   placeholder?: boolean;
 }
 
+export interface Delay {
+  delay: number;
+}
+
 export interface PresentationWithDates extends Presentation {
+  startDate: Date;
+  endDate: Date;
+}
+
+export interface BreakWithDates extends Break {
   startDate: Date;
   endDate: Date;
 }

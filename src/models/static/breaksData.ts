@@ -1,4 +1,6 @@
-export const breaksData = [
+import { Break } from '@/models/models';
+
+export const breaksData: Break[] = [
   {
     slug: 'megnyito',
     title: 'Megnyitó',

@@ -91,11 +91,6 @@ export interface IndexPageData {
     companies: Company[];
   };
   organisers: Organiser[];
-  featuredPresentation: {
-    sectionTitle: string;
-    description: string;
-    presentation: Presentation;
-  };
   presentations: Presentation[];
 }
 

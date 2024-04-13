@@ -15,7 +15,7 @@ import { YoutubeVideoTile } from '@/components/tiles/youtube-video-tile';
 import { getIndexData } from '@/models/get-index-data';
 import { getInterviews, getStreams } from '@/models/get-youtube-video-data';
 import { InterviewData, StreamData } from '@/models/models';
-import { kotlinPresentation, tresoritPresentation } from '@/models/staticPresentationData';
+import { kotlinPresentation, tresoritPresentation } from '@/models/static/featuredPresentationData';
 
 import konfLogo from '../../public/img/konf.svg';
 import redPlanet from '../../public/img/red-planet.png';

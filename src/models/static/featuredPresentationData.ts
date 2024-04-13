@@ -1,4 +1,4 @@
-import { Presentation } from './models';
+import { Presentation } from '../models';
 
 export const kotlinPresentation: Presentation = {
   slug: 'kotlin-multiplatform',
@@ -10,13 +10,10 @@ export const kotlinPresentation: Presentation = {
   endTime: '2024-03-19T15:15:00+01:00',
   questionsUrl: '',
   title: 'Kotlin Multiplatform: kódmegosztás pragmatikusan',
-  imageUrls: [
-    'https://konf-api.kir-dev.hu/cdn/public/KOTLIN_1CCDSQNPFEOYV.svg',
-    'https://konf-api.kir-dev.hu/cdn/public/KODEE_10PDQ52YA91EP.png',
-  ],
+  imageUrls: ['/img/KOTLIN_1CCDSQNPFEOYV.svg', '/img/KODEE_10PDQ52YA91EP.png'],
   presenter: {
     name: 'Braun Márton Szabolcs',
-    pictureUrl: 'https://konf-api.kir-dev.hu/cdn/public/BMARTON_CTEAHPBZ8A47.webp',
+    pictureUrl: '/img/BMARTON_CTEAHPBZ8A47.webp',
     rank: 'Developer Advocate, JetBrains',
   },
 };
@@ -34,7 +31,7 @@ export const tresoritPresentation: Presentation = {
   imageUrls: [],
   presenter: {
     name: 'Lám István',
-    pictureUrl: 'https://konf-api.kir-dev.hu/cdn/public/LISTVAN_1G03WBGQTX4KT.webp',
+    pictureUrl: '/img/LISTVAN_1G03WBGQTX4KT.webp',
     rank: 'Co-Founder, Board Member & Corporate Development Director, Tresorit',
   },
 };

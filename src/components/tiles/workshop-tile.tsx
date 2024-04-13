@@ -15,7 +15,7 @@ export function WorkshopTile() {
 
           <div className='flex flex-col items-center w-full'>
             <img
-              src='https://konf-api.kir-dev.hu/cdn/public/MEDVE_U6Y7SQZJ4HNQ.webp'
+              src='/img/MEDVE_U6Y7SQZJ4HNQ.webp'
               className='object-cover rounded-3xl w-[200px] h-[200px]'
               alt='Workshop Image'
             />

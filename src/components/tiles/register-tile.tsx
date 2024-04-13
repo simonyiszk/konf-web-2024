@@ -1,7 +1,6 @@
 'use client';
 import { Dialog } from '@headlessui/react';
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 import { RegistraionData } from '@/models/models';
@@ -16,8 +15,8 @@ export function RegisterTile({ data: { cooltixEventId, buttonText } }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div onClick={() => setIsOpen(true)} className='w-full sm:col-span-6'>
-        <Tile clickable className=' w-full h-full cursor-pointer'>
+      <div className='w-full sm:col-span-6 opacity-80 cursor-not-allowed'>
+        <Tile clickable={false} className='w-full h-full'>
           <Tile.Body className='flex flex-col justify-center items-center gap-4'>
             <h2 className='text-4xl sm:text-5xl font-bold'>{buttonText}</h2>
             <p className='text-lg sm:text-xl font-medium text-center'>

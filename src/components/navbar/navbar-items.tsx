@@ -17,15 +17,7 @@ const links = [
   {
     href: '/contact',
     label: 'kapcsolat',
-  },
-  {
-    href: '/questions',
-    label: 'kérdések',
-  },
-  {
-    href: '/golya',
-    label: 'gólyáknak',
-    external: true,
+    external: false,
   },
 ];
 

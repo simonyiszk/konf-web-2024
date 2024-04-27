@@ -51,7 +51,7 @@ export interface Presentation {
   startTime: string;
   endTime: string;
   description: string;
-  questionsUrl: string; // még kérdéses, hogy így lesz-e
+  videoUrl: string;
   imageUrls?: string[];
   placeholder?: boolean;
 }

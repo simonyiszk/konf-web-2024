@@ -103,8 +103,8 @@ export default async function Presentation({ presentation, isFrontPage }: Presen
             </div>
           </div>
           <div className='sm:w-full md:w-6/7 lg:w-5/6 mx-auto mt-8'>
-            {presentation.questionsUrl && !isFrontPage && (
-              <YoutubeVideo title={presentation.title} url={presentation.questionsUrl} />
+            {presentation.videoUrl && !isFrontPage && (
+              <YoutubeVideo title={presentation.title} url={presentation.videoUrl} />
             )}
           </div>
         </div>

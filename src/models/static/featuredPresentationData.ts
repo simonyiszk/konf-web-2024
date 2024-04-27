@@ -8,7 +8,7 @@ export const kotlinPresentation: Presentation = {
   room: 'IB028',
   startTime: '2024-03-19T14:45:00+01:00',
   endTime: '2024-03-19T15:15:00+01:00',
-  questionsUrl: '',
+  videoUrl: '',
   title: 'Kotlin Multiplatform: kódmegosztás pragmatikusan',
   imageUrls: ['/img/KOTLIN_1CCDSQNPFEOYV.svg', '/img/KODEE_10PDQ52YA91EP.png'],
   presenter: {
@@ -26,7 +26,7 @@ export const tresoritPresentation: Presentation = {
   room: 'IB028',
   startTime: '2024-03-19T15:45:00+01:00',
   endTime: '2024-03-19T16:15:00+01:00',
-  questionsUrl: '',
+  videoUrl: '',
   title: 'Hogyan lehet eladni a diplomamunkát 150 országban - CrySys laborból indult Tresorit tapasztalatok',
   imageUrls: [],
   presenter: {

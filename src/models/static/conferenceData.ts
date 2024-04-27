@@ -337,7 +337,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T15:15:00+01:00',
       description:
         'A Kotlin első verzióját 2016-ban adta ki a JetBrains. A nyelv azóta folyamatosan fejlődik, új funkciókkal és eszközökkel bővül, mára már élénk közösséggel és ökoszisztémával rendelkezik.\r\n\r\nBár a Kotlin eredeti célja a JVM alapú szoftverfejlesztés volt – asztali és szerver oldali alkalmazások létrehozása – ezt hamar kinőtte. Pár év alatt meghódította az Android fejlesztést is; a Google először hivatalosan támogatott, később pedig elsődleges nyelvvé tette a saját platformján.\r\n\r\nNapjainkban a növekedés legújabb iránya a Kotlin Multiplatform, amivel kitörhetünk a JVM-ről, és szabadon megoszthatunk Kotlin kódot különböző mobil platformok, valamint asztali, webes és szerveroldali alkalmazások között. Ebben az előadásban ennek a technológiának az előnyeivel és legújabb fejleményeivel fogunk megismerkedni.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/C0UFL3714UE?si=XN_4ZVRXShoC-8mK',
       presenter: {
         name: 'Braun Márton',
         rank: 'Developer Advocate, JetBrains',
@@ -353,7 +353,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T15:15:00+01:00',
       description:
         'A generatív AI egy erőteljesen fejlődő, természetes nyelven írt szövegek elemzésén alapuló megoldás, mely nagy érdeklődésre tart számot az egész világon. Mivel azonban a technológia – a szükséges számítási kapacitás, és a megfelelő gyakorlati megvalósítási módszerek korábbi elérhetetlensége miatt – csak a közelmúltban vált közismertté, még nem létezik széles körben elfogadott iparági ajánlás arra vonatkozóan, hogy az milyen üzleti problémák megoldására alkalmazható hatékonyan.\r\n\r\nAz előadás során – a Barré által egyéb, konvencionális IBM termékek segítségével kiszolgált iparági, nagyvállalati környezet rövid bemutatása mellett – egy élő demo formájában bemutatásra kerül egy jó eredményekkel kecsegtető lehetséges alkalmazási terület: a nagyvállalati dokumentumtárakban nagy mennyiségben elhelyezkedő, nem indexált dokumentumok utólagos klasszifikálása, és taxonómiai besorolásuknak megfelelő metaadataik kinyerése. Ezt követően bemutatásra kerül, hogy meglátásunk szerint mire potenciálisan jó, és mire biztosan nem jó a technológia, mely felvetésként a kérdés-felelet szekcióban akár vitaindítóként is szolgálhat.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/IiI9a0YvFp4?si=NJTAuEcuAktlMUS3',
       presenter: {
         name: 'Bartha Tamás Árpád',
         rank: 'vezérigazgató',
@@ -375,7 +375,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T18:00:00+01:00',
       description:
         'Napjainkban már szinte mindenki kapcsolatba került valamilyen formában a drónokkal, amelyek egyre nagyobb tudással és egyre olcsóbban hozzáférhetők. Ezek a – rendkívül sok célra remekül használható – eszközök felelőtlen, vagy rosszindulatú használat esetén nagy veszélyt, jelentős károkat, sőt katasztrófát okozhatnak. Az előadás az ilyen irányú kockázatokról, azok minimalizálását célzó fejlesztési irányokról, lehetőségekről és megoldásokról ad egy áttekintést. Érinti a - rendkívül költséges – felderítés, detektálás, valamint az elhárítási lehetőségek kérdéskörét. Természetesen szó lesz a drónok felhasználása következtében kialakult „aszimmetrikus hadviselésről”, a drónok szerepéről az orosz-ukrán háborúban, valamint az izraeli konfliktusban is. A nemzetközi kitekintést követően, az előadás befejező része bemutatja a témakör hazai vonatkozásait is.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/MpD9IkwIlA8?si=9to_MRg8mucJK8nJ',
       presenter: {
         name: 'Dr. Kazi Károly',
         rank: 'BHE ügyvezető, MELT elnök',
@@ -391,7 +391,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T14:00:00+01:00',
       description:
         'Beágyazott rendszerek sorozatgyártásánál hasznos eszköz a sorozatprogramozó, amely gombnyomásra, az USB-s eszközöknél lényegesen gyorsabban képes betölteni a firmware-t a készülékbe. A piacon kapható ARM sorozatprogramozók csak bizonyos típusokat támogatnak, ráadásul a hobbisták számára nem elérhető árúak. Az előadáson részt vevők betekintést nyerhetnek az ARM mikrovezérlők debug interfészébe, megismerkedhetnek az ARM Cortex architektúra és a CMSIS keretrendszer releváns részeivel, valamint a flash memória programozásának részleteivel, kiemelt figyelmet fordítva a gyártófüggetlen megvalósításra. A hardver és a szoftver implementációja egy, a Schönherz Elektronikai Műhelyben fejlesztett ARM sorozatprogramozó példáján kerül bemutatásra.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/MuUlXWBcsxU?si=KQ7g5lvJBOScdtgL',
       presenter: {
         name: 'Horváth Kristóf',
         rank: 'öregtag, Schönherz Elektronikai Műhely',
@@ -407,7 +407,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T16:15:00+01:00',
       description:
         'A Tresoritot BMEs és 1 Corvinusos hallgatók alapították, melynek alapja egy közös kutatási munka volt, és egyikük (az előadó) diplomamunkája is. Korán jelentős tőkét vontak be: már a BSc diplomaosztóra 380M Ft tőkebevonást zártak. De a sikerhez nem vezetett kikövezett út, az első tőkebevonás után rengeteg nehézséggel szembesültek. Fontos a marketing – de mi az? Növekedni kell – de hogyan? Céget és csapatot kell építeni – de ki fog akkor a termékfejlesztéssel foglalkozni? Ma már nagyvállalatok, kormányzati szervek, kisebb-nagyobb cégek világszerte használják a Tresoritot a legbizalmasabb dokumentumok tárolására – de az idevezető út sokszor meglepő fordulatot vett.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/PCI4OizUHMM?si=jrNKg01UPuVn0usn',
       presenter: {
         name: 'Lám István',
         rank: 'Co-Founder, Board Member & Corporate Development Director, Tresorit',
@@ -423,7 +423,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T17:00:00+01:00',
       description:
         "In the presentation \"Taming Monsters With Dragons or How to Build Digital Twins The Right Way\", Robert Karban, an internationally recognized Systems Engineering Expert with experience at NASA JPL, and Istvan Rath, CEO of IncQuery, will talk about the critical role of systems engineering in contemporary industries like aerospace, automotive, and biomedical. As the complexity of systems increases, so do the stakes in ensuring their functionality and reliability, demanding innovative engineering approaches for their development and operation.\r\n\r\nThe duo will discuss the challenges in the current engineering paradigm, especially the trend towards distributed teamwork. This dispersion often leads to organizational silos, creating barriers to collaboration and innovation and posing risks to project success. This necessitates novel engineering approaches, incorporating advanced processes, engineering eco-systems, and data management strategies.\r\n\r\nA central theme of the presentation is the concept of 'Digital Twins' and 'Digital Threads'. These innovative approaches enable the meaningful connection of people and their work, breaking down silos and fostering collaboration. The presentation aims to inspire future engineers to embrace these cutting-edge techniques for impactful and life-saving advancements.\r\n\r\nSpeaker Robert Karban's presentation is the prequel of Dr. Ráth's presentation on the same topic.",
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/bk_D2cILzt4?si=poT7KBuQXHPU9HlP',
       presenter: {
         name: 'Robert Karban',
         rank: 'Principal Systems Engineer',
@@ -439,7 +439,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T17:00:00+01:00',
       description:
         'Örömmel várjuk az érdeklődőket az ICF Tech Hungary kerekasztal beszélgetésén, ahol vezetőink és vezető fejlesztőink, valamint korábbi Bprof kooperatív képzésben részt vevő kollégáink osztják meg veletek tapasztalataikat az egyetemi éveket követő karrier útjaikról. Lehetőségetek lesz megismerni egy vállalat dinamikus növekedését, belekóstolhattok a mindennapi projektmunkákba, valamint feltárjuk, hogy milyen lehetőségek várnak rátok az egyetem elvégzését követően a munkaerőpiacon. Beszélgetünk majd a karrier lehetőségekről, a célkitűzés és a csapatmunka fontosságáról, valamint  a fejlődési lehetőségekről a szakmában. A kerekasztalt élő “kérdezz-felelek”-el zárjuk, ahol Ti is feltehetitek a kérdéseiteket.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/AumoSDJ1UlU?si=MmxY4xHWosb-NDP-',
       presenter: {
         name: 'ICF Tech Hungary',
         rank: '',
@@ -461,7 +461,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T17:30:00+01:00',
       description:
         "In the presentation \"Taming Monsters With Dragons or How to Build Digital Twins The Right Way\", Robert Karban, an internationally recognized Systems Engineering Expert with experience at NASA JPL, and Istvan Rath, CEO of IncQuery, will talk about the critical role of systems engineering in contemporary industries like aerospace, automotive, and biomedical. As the complexity of systems increases, so do the stakes in ensuring their functionality and reliability, demanding innovative engineering approaches for their development and operation.\r\n\r\nThe duo will discuss the challenges in the current engineering paradigm, especially the trend towards distributed teamwork. This dispersion often leads to organizational silos, creating barriers to collaboration and innovation and posing risks to project success. This necessitates novel engineering approaches, incorporating advanced processes, engineering eco-systems, and data management strategies.\r\n\r\nA central theme of the presentation is the concept of 'Digital Twins' and 'Digital Threads'. These innovative approaches enable the meaningful connection of people and their work, breaking down silos and fostering collaboration. The presentation aims to inspire future engineers to embrace these cutting-edge techniques for impactful and life-saving advancements.\r\n\r\nDr. Ráth's presentation is the sequel of Speaker Robert Karban's presentation on the same topic.",
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/bk_D2cILzt4?si=qVXoKp0duLBkigmr&amp;start=1563',
       presenter: {
         name: 'Dr. Ráth István',
         rank: 'CEO, IncQuery',
@@ -477,7 +477,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T15:45:00+01:00',
       description:
         'Mi történhet, ha egy ransomware támadás éri egy gyár belső infrastruktúráját? Milyen hibákat követhetünk el? Mit tehetünk, hogy elkerüljük a hasonló eseteket? Hogyan működik egy modern ransomware infrastruktúra? Milyen egy profin megírt titkosító algoritmus? Milyen lehetőségeink vannak adatok visszaállítására egy támadás után? Többek között ezekre a kérdésekre keressük a választ az előadás során, miközben egy valós incidenskezelési történetet tekintünk át az elmúlt évekből. Ezenkívül megpróbáljuk lefuttatni a támadók által használt ransomware mintát egy szeparált, virtualizált környezetben. Az előadás tanulságokkal szolgál otthoni felhasználóknak és céges környezetben dolgozóknak egyaránt.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/DGykIKTaoeI?si=bLpXbeQyy7_8Q5nN',
       presenter: {
         name: 'Tamás Kristóf',
         rank: 'Head of Security Services, Ukatemi Technologies',
@@ -493,7 +493,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T19:15:00+01:00',
       description:
         'A molekuláris biológia területe hatalmas lépésekkel fejlődött az elmúlt évtizedekben. A Human Genome Project által 2003-ra megismerhettük az emberi DNS szekvenciáját. Ma már több génterápiás gyógyszer is elérhető, mint például a 2019-ben gerinc eredetű izomsorvadás kezelésére engedélyezett Zolgensma. Az új mérési módszerek mélyebb betekintést adnak a sejtek viselkedésébe, mint eddig bármikor. A next generation sequencing elterjedésével a DNS-ben tárolt információ megismerésének költsége exponenciálisnál is gyorsabban csökkent. Azonban a rengeteg rendelkezésre álló adat egyelőre kevés áttöréshez vezetett olyan bonyolult betegségek kezelésében, mint a rák vagy a gyulladásos bélbetegségek. Az elmúlt évtized AI forradalmai után adja magát a lehetőség, hogy használjunk a nagymennyiségű rendelkezésre álló adat megértéséhez mesterséges intelligenciát. Viszont a biológiai adatok feldolgozása egyedi kihívásokkal jár. A mérések jellemzően zajosak, hiányzó értékekkel terheltek, az adatkészletek nem egységesek. Az előadásban egy AI fejlesztő szempontjából ismerkedünk meg a rendelkezésre álló adatokkal és, hogy hogyan lehet megküzdeni ezekkel a kihívásokkal.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/KP4wSDSyQOg?si=y2BaskxRrMQuae05',
       presenter: {
         name: 'Mérő László',
         rank: 'Research Team Lead, Turbine',
@@ -509,7 +509,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T15:45:00+01:00',
       description:
         'Na tessék! Megint ez a buzzword! Igen, tudjuk, a Tárgyak Internete rohamosan nő, gombamód szaporodnak az ipari és otthoni rádiós eszközök. Alapos töprengést igényelne, ha megpróbálnánk összeszámolni, hány olyan elektronikus eszközzel találkozunk naponta, amely valamilyen módon kommunikál a külvilággal. Ma már nehezen tudjuk elképzelni a mindennapjainkat mobiltelefon nélkül, és rövidesen ugyanezt mondhatjuk majd az okos eszközökre is. Tavaly még arról beszéltünk, hogy az okosvárosok építése megkezdődött, most pedig azt halljuk, hogy már a világűrbe is kilóg az IoT. Sőt, a más égitesteken munkát végző robotok, drónok, de akár személyzet számára élet-halál kérdése lehet a köztük és a bázis között lévő állandó kapcsolat.\r\n\r\nMár itt tartunk? De tényleg? De minek? Mi hajtja a légkörön túli terjeszkedést? Tényleg létezik az Űreszközök Internete? Milyen kihívásokkal kell szembenéznie a vállakozó cégeknek a földi körülményekhez képest? Megéri teleszemetelni az Űrt térben, időben és frekvenciatartományban? Az IoT piac egyik meghatározó szereplőjeként ezekre a kérdésekre is megróbálunk választ adni rövid előadásunkban.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/XzU3ywusz7k?si=ew8v1c_ZHtUWFs5a',
       presenter: {
         name: 'Cseh Ádám',
         rank: 'Applications Engineering Manager',
@@ -531,7 +531,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T14:30:00+01:00',
       description:
         'A Vue.js az egyik legnépszerűbb webes keretrendszer, mely a reaktív programozási paradigmát valósítja meg, és korábban soha nem látott lehetőségeket biztosít. Nem véletlen, hogy olyan nagyvállalatok döntöttek a használata mellett, mint a Google, a Facebook vagy a Netflix. A Magyarországon is tevékenykedő, Péterffy Tamás által alapított Interactive Brokers technológiai palettájának is a része.\r\n\r\nEbben az előadásban megnézzük, hogy mit is jelent pontosan a reaktív programozási paradigma, és milyen következményei vannak. Utána magát a Vue.js keretrendszert vesszük górcső alá. Az olyan kapcsolódó technológiákról is lesz szó, mint a Pug HTML sablonkönyvtár vagy a Less CSS kiterjesztés.\r\n\r\nAz előadás egyrészt azoknak ajánlott, akik a már jól ismert procedurális, objektumorientált és funkcionális programozási paradigmák mellett egy újabb feltörekvővel, a reaktív paradigmával is meg szeretnének ismerkedni, másrészt mindenkinek, akiket érdekel a webes fejlesztés, és látni szeretnék, hogy mi van a HTML-CSS-JavaScript bűvkörén túl.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/d81jy3cDIME?si=d-HzRPfdO51NEBIk',
       presenter: {
         name: 'Dr. Faragó Csaba',
         rank: 'Senior Software Developer',
@@ -553,7 +553,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T18:00:00+01:00',
       description:
         '2023 a mesterséges intelligencia éve volt, valószínűleg 2024-ben csillapodik a hype a technológia körül és felszínre kerülnek azok a valós életben is használható megoldások, amik valóban értéket termelnek a magánszemélyek és a vállalkozások számára. Emellett viszont az utóbbi időben egyre többet olvashatunk, hallhatunk a mesterséges intelligencia kiberbiztonságra gyakorolt hatásáról, és arról, hogy hogyan fogja megváltoztatni azt a közeli vagy távoli jövőben. Az előadás célja, hogy átlássunk a média keltette zajon, vegyük sorra milyen támadásokkal találkozunk jelenleg és mi várhat ránk a következő hónapokban.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/nj9-ZZlgt2Y?si=MokHRFo7zcdz5fTU',
       presenter: {
         name: 'Béres Péter',
         rank: 'IT-vezető',
@@ -575,7 +575,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T14:00:00+01:00',
       description:
         'Nemrég berobbant a köztudatba a generatív AI lehetősége, számos példát láttunk mesterségesen generált képekre, szövegekre. Vajon komplex feladatok elvégzésére is képes lehet-e ez a technológia, és át fogja venni a fejlesztők munkáját?\r\n\r\nRöviden megnézzük, hogyan működnek, és mit tudnak ezek a modellek, merre halad a technológia. Az űrhajótervezés példáján keresztül áttekintjük egy komplex fejlesztési folyamat kihívásait, a megbízható termékfejlesztési módszertan alapjait. Megnézzük, melyek azok a lépések, ahol a mérnökeink munkáját akár a gépek is elvégezhetnék, illetve hol kell továbbra is az emberi kreativitás és hozzáértés. Ennek fényében meglátjuk, mik azok a mérnöki készségek, amik az AI korában is megtartják értéküket.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/R27sm-vg-q8?si=t-UoIVlUUIw4Ln9e',
       presenter: {
         name: 'Dr. Csilling Ákos',
         rank: 'Bosch Scientist',
@@ -597,7 +597,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T14:30:00+01:00',
       description:
         'A holdi víz az egyik legértékesebb nyersanyag lehet a közeli jövőben, amely fontos szerepet játszhat a jövőbeli küldetéseknél, a holdi tartós emberi jelenlét támogatásában és a földi gazdaság fejlesztésében is. Ezért elengedhetetlen, hogy lehetséges előfordulását és minőségét, hasonlóan több más lehetséges erőforráshoz, karakterizáljuk és feltérképezzük.\r\n\r\nA kozmikus háttérsugárzás folyamatosan bombázza a Hold felszínét, ennek hatására másodlagos neutronsugárzás lép ki a holdfelszínből. Ezt remekül lehet a regolit (holdi talaj) felszín alatti összetételének meghatározására használni mintegy 1 méter mélységig, különös tekintettel annak hidrogén (és így vízjég) tartalmára.\r\n\r\nKorábbi, Hold körüli pályáról végzett neutronspektroszkópiai mérések után 2024-ben kerül sor a tervek szerint az első részletes holdfelszíni mérésekre. A NASA holdi kereskedelmi szállítási programja (Commercial Lunar Payload Services, CLPS) keretében a VIPER holdjáró (Volatiles Investigating Polar Exploration Rover) az Astrobotic cég Griffin leszállóegységén indulhat útnak a Hold felé, míg az Intutive Machines cég az IM-2 küldetésen a NASA első jégbányászati kísérletét (PRIME-1, Polar Resources Ice-Mining Experiment) szállítja a Hold déli sarkvidékére. Az IM-2 küldetése magyar szempontból is fontos, két hazai fejlesztésű neutrondetektor („Vízszimatoló”) is a fedélzeten van.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/aY4z6uOOHMw?si=x-we9R4Y6kWQmehA',
       presenter: {
         name: 'Hazadi Mátyás, Dr. Pacher Tibor',
         rank: 'villamosmérnöki vezető, ügyvezető igazgató, Puli Space Technologies',
@@ -613,7 +613,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T13:30:00+01:00',
       description:
         'A DuckDB egy új nyílt forráskódú adatbázis-kezelő rendszer, melynek fő fókusza az analitikus lekérdezések hatékony támogatása. Míg a legtöbb hasonló rendszer az “alkalmazás kliens – adatbázis szerver” architektúrát követi, a DuckDB a kliens alkalmazásba beágyazottan (in-process) működik, külső függőségek nélkül. Így a rendszer rendkívül hordozható és könnyen telepíthető a legtöbb népszerű hardver környezetben és operációs rendszerben.\r\n\r\nA DuckDB egy modern SQL adatbázis-kezelő, ami teljes egészében C++11-ben íródott, oszlop alapú adattárolást használ és a lekérdezőmotorja a hatékony vektorizált futtatási módot alkalmazza. Ennek köszönhetően a rendszer gyors és jól skálázódik.\r\n\r\nA DuckDB-t az elmúlt években sikerrel használták különféle rendszerek kiváltására, beleértve dataframe függvénykönyvtárakat (pandas, polars, dplyr), beágyazott adatbázisokat (SQLite), elosztott adatfeldolgozó rendszereket (Spark, Dask) és felhőalapú adattárházakat (Snowflake, Google BigQuery).\r\n\r\nAz előadásban bemutatom a DuckDB fő tervezési irányelveit, a hatékony tárolástól kezdve a párhuzamosítást lehetővé tevő megoldásokig.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/b4enSPbyIkk?si=F2DegbJucIRVFlt8',
       presenter: {
         name: 'Dr. Szárnyas Gábor',
         rank: 'Developer Relations Advocate, DuckDB',
@@ -629,7 +629,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T19:15:00+01:00',
       description:
         'Videójáték programozói pályafutásom során számtalanszor találkoztam különböző koordináta-rendszerekből adódó problémákkal. Ezek elkerülése végett összegyűjtöttem a legfontosabbnak vélt irányelveket a témában, amelyekkel útmutatást szeretnék nyújtani a kezdő fejlesztők számára. Bemutatom, hogy a projekteknél használt eszközök miként kompatibilisek egymással, és az egyes alrendszereknél milyen egyedi igények vannak, valamint néhány példán keresztül sorba veszem azokat a szempontokat, amiket érdemes figyelembe venni már a játékprogram tervezésénél is.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/1dbSV2Sm3Lo?si=xGBiwo2qD7MkJEzo',
       presenter: {
         name: 'Nagy Róbert',
         rank: 'Veterán game engine fejlesztő, Gaijin Entertainment',
@@ -645,7 +645,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T18:45:00+01:00',
       description:
         'Az előadás elején piaci kitekintést szeretnék adni arról, hogy milyen dinamikák tapasztalhatóak a nagy nyelvi modellek terén. Ezen kívül be fogom mutatni, hogy mi milyen belső fejlesztéseken dolgozunk, milyen alkalmazási területet látunk a mesterséges intelligencia nagy nyelvi modelljének (AI LLM) felhasználásra. A prezentáció második felében kitérek arra, hogy hogyan fejlesztjük a chat képességünket, belső tudástárainkat annak érdekében, hogy az AI segítségével támogatni tudjuk a banki tevékenységekhez kapcsolódó műveletek egyszerűbbé, automatizáltabbá tételét. Az előadás végén szó lesz arról is, hogy mi hogyan képzeljük el a banknál az AI nagy nyelvi modelljének felhasználását a jövőben és milyen lehetőségeket látunk a belső fejlesztéseink és a piacról beszerezhető tudás ötvözésének.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/ziSHaEOwEQs?si=SuX6REXZQy_YQSf5',
       presenter: {
         name: 'Szentmihályi Kristóf',
         rank: 'Data Science szakértő',
@@ -667,7 +667,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T17:30:00+01:00',
       description:
         'Az előadás egy olyan világba invitál, ahol csak azt kell megfogalmazni, hogy "mit" szeretnénk, a "hogyan"-t pedig rábízhatjuk arra, ami ehhez a legjobban ért: magára a hálózatra. Mindez már nem csak sci-fi, a bemutatott rendszer képes emberi nyelven megfogalmazott igényeket értelmezni és ez alapján önállóan létre is hozni a kívánt szolgáltatást vagy végrehajtani a szükséges változtatásokat egy valódi 5G hálózatban.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/-q-I74C3BkU?si=Rax69BVmWp4fSRgG',
       presenter: {
         name: 'Nováczki Szabolcs',
         rank: 'Szenior Kutatómérnök',
@@ -689,7 +689,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T18:45:00+01:00',
       description:
         'A Műegyetemi műhold fejlesztés még 2007-ben kezdődött a MASAT-1-gyel, amely az első magyar műholdként került a világűrbe. Őt követte további négy társa, úgy mint a SMOG-P, az ATL-1 és a SMOG-1, akik már a PocketQube, vagyis zsebműhold kategóriába tartoztak. Közülük a SMOG-P úttörőként, a világ első működő egy egységnyi PocketQube-ja volt. Legújabb társuk az MRC-100 egy három egység méretű PocketQube, az eddigi legösszetettebb és legbonyolultabb műhold amely egyetemi oktatók és hallgatók által lett fejlesztve a Műegyetemen. A műholdak mind sikeres küldetést tudhatnak maguk mögött, illetve az MRC-100 jelenleg is végzi a feladatát a világűrben. A műholdak fedélzetére került kísérletek között a technológiai demonstrációtól kezdve a Föld körüli térség elektromágneses szennyezettségének feltárásán és akkumulátorok szigetelésének vizsgálatán át, dozimetriai és optikai szenzorokig számtalan kísérlet megtalálható. Az előadásban a fejlesztésről és a kutatási eredményekről kaphat ízelítőt a hallgatóság.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/_om451-sPB4?si=fesfsBmV-uYj3tZK',
       presenter: {
         name: 'Püspöki Péter',
         rank: 'MSc űrmérnök hallgató, szakkollégista',
@@ -705,7 +705,7 @@ export const conferenceData: IndexPageData = {
       endTime: '2024-03-19T16:15:00+01:00',
       description:
         'Mézes Mackó, Villányi Kopár, Ferrari, Mi a baj a kutyákkal? „ A királynőt megölni nem kellfélnetek” Blade Runner, Mi van a zsebemben? 1954: 7:1 , Túl az üveghegyen…\r\n\r\nMi köti össze a fent leírtakat és azt a másik harminc talányos szót, fogalmat, kifejezést, mondatot, amit az első dián lát majd a részvevő? Erre ad gyakorlati választ az előadó olymódon, hogy a hallgatóság választásai alapján, helyben szerkeszti és „fűszerezi” mondanivalóját.',
-      questionsUrl: '',
+      videoUrl: 'https://www.youtube.com/embed/iA2YgseV3Yg?si=rHnViHSii9WAF8hw',
       presenter: {
         name: 'Fehér András',
         rank: 'Üzletfejlesztési igazgató, Mensor3D',
